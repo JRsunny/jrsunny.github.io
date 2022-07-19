@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>first-7-6</title>
-    <url>/2022/07/07/first-7-6/</url>
+    <url>/2021/07/07/first-7-6/</url>
     <content><![CDATA[<p>天上白玉京，十二层五楼。仙人抚我顶，结发受长生。</p>
 ]]></content>
   </entry>
@@ -23,5 +23,25 @@
 
 <p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>收藏-C++</title>
+    <url>/2022/07/19/%E6%94%B6%E8%97%8F-C/</url>
+    <content><![CDATA[<p>学了很久编程，各种资源攒了一麻袋。</p>
+]]></content>
+      <tags>
+        <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>收藏-SQL</title>
+    <url>/2022/07/19/%E6%94%B6%E8%97%8F-SQL/</url>
+    <content><![CDATA[<p>学习MySQL,基础理论。</p>
+<p><a href="https://www.udemy.com/">https://www.udemy.com/</a></p>
+<p>面向全球</p>
+]]></content>
+      <tags>
+        <tag>SQL</tag>
+      </tags>
   </entry>
 </search>
