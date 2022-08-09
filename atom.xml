@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-09T06:21:27.635Z</updated>
+  <updated>2022-08-09T15:58:30.481Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,13 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>电影 华尔街之狼</title>
+    <link href="http://example.com/2022/08/09/the-wolf/"/>
+    <id>http://example.com/2022/08/09/the-wolf/</id>
+    <published>2022-08-09T15:01:27.000Z</published>
+    <updated>2022-08-09T15:58:30.481Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="简介-资源在最下方"><a href="#简介-资源在最下方" class="headerlink" title="简介                                 资源在最下方"></a>简介                                 资源在最下方</h1><hr><p>!.华尔街之狼 &#x2F; 华尔街狼人(港)<br>1.片　　名　The Wolf of Wall Street<br>1.年　　代　2013<br>1.产　　地　美国<br>1.类　　别　剧情 &#x2F; 传记 &#x2F; 犯罪<br>1.语　　言　英语 &#x2F; 法语<br>1.上映日期　2013-12-17(纽约首映) &#x2F; 2013-12-25(美国)<br>1.IMDb链接　<a href="https://www.imdb.com/title/tt0993846/">https://www.imdb.com/title/tt0993846/</a><br>1.豆瓣评分　8.0&#x2F;10 (356003人评价)<br>1.豆瓣链接　<a href="https://movie.douban.com/subject/2997076/">https://movie.douban.com/subject/2997076/</a><br>1.片　　长　180分钟<br>1.导　　演　马丁·斯科塞斯 Martin Scorsese (id:1054425)<br>1.编　　剧　特伦斯·温特 Terence Winter (id:1323478)<br>　 　　　　 乔丹·贝尔福特 Jordan Belfort (id:1337076)<br>1.演　　员　莱昂纳多·迪卡普里奥 Leonardo DiCaprio (id:1041029)<br>　　　　　 乔纳·希尔 Jonah Hill (id:1036302)<br>　　　　　 玛格特·罗比 Margot Robbie (id:1272303)</p><hr><h2 id="电影中几个经典对于人性的转变刻画的非常经典"><a href="#电影中几个经典对于人性的转变刻画的非常经典" class="headerlink" title="电影中几个经典对于人性的转变刻画的非常经典"></a>电影中几个经典对于人性的转变刻画的非常经典</h2><p><img src="/img/wolf2.jpg" alt="出轨前的挣扎"></p><h2 id="超模面前瞬间沦陷"><a href="#超模面前瞬间沦陷" class="headerlink" title="超模面前瞬间沦陷"></a>超模面前瞬间沦陷</h2><p><img src="/img/wolf3.jpg" alt="男人有钱就会变坏"></p><h2 id="销售必看的激情演讲"><a href="#销售必看的激情演讲" class="headerlink" title="销售必看的激情演讲"></a>销售必看的激情演讲</h2><p><img src="/img/wolf4.jpg"></p><h2 id="不堪入目的"><a href="#不堪入目的" class="headerlink" title="不堪入目的"></a>不堪入目的</h2><p><img src="/img/wolf5.jpg" alt="在飞机上乱搞、嗑药"><br>还好是网络自留地，可以比较随意的写</p><h2 id="种子链接需要付费"><a href="#种子链接需要付费" class="headerlink" title="种子链接需要付费"></a>种子链接需要付费</h2><div class="radish-content" data-hashid="D5NwpNYW"></div><script src="https://jianshou.online/js/embed.js"></script>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;简介-资源在最下方&quot;&gt;&lt;a href=&quot;#简介-资源在最下方&quot; class=&quot;headerlink&quot; title=&quot;简介                                 资源在最下方&quot;&gt;&lt;/a&gt;简介                         </summary>
+      
+    
+    
+    
+    
+    <category term="movie" scheme="http://example.com/tags/movie/"/>
+    
+  </entry>
+  
+  <entry>
     <title>收藏-SQL</title>
     <link href="http://example.com/2022/07/19/%E6%94%B6%E8%97%8F-SQL/"/>
     <id>http://example.com/2022/07/19/%E6%94%B6%E8%97%8F-SQL/</id>
     <published>2022-07-19T11:53:19.000Z</published>
-    <updated>2022-08-09T06:21:27.635Z</updated>
+    <updated>2022-08-09T15:52:48.081Z</updated>
     
-    <content type="html"><![CDATA[<hr><h3 id="SQL学习资源导航网站"><a href="#SQL学习资源导航网站" class="headerlink" title="SQL学习资源导航网站"></a>SQL学习资源导航网站</h3><h1 id="牛客"><a href="#牛客" class="headerlink" title="牛客"></a>牛客</h1><p>检索数据、排序检索数据、过滤数据、通配符、子查询、联结查询、组合查询等50个题目  </p><p>网址链接 <a href="https://www.nowcoder.com/exam/oj">牛客刷题</a>。</p><h1 id="国外的一个"><a href="#国外的一个" class="headerlink" title="国外的一个"></a>国外的一个</h1><p>除了SQL 还有很多其他的在线课程，缺点是部分需要付费</p><p>[网址链接]（<a href="https://www.udemy.com/%EF%BC%89">https://www.udemy.com/）</a>.</p><h1 id="在线"><a href="#在线" class="headerlink" title="在线"></a>在线</h1><p><a href="https://sqlzoo.net/">https://sqlzoo.net/</a></p><h1 id="小白学习"><a href="#小白学习" class="headerlink" title="小白学习"></a>小白学习</h1><p><a href="http://www.xuesql.cn/">http://www.xuesql.cn/</a></p><h1 id="SQL模拟面试"><a href="#SQL模拟面试" class="headerlink" title="SQL模拟面试"></a>SQL模拟面试</h1><p>模拟sql实习生场景的网站 里面的题全都会了 面试肯定也没问题啦  </p><p><a href="http://www.sqlintern.com/">http://www.sqlintern.com/</a></p><h1 id="https-www-stratascratch-com"><a href="#https-www-stratascratch-com" class="headerlink" title="https://www.stratascratch.com/"></a><a href="https://www.stratascratch.com/">https://www.stratascratch.com/</a></h1><p>需要注册登录<br>面向全球</p>]]></content>
+    <content type="html"><![CDATA[<hr><h3 id="SQL学习资源导航网站"><a href="#SQL学习资源导航网站" class="headerlink" title="SQL学习资源导航网站"></a>SQL学习资源导航网站</h3><h1 id="牛客"><a href="#牛客" class="headerlink" title="牛客"></a>牛客</h1><p>检索数据、排序检索数据、过滤数据、通配符、子查询、联结查询、组合查询等50个题目  </p><p>网址链接 <a href="https://www.nowcoder.com/exam/oj">牛客刷题</a>。</p><h1 id="国外的一个"><a href="#国外的一个" class="headerlink" title="国外的一个"></a>国外的一个</h1><p>除了SQL 还有很多其他的在线课程，缺点是部分需要付费</p><p>[网址链接]（<a href="https://www.udemy.com/%EF%BC%89">https://www.udemy.com/）</a>.</p><h1 id="在线"><a href="#在线" class="headerlink" title="在线"></a>在线</h1><p><a href="https://sqlzoo.net/">https://sqlzoo.net/</a></p><h1 id="小白学习"><a href="#小白学习" class="headerlink" title="小白学习"></a>小白学习</h1><p><a href="http://www.xuesql.cn/">http://www.xuesql.cn/</a></p><h1 id="SQL模拟面试"><a href="#SQL模拟面试" class="headerlink" title="SQL模拟面试"></a>SQL模拟面试</h1><p>模拟sql实习生场景的网站 里面的题全都会了 面试肯定也没问题啦  </p><p><a href="http://www.sqlintern.com/">http://www.sqlintern.com/</a></p><h1 id="https-www-stratascratch-com"><a href="#https-www-stratascratch-com" class="headerlink" title="https://www.stratascratch.com/"></a><a href="https://www.stratascratch.com/">https://www.stratascratch.com/</a></h1><p>需要注册登录 </p>]]></content>
     
     
       
