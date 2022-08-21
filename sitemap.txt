@@ -1,9 +1,9 @@
 http://example.com/google7c6bcdd871bbb34f.html
-http://example.com/2022/08/09/the-wolf/
-http://example.com/2021/07/07/first/
-http://example.com/2022/07/19/%E6%94%B6%E8%97%8F-C/
-http://example.com/2021/01/07/hello-world/
-http://example.com/2022/07/19/%E6%94%B6%E8%97%8F-SQL/
+http://example.com/posts/undefined/
+http://example.com/posts/undefined/
+http://example.com/posts/undefined/
+http://example.com/posts/undefined/
+http://example.com/posts/undefined/
 http://example.com/categories/index.html
 http://example.com/tags/index.html
 http://example.com/

@@ -18,8 +18,8 @@
   
   <entry>
     <title>电影 华尔街之狼</title>
-    <link href="http://example.com/2022/08/09/the-wolf/"/>
-    <id>http://example.com/2022/08/09/the-wolf/</id>
+    <link href="http://example.com/posts/undefined/"/>
+    <id>http://example.com/posts/undefined/</id>
     <published>2022-08-09T15:01:27.000Z</published>
     <updated>2022-08-18T13:56:10.723Z</updated>
     
@@ -41,8 +41,8 @@
   
   <entry>
     <title>收藏-SQL</title>
-    <link href="http://example.com/2022/07/19/%E6%94%B6%E8%97%8F-SQL/"/>
-    <id>http://example.com/2022/07/19/%E6%94%B6%E8%97%8F-SQL/</id>
+    <link href="http://example.com/posts/undefined/"/>
+    <id>http://example.com/posts/undefined/</id>
     <published>2022-07-19T11:53:19.000Z</published>
     <updated>2022-08-09T15:52:48.081Z</updated>
     
@@ -64,8 +64,8 @@
   
   <entry>
     <title>收藏-C++</title>
-    <link href="http://example.com/2022/07/19/%E6%94%B6%E8%97%8F-C/"/>
-    <id>http://example.com/2022/07/19/%E6%94%B6%E8%97%8F-C/</id>
+    <link href="http://example.com/posts/undefined/"/>
+    <id>http://example.com/posts/undefined/</id>
     <published>2022-07-19T09:25:36.000Z</published>
     <updated>2022-08-11T13:16:12.290Z</updated>
     
@@ -87,8 +87,8 @@
   
   <entry>
     <title>将进酒</title>
-    <link href="http://example.com/2021/07/07/first/"/>
-    <id>http://example.com/2021/07/07/first/</id>
+    <link href="http://example.com/posts/undefined/"/>
+    <id>http://example.com/posts/undefined/</id>
     <published>2021-07-07T08:19:12.000Z</published>
     <updated>2022-08-11T13:16:25.335Z</updated>
     
@@ -108,8 +108,8 @@
   
   <entry>
     <title>hello-world</title>
-    <link href="http://example.com/2021/01/07/hello-world/"/>
-    <id>http://example.com/2021/01/07/hello-world/</id>
+    <link href="http://example.com/posts/undefined/"/>
+    <id>http://example.com/posts/undefined/</id>
     <published>2021-01-06T16:00:00.000Z</published>
     <updated>2022-08-11T13:15:58.571Z</updated>
     
