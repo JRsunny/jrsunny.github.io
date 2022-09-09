@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-06T14:35:53.571Z</updated>
+  <updated>2022-09-09T07:07:54.437Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,9 +17,29 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>AI画画，见证一个时代</title>
+    <link href="http://example.com/2022/09/09/MJ/"/>
+    <id>http://example.com/2022/09/09/MJ/</id>
+    <published>2022-09-09T06:58:36.000Z</published>
+    <updated>2022-09-09T07:07:54.437Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="见证AI崛起于我们的时代"><a href="#见证AI崛起于我们的时代" class="headerlink" title="见证AI崛起于我们的时代"></a>见证AI崛起于我们的时代</h1><p>前几天看到有人用Midjourney生成的数字绘画作品获得了比赛一等奖，恍然惊醒，原来AI已经成长到这种地步了，一种见证AI崛起于这个时代厚重历史感，</p><p>作者用的是Discord频道下Midjourney，输入提示词，然后等待GPU燃烧就可以生成画作。这个过程说起来简单，但实际上还是有难度。这个过程叫做Prompt Engineering</p><p>直接翻译为提示工程，可能不是太准确，网友甚至预测以后会有提示工程师这种全新职业。毕竟利用AI作画，一小时抵的上原来一星期的量，这让人明明白白的感受到什么是降维打击啊。<br><img src="/img/mj/b.png"><br>关于AI是否杀死了艺术，个人认为虎嗅这篇文章分析的有点道理。<br>《美术行业，正在被AI作画杀死？》<br><a href="https://www.huxiu.com/article/651324.html">https://www.huxiu.com/article/651324.html</a></p><h1 id="整理几个AI画画工具"><a href="#整理几个AI画画工具" class="headerlink" title="整理几个AI画画工具"></a>整理几个AI画画工具</h1><p>discord.gg&#x2F;midjourney（公测）</p><p>labs.openai.com&#x2F;waitlist（内测）</p><p><a href="https://beta.dreamstudio.ai/dream%EF%BC%88%E5%85%AC%E6%B5%8B%EF%BC%89">https://beta.dreamstudio.ai/dream（公测）</a></p><h1 id="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"><a href="#对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。" class="headerlink" title="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"></a>对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。</h1><p>一、抖音的壁纸号，目前已经有不少人在做这个，通过精美的壁纸吸引流量，然后广告变现，但是这个由于护城河很低，也是卷的不行。需要坚持。<br>二、对于原本的美术设计，游戏设计来说，运用得当可能会是职场杀器，缺陷在于很可能调试出来给提示词直接被公司继承，然后就直接毕业了。<br>三、对于画家来说确实不是一个好消息，继续坚持可能会更加困难，转型则意味之前的学习成本投入几乎浪费。还是顺势拥抱吧。<br>四、整理相关知识，卖教程，做知识星球。这个是比较可行的路子。至少可以在这一波冲击中收获一些。</p><p>最后，</p><p>很幸运生在这个伟大的时代，<br>但同时面对这个时代的飞速发展，<br>又感到很无力。<br>网上有个段子说的很好：长城非常壮观雄伟，但是我是修长城的人。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;见证AI崛起于我们的时代&quot;&gt;&lt;a href=&quot;#见证AI崛起于我们的时代&quot; class=&quot;headerlink&quot; title=&quot;见证AI崛起于我们的时代&quot;&gt;&lt;/a&gt;见证AI崛起于我们的时代&lt;/h1&gt;&lt;p&gt;前几天看到有人用Midjourney生成的数字绘画作品获得了</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>学习</title>
-    <link href="http://example.com/post/5ac6f809.html"/>
-    <id>http://example.com/post/5ac6f809.html</id>
+    <link href="http://example.com/2022/09/06/%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://example.com/2022/09/06/%E5%AD%A6%E4%B9%A0/</id>
     <published>2022-09-06T14:14:55.000Z</published>
     <updated>2022-09-06T14:35:53.571Z</updated>
     
@@ -40,17 +60,17 @@
   
   <entry>
     <title>雨巷</title>
-    <link href="http://example.com/post/1.html"/>
-    <id>http://example.com/post/1.html</id>
+    <link href="http://example.com/2022/08/21/%E9%9B%A8%E5%B7%B7/"/>
+    <id>http://example.com/2022/08/21/%E9%9B%A8%E5%B7%B7/</id>
     <published>2022-08-21T11:07:07.000Z</published>
-    <updated>2022-09-06T14:09:09.929Z</updated>
+    <updated>2022-09-09T07:09:46.747Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="封面测试"><a href="#封面测试" class="headerlink" title="封面测试"></a>封面测试</h1><p>雨巷<br>撑着油纸伞，独自<br>彷徨在悠长，悠长<br>又寂寥的雨巷，<br>我希望逢着<br>一个丁香一样地1<br>结着愁怨的姑娘。<br>她是有<br>丁香一样的颜色，<br>丁香一样的芬芳，<br>丁香一样的忧愁，<br>在雨中哀怨，<br>哀怨又彷徨；<br>她彷徨在这寂寥的雨巷，<br>撑着油纸伞<br>像我一样，<br>像我一样地<br>默默彳亍2着，<br>冷漠，凄清，又惆怅。<br>她静默地走近<br>走近，又投出<br>太息3一般的眼光，<br>她飘过<br>像梦一般的，<br>像梦一般的凄婉迷茫。<br>像梦中飘过<br>一枝丁香的，<br>我身旁飘过这女郎；<br>她静默地远了，远了，<br>到了颓圮4的篱墙，<br>走尽这雨巷。<br>在雨的哀曲里，<br>消了她的颜色，<br>散了她的芬芳<br>消散了，甚至她的<br>太息般的眼光，<br>丁香般的惆怅。<br>撑着油纸伞，独自<br>彷徨在悠长，悠长<br>又寂寥的雨巷，<br>我希望飘过<br>一个丁香一样地<br>结着愁怨的姑娘。</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。"><a href="#最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。" class="headerlink" title="最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。"></a>最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。</h1><h1 id="雨巷"><a href="#雨巷" class="headerlink" title="# 雨巷"></a># 雨巷</h1><p>撑着油纸伞，独自<br>彷徨在悠长，悠长<br>又寂寥的雨巷，<br>我希望逢着<br>一个丁香一样地1<br>结着愁怨的姑娘。<br>她是有<br>丁香一样的颜色，<br>丁香一样的芬芳，<br>丁香一样的忧愁，<br>在雨中哀怨，<br>哀怨又彷徨；<br>她彷徨在这寂寥的雨巷，<br>撑着油纸伞<br>像我一样，<br>像我一样地<br>默默彳亍2着，<br>冷漠，凄清，又惆怅。<br>她静默地走近<br>走近，又投出<br>太息3一般的眼光，<br>她飘过<br>像梦一般的，<br>像梦一般的凄婉迷茫。<br>像梦中飘过<br>一枝丁香的，<br>我身旁飘过这女郎；<br>她静默地远了，远了，<br>到了颓圮4的篱墙，<br>走尽这雨巷。<br>在雨的哀曲里，<br>消了她的颜色，<br>散了她的芬芳<br>消散了，甚至她的<br>太息般的眼光，<br>丁香般的惆怅。<br>撑着油纸伞，独自<br>彷徨在悠长，悠长<br>又寂寥的雨巷，<br>我希望飘过<br>一个丁香一样地<br>结着愁怨的姑娘。</p>]]></content>
     
     
       
       
-    <summary type="html">&lt;h1 id=&quot;封面测试&quot;&gt;&lt;a href=&quot;#封面测试&quot; class=&quot;headerlink&quot; title=&quot;封面测试&quot;&gt;&lt;/a&gt;封面测试&lt;/h1&gt;&lt;p&gt;雨巷&lt;br&gt;撑着油纸伞，独自&lt;br&gt;彷徨在悠长，悠长&lt;br&gt;又寂寥的雨巷，&lt;br&gt;我希望逢着&lt;br&gt;一个丁香一样地1&lt;br&gt;</summary>
+    <summary type="html">&lt;h1 id=&quot;最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。&quot;&gt;&lt;a href=&quot;#最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。&quot; class=&quot;headerlink&quot; title=&quot;最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。&quot;&gt;</summary>
       
     
     
@@ -60,8 +80,8 @@
   
   <entry>
     <title>电影 华尔街之狼</title>
-    <link href="http://example.com/post/2.html"/>
-    <id>http://example.com/post/2.html</id>
+    <link href="http://example.com/2022/08/09/the-wolf/"/>
+    <id>http://example.com/2022/08/09/the-wolf/</id>
     <published>2022-08-09T15:01:27.000Z</published>
     <updated>2022-09-06T14:14:18.227Z</updated>
     
@@ -83,8 +103,8 @@
   
   <entry>
     <title>收藏-SQL</title>
-    <link href="http://example.com/post/5.html"/>
-    <id>http://example.com/post/5.html</id>
+    <link href="http://example.com/2022/07/19/%E6%94%B6%E8%97%8F-SQL/"/>
+    <id>http://example.com/2022/07/19/%E6%94%B6%E8%97%8F-SQL/</id>
     <published>2022-07-19T11:53:19.000Z</published>
     <updated>2022-08-25T13:26:34.620Z</updated>
     
@@ -106,8 +126,8 @@
   
   <entry>
     <title>收藏-C++</title>
-    <link href="http://example.com/post/4.html"/>
-    <id>http://example.com/post/4.html</id>
+    <link href="http://example.com/2022/07/19/%E6%94%B6%E8%97%8F-C/"/>
+    <id>http://example.com/2022/07/19/%E6%94%B6%E8%97%8F-C/</id>
     <published>2022-07-19T09:25:36.000Z</published>
     <updated>2022-08-25T13:26:16.673Z</updated>
     
@@ -129,8 +149,8 @@
   
   <entry>
     <title>将进酒</title>
-    <link href="http://example.com/post/3.html"/>
-    <id>http://example.com/post/3.html</id>
+    <link href="http://example.com/2021/07/07/first/"/>
+    <id>http://example.com/2021/07/07/first/</id>
     <published>2021-07-07T08:19:12.000Z</published>
     <updated>2022-08-25T13:25:51.993Z</updated>
     
@@ -150,8 +170,8 @@
   
   <entry>
     <title>hello-world</title>
-    <link href="http://example.com/post/undefined.html"/>
-    <id>http://example.com/post/undefined.html</id>
+    <link href="http://example.com/2021/01/07/hello-world/"/>
+    <id>http://example.com/2021/01/07/hello-world/</id>
     <published>2021-01-06T16:00:00.000Z</published>
     <updated>2022-08-11T13:15:58.571Z</updated>
     
