@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+  <!-- Created By http://www.zhetao.com/sitemapcreator,  URLs: 18 Generated at: 2022-09-17 21:13:14 -->
+
+  <url>
+    <loc>https://jrsunny.github.io/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/archives/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/tags/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/categories/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/2022/09/09/MJ/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/2022/09/06/%E5%AD%A6%E4%B9%A0/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/2022/08/21/%E9%9B%A8%E5%B7%B7/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/2022/07/19/%E6%94%B6%E8%97%8F-SQL/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/2022/07/19/%E6%94%B6%E8%97%8F-C/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/tags/C/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/tags/SQL/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/tags/%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F%E3%80%81%E8%AE%A1%E7%AE%97%E6%9C%BA/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/archives/2022/09/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/archives/2022/08/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/archives/2022/07/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/archives/2021/01/</loc>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/</loc>
+    <priority>0.97</priority>
+  </url>
+
+  <url>
+    <loc>https://jrsunny.github.io/2021/01/07/hello-world/</loc>
+    <priority>0.95</priority>
+  </url>
+
+</urlset>
