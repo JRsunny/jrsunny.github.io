@@ -159,8 +159,7 @@
 
 <h2 id="注意，这里部分情况下会遇见网络问题，建议提前准备一个科学上网的代理"><a href="#注意，这里部分情况下会遇见网络问题，建议提前准备一个科学上网的代理" class="headerlink" title="注意，这里部分情况下会遇见网络问题，建议提前准备一个科学上网的代理"></a>注意，这里部分情况下会遇见网络问题，建议提前准备一个科学上网的代理</h2><h3 id="3-拉取-Freqtrade-Docker-镜像"><a href="#3-拉取-Freqtrade-Docker-镜像" class="headerlink" title="3. 拉取 Freqtrade Docker 镜像"></a>3. 拉取 Freqtrade Docker 镜像</h3><p>使用以下命令拉取 Freqtrade 的 Docker 镜像：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose pull</span><br></pre></td></tr></table></figure>
-
-
+<p><img src="/img/freqtrade/20250713-133054.jpg"></p>
 <h3 id="4-创建用户目录结构"><a href="#4-创建用户目录结构" class="headerlink" title="4. 创建用户目录结构"></a>4. 创建用户目录结构</h3><p>运行以下命令创建用户目录结构：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose run --<span class="built_in">rm</span> freqtrade create-userdir --userdir user_data</span><br></pre></td></tr></table></figure>
 
