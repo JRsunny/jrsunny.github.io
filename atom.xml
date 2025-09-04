@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-07-13T05:32:34.352Z</updated>
+  <updated>2025-09-04T08:07:49.630Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,86 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>图片网站集合</title>
+    <link href="http://example.com/2025/09/04/image-site/"/>
+    <id>http://example.com/2025/09/04/image-site/</id>
+    <published>2025-09-04T08:04:45.000Z</published>
+    <updated>2025-09-04T08:07:49.630Z</updated>
+    
+    <content type="html"><![CDATA[<table><thead><tr><th>名称</th><th>简介</th><th>网址</th></tr></thead><tbody><tr><td><strong>BestWallpapers</strong></td><td>数百万张4K高清壁纸，每日更新，免注册下载</td><td><a href="https://bestwallpapers.net/">bestwallpapers.net</a></td></tr><tr><td><strong>WallpaperHub</strong></td><td>8K分辨率壁纸，摄影与创意类为主</td><td><a href="https://wallpaperhub.app/">wallpaperhub.app</a></td></tr><tr><td><strong>WallpapersCraft</strong></td><td>支持选择分辨率，分类丰富，适配手机&#x2F;电脑</td><td><a href="https://wallpaperscraft.com/">wallpaperscraft.com</a></td></tr><tr><td><strong>Wallpaper Cave</strong></td><td>动漫、插画、风景、摄影等风格多样</td><td><a href="https://wallpapercave.com/">wallpapercave.com</a></td></tr></tbody></table><table><thead><tr><th>名称</th><th>简介</th><th>网址</th></tr></thead><tbody><tr><td><strong>Unsplash</strong></td><td>世界知名摄影图库，8K分辨率，极简风、自然风为主</td><td><a href="https://unsplash.com/">unsplash.com</a></td></tr><tr><td><strong>Pexels</strong></td><td>免费高清摄影图，支持中文搜索，适合壁纸使用</td><td><a href="https://www.pexels.com/zh-cn/">pexels.com&#x2F;zh-cn</a></td></tr><tr><td><strong>Pixabay</strong></td><td>超240万张图片，支持矢量图、插画、视频等</td><td><a href="https://pixabay.com/zh/">pixabay.com</a></td></tr><tr><td><strong>Piqsels</strong></td><td>免版税高清图库，支持中文，适合壁纸与商用</td><td><a href="https://www.piqsels.com/">piqsels.com</a></td></tr><tr><td><strong>StockSnap.io</strong></td><td>高质量摄影图，每周更新，现代风格为主</td><td><a href="https://stocksnap.io/">stocksnap.io</a></td></tr></tbody></table>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;名称&lt;/th&gt;
+&lt;th&gt;简介&lt;/th&gt;
+&lt;th&gt;网址&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;BestWallpapers&lt;/strong&gt;&lt;/td&gt;
+&lt;td&gt;数百万张4K高清壁纸，</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>quant_class</title>
+    <link href="http://example.com/2025/09/04/quant-class/"/>
+    <id>http://example.com/2025/09/04/quant-class/</id>
+    <published>2025-09-04T08:03:51.000Z</published>
+    <updated>2025-09-04T08:03:51.075Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>backtest</title>
+    <link href="http://example.com/2025/09/04/backtest/"/>
+    <id>http://example.com/2025/09/04/backtest/</id>
+    <published>2025-09-04T08:03:15.000Z</published>
+    <updated>2025-09-04T08:03:15.118Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>freqtrade-AI学习记录</title>
+    <link href="http://example.com/2025/07/16/freq_AI/"/>
+    <id>http://example.com/2025/07/16/freq_AI/</id>
+    <published>2025-07-16T12:29:58.000Z</published>
+    <updated>2025-07-30T03:02:59.073Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Freqtrade-使用"><a href="#Freqtrade-使用" class="headerlink" title="Freqtrade 使用"></a>Freqtrade 使用</h1><p>services:<br>  tensorboard:<br>    image: freqtradeorg&#x2F;freqtrade:stable<br>    volumes:<br>      - “.&#x2F;user_data:&#x2F;freqtrade&#x2F;user_data”<br>    ports:<br>      - “6006:6006”<br>    command: &gt;<br>      tensorboard –logdir user_data&#x2F;models&#x2F;unique-id2 –host 0.0.0.0 –port 6006<br>docker-compose up tensorboard</p><p>#不太会使用tensorbaord进行调试啊</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;Freqtrade-使用&quot;&gt;&lt;a href=&quot;#Freqtrade-使用&quot; class=&quot;headerlink&quot; title=&quot;Freqtrade 使用&quot;&gt;&lt;/a&gt;Freqtrade 使用&lt;/h1&gt;&lt;p&gt;services:&lt;br&gt;  tensorboard:&lt;br</summary>
+      
+    
+    
+    
+    <category term="量化" scheme="http://example.com/categories/%E9%87%8F%E5%8C%96/"/>
+    
+    
+    <category term="quant" scheme="http://example.com/tags/quant/"/>
+    
+  </entry>
   
   <entry>
     <title>freqtrade安装简要教程---docker安装</title>
