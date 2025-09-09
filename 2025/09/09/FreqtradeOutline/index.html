@@ -1,0 +1,399 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>FreqtradeOutline | JRsunny</title><meta name="keywords" content="learn,share,progress,code,"><meta name="author" content="万里无云"><meta name="copyright" content="万里无云"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Freqtrade量化交易新手入门到精通教学大纲课程简介本课程基于Freqtrade 2025.8 stable版本，从零开始讲解加密货币量化交易框架的使用，涵盖环境搭建、策略开发、回测优化到实盘交易的全流程。参考《零基础Python量化教程》和《量化从入门到精通》的经典结构，结合实战案例帮助新手快速掌握量化交易技能。 学习目标 掌握Python基础语法及量化交易常用库（Pandas、TA-Lib">
+<meta property="og:type" content="article">
+<meta property="og:title" content="FreqtradeOutline">
+<meta property="og:url" content="http://example.com/2025/09/09/FreqtradeOutline/index.html">
+<meta property="og:site_name" content="JRsunny">
+<meta property="og:description" content="Freqtrade量化交易新手入门到精通教学大纲课程简介本课程基于Freqtrade 2025.8 stable版本，从零开始讲解加密货币量化交易框架的使用，涵盖环境搭建、策略开发、回测优化到实盘交易的全流程。参考《零基础Python量化教程》和《量化从入门到精通》的经典结构，结合实战案例帮助新手快速掌握量化交易技能。 学习目标 掌握Python基础语法及量化交易常用库（Pandas、TA-Lib">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2025-09-09T01:32:15.000Z">
+<meta property="article:modified_time" content="2025-09-09T01:48:20.171Z">
+<meta property="article:author" content="万里无云">
+<meta property="article:tag" content="learn,share,progress,code,">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2025/09/09/FreqtradeOutline/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="zxIuQKLK97eYuGrwYuEQR_rwv3BmMcxYWF5H78A3FKY"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'FreqtradeOutline',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-09-09 09:48:20'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="JRsunny" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> sitemap</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/sitemap.xml"><span> path</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> baidusitemap</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/baidusitemap.xml"><span> path</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JRsunny</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> sitemap</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/sitemap.xml"><span> path</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> baidusitemap</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/baidusitemap.xml"><span> path</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">FreqtradeOutline</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-09-09T01:32:15.000Z" title="发表于 2025-09-09 09:32:15">2025-09-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-09-09T01:48:20.171Z" title="更新于 2025-09-09 09:48:20">2025-09-09</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="FreqtradeOutline"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="Freqtrade量化交易新手入门到精通教学大纲"><a href="#Freqtrade量化交易新手入门到精通教学大纲" class="headerlink" title="Freqtrade量化交易新手入门到精通教学大纲"></a>Freqtrade量化交易新手入门到精通教学大纲</h1><h2 id="课程简介"><a href="#课程简介" class="headerlink" title="课程简介"></a>课程简介</h2><p>本课程基于Freqtrade 2025.8 stable版本，从零开始讲解加密货币量化交易框架的使用，涵盖环境搭建、策略开发、回测优化到实盘交易的全流程。参考《零基础Python量化教程》和《量化从入门到精通》的经典结构，结合实战案例帮助新手快速掌握量化交易技能。</p>
+<h2 id="学习目标"><a href="#学习目标" class="headerlink" title="学习目标"></a>学习目标</h2><ul>
+<li>掌握Python基础语法及量化交易常用库（Pandas、TA-Lib）</li>
+<li>熟练配置Freqtrade开发环境（Docker&#x2F;原生两种方式）</li>
+<li>能够独立编写、测试和优化量化交易策略</li>
+<li>理解量化回测原理及实盘风险控制方法</li>
+<li>掌握FreqAI人工智能策略开发基础</li>
+</ul>
+<hr>
+<h2 id="第一部分：量化交易基础（入门篇）"><a href="#第一部分：量化交易基础（入门篇）" class="headerlink" title="第一部分：量化交易基础（入门篇）"></a>第一部分：量化交易基础（入门篇）</h2><h3 id="第1章：量化交易概念入门"><a href="#第1章：量化交易概念入门" class="headerlink" title="第1章：量化交易概念入门"></a>第1章：量化交易概念入门</h3><p>1.1 什么是量化交易？</p>
+<ul>
+<li>量化交易的定义与优势</li>
+<li>加密货币市场特点及量化适用性</li>
+<li>常见量化策略类型（趋势跟踪、均值回归等）</li>
+</ul>
+<p>1.2 量化交易必备知识</p>
+<ul>
+<li>金融市场基本概念（K线、指标、订单类型）</li>
+<li>回测与实盘的区别</li>
+<li>风险控制基础（止损、仓位管理）</li>
+</ul>
+<h3 id="第2章：Python量化基础"><a href="#第2章：Python量化基础" class="headerlink" title="第2章：Python量化基础"></a>第2章：Python量化基础</h3><p>2.1 Python环境搭建</p>
+<ul>
+<li>Anaconda安装与环境配置</li>
+<li>Jupyter Notebook使用指南</li>
+<li>常用库安装（Pandas、NumPy、TA-Lib）</li>
+</ul>
+<p>2.2 Python核心语法</p>
+<ul>
+<li>数据类型与控制流</li>
+<li>函数与类的定义</li>
+<li>量化交易常用数据结构</li>
+</ul>
+<p>2.3 金融数据处理实战</p>
+<ul>
+<li>Pandas读取与处理K线数据</li>
+<li>技术指标计算（RSI、MACD、布林带）</li>
+<li>数据可视化（Matplotlib&#x2F;Plotly）</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 示例：计算RSI指标</span></span><br><span class="line"><span class="keyword">import</span> talib <span class="keyword">as</span> ta</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line">df = pd.read_csv(<span class="string">&#x27;BTC-USDT-1h.csv&#x27;</span>)</span><br><span class="line">df[<span class="string">&#x27;rsi&#x27;</span>] = ta.RSI(df[<span class="string">&#x27;close&#x27;</span>], timeperiod=<span class="number">14</span>)</span><br><span class="line"><span class="built_in">print</span>(df[[<span class="string">&#x27;datetime&#x27;</span>, <span class="string">&#x27;close&#x27;</span>, <span class="string">&#x27;rsi&#x27;</span>]].tail())</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="第二部分：Freqtrade框架核心（进阶篇）"><a href="#第二部分：Freqtrade框架核心（进阶篇）" class="headerlink" title="第二部分：Freqtrade框架核心（进阶篇）"></a>第二部分：Freqtrade框架核心（进阶篇）</h2><h3 id="第3章：Freqtrade环境搭建"><a href="#第3章：Freqtrade环境搭建" class="headerlink" title="第3章：Freqtrade环境搭建"></a>第3章：Freqtrade环境搭建</h3><p>3.1 系统要求与依赖</p>
+<ul>
+<li>硬件配置：2GB RAM&#x2F;1GB磁盘&#x2F;2vCPU</li>
+<li>软件要求：Python 3.11+、Docker（推荐）、Git</li>
+<li>常见问题解决（TA-Lib安装失败、权限问题）</li>
+</ul>
+<p>3.2 Docker安装方式<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 拉取最新镜像</span></span><br><span class="line">docker compose pull</span><br><span class="line"></span><br><span class="line"><span class="comment"># 启动并后台运行</span></span><br><span class="line">docker compose up -d</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看日志</span></span><br><span class="line">docker compose logs -f</span><br></pre></td></tr></table></figure></p>
+<p>3.3 原生Python安装方式<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 克隆仓库</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/freqtrade/freqtrade.git</span><br><span class="line"><span class="built_in">cd</span> freqtrade</span><br><span class="line"></span><br><span class="line"><span class="comment"># 创建虚拟环境</span></span><br><span class="line">virtualenv -p python3 .venv</span><br><span class="line"><span class="built_in">source</span> .venv/bin/activate  <span class="comment"># Windows: .venv\Scripts\activate</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装依赖</span></span><br><span class="line">pip install -U -r requirements.txt</span><br><span class="line">pip install -e .</span><br><span class="line"></span><br><span class="line"><span class="comment"># 安装FreqUI</span></span><br><span class="line">freqtrade install-ui</span><br></pre></td></tr></table></figure></p>
+<p>3.4 初始配置与目录结构</p>
+<ul>
+<li>配置文件详解（config.json）</li>
+<li>用户目录结构（策略&#x2F;数据&#x2F;日志存放位置）</li>
+<li>交易所API密钥安全配置</li>
+</ul>
+<h3 id="第4章：策略开发基础（V3版本）"><a href="#第4章：策略开发基础（V3版本）" class="headerlink" title="第4章：策略开发基础（V3版本）"></a>第4章：策略开发基础（V3版本）</h3><p>4.1 策略基本结构</p>
+<ul>
+<li>IStrategy接口核心方法</li>
+<li>策略配置参数（时间框架、止损、ROI）</li>
+<li>最小策略示例（RSI策略）</li>
+</ul>
+<p>4.2 V3版本API重大变更</p>
+<table>
+<thead>
+<tr>
+<th>旧版本（V2）</th>
+<th>新版本（V3）</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>populate_buy_trend</td>
+<td>populate_entry_trend</td>
+<td>支持多空交易</td>
+</tr>
+<tr>
+<td>populate_sell_trend</td>
+<td>populate_exit_trend</td>
+<td>支持多空交易</td>
+</tr>
+<tr>
+<td>‘buy’ 信号列</td>
+<td>‘enter_long’ 信号列</td>
+<td>多头入口信号</td>
+</tr>
+<tr>
+<td>‘sell’ 信号列</td>
+<td>‘exit_long’ 信号列</td>
+<td>多头出口信号</td>
+</tr>
+<tr>
+<td>custom_sell</td>
+<td>custom_exit</td>
+<td>自定义退出逻辑</td>
+</tr>
+</tbody></table>
+<p>4.3 技术指标应用</p>
+<ul>
+<li>内置指标库使用（TA-Lib、Pandas TA）</li>
+<li>自定义指标编写方法</li>
+<li>策略逻辑调试技巧</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># V3版本RSI策略示例</span></span><br><span class="line"><span class="keyword">class</span> <span class="title class_">RSIStrategy</span>(<span class="title class_ inherited__">IStrategy</span>):</span><br><span class="line">    INTERFACE_VERSION = <span class="number">3</span></span><br><span class="line">    timeframe = <span class="string">&#x27;1h&#x27;</span></span><br><span class="line">    minimal_roi = &#123;<span class="string">&quot;0&quot;</span>: <span class="number">0.1</span>, <span class="string">&quot;30&quot;</span>: <span class="number">0.05</span>, <span class="string">&quot;60&quot;</span>: <span class="number">0</span>&#125;</span><br><span class="line">    stoploss = -<span class="number">0.05</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">populate_entry_trend</span>(<span class="params">self, dataframe: pd.DataFrame, metadata: <span class="built_in">dict</span></span>) -&gt; pd.DataFrame:</span><br><span class="line">        dataframe.loc[</span><br><span class="line">            (</span><br><span class="line">                ta.RSI(dataframe) &lt; <span class="number">30</span>  <span class="comment"># RSI低于30</span></span><br><span class="line">                &amp; (dataframe[<span class="string">&#x27;volume&#x27;</span>] &gt; <span class="number">0</span>)  <span class="comment"># 排除零交易量</span></span><br><span class="line">            ),</span><br><span class="line">            [<span class="string">&#x27;enter_long&#x27;</span>, <span class="string">&#x27;enter_tag&#x27;</span>]] = (<span class="number">1</span>, <span class="string">&#x27;rsi_buy&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> dataframe</span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">populate_exit_trend</span>(<span class="params">self, dataframe: pd.DataFrame, metadata: <span class="built_in">dict</span></span>) -&gt; pd.DataFrame:</span><br><span class="line">        dataframe.loc[</span><br><span class="line">            (</span><br><span class="line">                ta.RSI(dataframe) &gt; <span class="number">70</span>  <span class="comment"># RSI高于70</span></span><br><span class="line">                &amp; (dataframe[<span class="string">&#x27;volume&#x27;</span>] &gt; <span class="number">0</span>)  <span class="comment"># 排除零交易量</span></span><br><span class="line">            ),</span><br><span class="line">            [<span class="string">&#x27;exit_long&#x27;</span>, <span class="string">&#x27;exit_tag&#x27;</span>]] = (<span class="number">1</span>, <span class="string">&#x27;rsi_sell&#x27;</span>)</span><br><span class="line">        <span class="keyword">return</span> dataframe</span><br></pre></td></tr></table></figure>
+
+<h3 id="第5章：多空交易策略"><a href="#第5章：多空交易策略" class="headerlink" title="第5章：多空交易策略"></a>第5章：多空交易策略</h3><p>5.1 空头交易基础</p>
+<ul>
+<li>做空逻辑与信号定义</li>
+<li>enter_short&#x2F;exit_short信号列使用</li>
+<li>多空策略示例代码</li>
+</ul>
+<p>5.2 仓位管理</p>
+<ul>
+<li>固定仓位与动态仓位设置</li>
+<li>杠杆交易风险控制</li>
+<li>策略参数优化思路</li>
+</ul>
+<hr>
+<h2 id="第三部分：实战操作指南（实战篇）"><a href="#第三部分：实战操作指南（实战篇）" class="headerlink" title="第三部分：实战操作指南（实战篇）"></a>第三部分：实战操作指南（实战篇）</h2><h3 id="第6章：数据获取与回测"><a href="#第6章：数据获取与回测" class="headerlink" title="第6章：数据获取与回测"></a>第6章：数据获取与回测</h3><p>6.1 历史数据下载<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 下载比特币1小时数据（近30天）</span></span><br><span class="line">freqtrade download-data --timeframes 1h --pairs BTC/USDT --exchange binance --timerange 20250801-20250830</span><br></pre></td></tr></table></figure></p>
+<p>6.2 回测功能详解</p>
+<ul>
+<li>基本回测命令   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">freqtrade backtesting --strategy RSIStrategy --timerange 20250801-20250830</span><br></pre></td></tr></table></figure></li>
+<li>回测结果分析（收益、胜率、最大回撤）</li>
+<li>可视化回测结果（生成HTML报告）</li>
+</ul>
+<p>6.3 策略优化（Hyperopt）</p>
+<ul>
+<li>超参数优化原理</li>
+<li>目标函数选择（夏普比率、利润因子）</li>
+<li>优化命令示例   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">freqtrade hyperopt --strategy RSIStrategy --hyperopt-loss SharpeHyperOptLoss --epochs 50</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="第7章：实盘交易与监控"><a href="#第7章：实盘交易与监控" class="headerlink" title="第7章：实盘交易与监控"></a>第7章：实盘交易与监控</h3><p>7.1 模拟交易（Dry Run）<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">freqtrade trade --strategy RSIStrategy --dry-run --config user_data/config.json</span><br></pre></td></tr></table></figure></p>
+<p>7.2 实盘交易启动<br>   <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 原生方式</span></span><br><span class="line">freqtrade trade --strategy RSIStrategy --config user_data/config.json</span><br><span class="line"></span><br><span class="line"><span class="comment"># Docker方式</span></span><br><span class="line">docker compose up -d</span><br></pre></td></tr></table></figure></p>
+<p>7.3 交易监控工具</p>
+<ul>
+<li>FreqUI网页界面使用</li>
+<li>关键指标监控（交易量、盈亏、策略性能）</li>
+<li>日志分析与问题排查</li>
+</ul>
+<p>7.4 实盘风险控制</p>
+<ul>
+<li>仓位大小动态调整</li>
+<li>连续亏损应急预案</li>
+<li>市场极端行情应对策略</li>
+</ul>
+<h3 id="第8章：FreqAI人工智能策略（进阶）"><a href="#第8章：FreqAI人工智能策略（进阶）" class="headerlink" title="第8章：FreqAI人工智能策略（进阶）"></a>第8章：FreqAI人工智能策略（进阶）</h3><p>8.1 FreqAI基础配置</p>
+<ul>
+<li>启用AI功能的策略设置</li>
+<li>训练周期与数据量选择</li>
+<li>常用模型类型（XGBoost、LightGBM）</li>
+</ul>
+<p>8.2 特征工程</p>
+<ul>
+<li>技术指标特征构建</li>
+<li>特征扩展与时间序列处理</li>
+<li>自动特征生成示例</li>
+</ul>
+<p>8.3 目标函数定义</p>
+<ul>
+<li>价格预测目标设置</li>
+<li>多目标优化方法</li>
+<li>风险调整后的收益目标</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># FreqAI策略示例片段</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">feature_engineering_expand_all</span>(<span class="params">self, dataframe: pd.DataFrame, period: <span class="built_in">int</span></span>) -&gt; pd.DataFrame:</span><br><span class="line">    dataframe[<span class="string">&quot;%-rsi-period&quot;</span>] = ta.RSI(dataframe, timeperiod=period)</span><br><span class="line">    dataframe[<span class="string">&quot;%-macd-period&quot;</span>] = ta.MACD(dataframe)[<span class="string">&quot;macd&quot;</span>]</span><br><span class="line">    dataframe[<span class="string">&quot;%-bb-width-period&quot;</span>] = (</span><br><span class="line">        (dataframe[<span class="string">&quot;bb_upperband&quot;</span>] - dataframe[<span class="string">&quot;bb_lowerband&quot;</span>]) / dataframe[<span class="string">&quot;bb_middleband&quot;</span>]</span><br><span class="line">    )</span><br><span class="line">    <span class="keyword">return</span> dataframe</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="第三部分：综合实战项目（实战篇）"><a href="#第三部分：综合实战项目（实战篇）" class="headerlink" title="第三部分：综合实战项目（实战篇）"></a>第三部分：综合实战项目（实战篇）</h2><h3 id="第9章：完整策略开发实战"><a href="#第9章：完整策略开发实战" class="headerlink" title="第9章：完整策略开发实战"></a>第9章：完整策略开发实战</h3><p>9.1 项目需求：双指标趋势策略</p>
+<ul>
+<li>策略逻辑设计（RSI+布林带组合）</li>
+<li>入场&#x2F;出场条件定义</li>
+<li>风险控制参数设置</li>
+</ul>
+<p>9.2 策略编写与调试</p>
+<ul>
+<li>代码实现步骤</li>
+<li>常见错误排查</li>
+<li>策略回测验证</li>
+</ul>
+<p>9.3 优化与性能提升</p>
+<ul>
+<li>Hyperopt参数优化</li>
+<li>策略鲁棒性测试</li>
+<li>不同市场条件下的表现评估</li>
+</ul>
+<h3 id="第10章：实盘部署与运维"><a href="#第10章：实盘部署与运维" class="headerlink" title="第10章：实盘部署与运维"></a>第10章：实盘部署与运维</h3><p>10.1 服务器部署方案</p>
+<ul>
+<li>云服务器选择（AWS&#x2F;阿里云&#x2F;腾讯云）</li>
+<li>开机自启动配置</li>
+<li>远程访问安全设置</li>
+</ul>
+<p>10.2 数据备份与策略更新</p>
+<ul>
+<li>自动备份策略文件</li>
+<li>平滑更新策略方法</li>
+<li>版本控制（Git）集成</li>
+</ul>
+<p>10.3 长期运行监控</p>
+<ul>
+<li>性能指标长期跟踪</li>
+<li>策略衰减预警</li>
+<li>定期再训练计划</li>
+</ul>
+<hr>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><h3 id="附录A：常见问题解决"><a href="#附录A：常见问题解决" class="headerlink" title="附录A：常见问题解决"></a>附录A：常见问题解决</h3><ul>
+<li>安装问题（依赖缺失、权限错误）</li>
+<li>策略错误（语法问题、逻辑缺陷）</li>
+<li>回测异常（数据质量、参数设置）</li>
+<li>实盘故障（API连接、订单执行失败）</li>
+</ul>
+<h3 id="附录B：学习资源推荐"><a href="#附录B：学习资源推荐" class="headerlink" title="附录B：学习资源推荐"></a>附录B：学习资源推荐</h3><ul>
+<li>官方文档：<a target="_blank" rel="noopener" href="https://www.freqtrade.io/en/stable/">Freqtrade官方指南</a></li>
+<li>策略库：<a target="_blank" rel="noopener" href="https://github.com/freqtrade/freqtrade-strategies">Freqtrade社区策略</a></li>
+<li>进阶书籍：《量化交易》《Python金融大数据分析》</li>
+<li>社区支持：Discord群组、GitHub Issues</li>
+</ul>
+<h3 id="附录C：工具与资源清单"><a href="#附录C：工具与资源清单" class="headerlink" title="附录C：工具与资源清单"></a>附录C：工具与资源清单</h3><ul>
+<li>开发工具（VS Code配置）</li>
+<li>数据获取工具</li>
+<li>性能分析工具</li>
+<li>安全最佳实践</li>
+</ul>
+<hr>
+<h2 id="课程总结与后续学习路径"><a href="#课程总结与后续学习路径" class="headerlink" title="课程总结与后续学习路径"></a>课程总结与后续学习路径</h2><ul>
+<li>知识体系回顾</li>
+<li>进阶学习方向（高频交易、套利策略）</li>
+<li>量化交易伦理与合规</li>
+<li>持续学习资源推荐</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">万里无云</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2025/09/09/FreqtradeOutline/">http://example.com/2025/09/09/FreqtradeOutline/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">JRsunny</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2025/09/04/image-site/"><img class="next-cover" src="/img/cos/202507.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">图片网站集合</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">万里无云</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎留言评论</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Freqtrade%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A%E6%95%99%E5%AD%A6%E5%A4%A7%E7%BA%B2"><span class="toc-number">1.</span> <span class="toc-text">Freqtrade量化交易新手入门到精通教学大纲</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E7%A8%8B%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">课程简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AD%A6%E4%B9%A0%E7%9B%AE%E6%A0%87"><span class="toc-number">1.2.</span> <span class="toc-text">学习目标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E9%83%A8%E5%88%86%EF%BC%9A%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E5%9F%BA%E7%A1%80%EF%BC%88%E5%85%A5%E9%97%A8%E7%AF%87%EF%BC%89"><span class="toc-number">1.3.</span> <span class="toc-text">第一部分：量化交易基础（入门篇）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC1%E7%AB%A0%EF%BC%9A%E9%87%8F%E5%8C%96%E4%BA%A4%E6%98%93%E6%A6%82%E5%BF%B5%E5%85%A5%E9%97%A8"><span class="toc-number">1.3.1.</span> <span class="toc-text">第1章：量化交易概念入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC2%E7%AB%A0%EF%BC%9APython%E9%87%8F%E5%8C%96%E5%9F%BA%E7%A1%80"><span class="toc-number">1.3.2.</span> <span class="toc-text">第2章：Python量化基础</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E9%83%A8%E5%88%86%EF%BC%9AFreqtrade%E6%A1%86%E6%9E%B6%E6%A0%B8%E5%BF%83%EF%BC%88%E8%BF%9B%E9%98%B6%E7%AF%87%EF%BC%89"><span class="toc-number">1.4.</span> <span class="toc-text">第二部分：Freqtrade框架核心（进阶篇）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC3%E7%AB%A0%EF%BC%9AFreqtrade%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA"><span class="toc-number">1.4.1.</span> <span class="toc-text">第3章：Freqtrade环境搭建</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC4%E7%AB%A0%EF%BC%9A%E7%AD%96%E7%95%A5%E5%BC%80%E5%8F%91%E5%9F%BA%E7%A1%80%EF%BC%88V3%E7%89%88%E6%9C%AC%EF%BC%89"><span class="toc-number">1.4.2.</span> <span class="toc-text">第4章：策略开发基础（V3版本）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC5%E7%AB%A0%EF%BC%9A%E5%A4%9A%E7%A9%BA%E4%BA%A4%E6%98%93%E7%AD%96%E7%95%A5"><span class="toc-number">1.4.3.</span> <span class="toc-text">第5章：多空交易策略</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%9A%E5%AE%9E%E6%88%98%E6%93%8D%E4%BD%9C%E6%8C%87%E5%8D%97%EF%BC%88%E5%AE%9E%E6%88%98%E7%AF%87%EF%BC%89"><span class="toc-number">1.5.</span> <span class="toc-text">第三部分：实战操作指南（实战篇）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC6%E7%AB%A0%EF%BC%9A%E6%95%B0%E6%8D%AE%E8%8E%B7%E5%8F%96%E4%B8%8E%E5%9B%9E%E6%B5%8B"><span class="toc-number">1.5.1.</span> <span class="toc-text">第6章：数据获取与回测</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC7%E7%AB%A0%EF%BC%9A%E5%AE%9E%E7%9B%98%E4%BA%A4%E6%98%93%E4%B8%8E%E7%9B%91%E6%8E%A7"><span class="toc-number">1.5.2.</span> <span class="toc-text">第7章：实盘交易与监控</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC8%E7%AB%A0%EF%BC%9AFreqAI%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%AD%96%E7%95%A5%EF%BC%88%E8%BF%9B%E9%98%B6%EF%BC%89"><span class="toc-number">1.5.3.</span> <span class="toc-text">第8章：FreqAI人工智能策略（进阶）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E9%83%A8%E5%88%86%EF%BC%9A%E7%BB%BC%E5%90%88%E5%AE%9E%E6%88%98%E9%A1%B9%E7%9B%AE%EF%BC%88%E5%AE%9E%E6%88%98%E7%AF%87%EF%BC%89"><span class="toc-number">1.6.</span> <span class="toc-text">第三部分：综合实战项目（实战篇）</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC9%E7%AB%A0%EF%BC%9A%E5%AE%8C%E6%95%B4%E7%AD%96%E7%95%A5%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98"><span class="toc-number">1.6.1.</span> <span class="toc-text">第9章：完整策略开发实战</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AC%AC10%E7%AB%A0%EF%BC%9A%E5%AE%9E%E7%9B%98%E9%83%A8%E7%BD%B2%E4%B8%8E%E8%BF%90%E7%BB%B4"><span class="toc-number">1.6.2.</span> <span class="toc-text">第10章：实盘部署与运维</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%99%84%E5%BD%95"><span class="toc-number">1.7.</span> <span class="toc-text">附录</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%84%E5%BD%95A%EF%BC%9A%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3"><span class="toc-number">1.7.1.</span> <span class="toc-text">附录A：常见问题解决</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%84%E5%BD%95B%EF%BC%9A%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%8E%A8%E8%8D%90"><span class="toc-number">1.7.2.</span> <span class="toc-text">附录B：学习资源推荐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%99%84%E5%BD%95C%EF%BC%9A%E5%B7%A5%E5%85%B7%E4%B8%8E%E8%B5%84%E6%BA%90%E6%B8%85%E5%8D%95"><span class="toc-number">1.7.3.</span> <span class="toc-text">附录C：工具与资源清单</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AF%BE%E7%A8%8B%E6%80%BB%E7%BB%93%E4%B8%8E%E5%90%8E%E7%BB%AD%E5%AD%A6%E4%B9%A0%E8%B7%AF%E5%BE%84"><span class="toc-number">1.8.</span> <span class="toc-text">课程总结与后续学习路径</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/09/09/FreqtradeOutline/" title="FreqtradeOutline"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="FreqtradeOutline"/></a><div class="content"><a class="title" href="/2025/09/09/FreqtradeOutline/" title="FreqtradeOutline">FreqtradeOutline</a><time datetime="2025-09-09T01:32:15.000Z" title="发表于 2025-09-09 09:32:15">2025-09-09</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/04/image-site/" title="图片网站集合"><img src="/img/cos/202507.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="图片网站集合"/></a><div class="content"><a class="title" href="/2025/09/04/image-site/" title="图片网站集合">图片网站集合</a><time datetime="2025-09-04T08:04:45.000Z" title="发表于 2025-09-04 16:04:45">2025-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/04/quant-class/" title="quant_class"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="quant_class"/></a><div class="content"><a class="title" href="/2025/09/04/quant-class/" title="quant_class">quant_class</a><time datetime="2025-09-04T08:03:51.000Z" title="发表于 2025-09-04 16:03:51">2025-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/09/04/backtest/" title="backtest"><img src="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="backtest"/></a><div class="content"><a class="title" href="/2025/09/04/backtest/" title="backtest">backtest</a><time datetime="2025-09-04T08:03:15.000Z" title="发表于 2025-09-04 16:03:15">2025-09-04</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/07/16/freq_AI/" title="freqtrade-AI学习记录"><img src="/img/freqtrade/freqtrade1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="freqtrade-AI学习记录"/></a><div class="content"><a class="title" href="/2025/07/16/freq_AI/" title="freqtrade-AI学习记录">freqtrade-AI学习记录</a><time datetime="2025-07-16T12:29:58.000Z" title="发表于 2025-07-16 20:29:58">2025-07-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By 万里无云</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '8kOOa5lA6AguqvfceQQ1HNIu-gzGzoHsz',
+      appKey: 'tL9nsaGys5ImRzuPG85nas8Q',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body></html>
