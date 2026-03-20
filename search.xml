@@ -313,6 +313,19 @@
       </tags>
   </entry>
   <entry>
+    <title>freqtrade-AI学习记录</title>
+    <url>/2025/07/16/freq_AI/</url>
+    <content><![CDATA[<h1 id="Freqtrade-使用"><a href="#Freqtrade-使用" class="headerlink" title="Freqtrade 使用"></a>Freqtrade 使用</h1><p>services:<br>  tensorboard:<br>    image: freqtradeorg&#x2F;freqtrade:stable<br>    volumes:<br>      - “.&#x2F;user_data:&#x2F;freqtrade&#x2F;user_data”<br>    ports:<br>      - “6006:6006”<br>    command: &gt;<br>      tensorboard –logdir user_data&#x2F;models&#x2F;unique-id2 –host 0.0.0.0 –port 6006<br>docker-compose up tensorboard</p>
+<p>#不太会使用tensorbaord进行调试啊</p>
+]]></content>
+      <categories>
+        <category>量化</category>
+      </categories>
+      <tags>
+        <tag>quant</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>freqtrade安装简要教程---docker安装</title>
     <url>/2025/07/06/freqtrade/</url>
     <content><![CDATA[<h1 id="Freqtrade-使用-Docker-安装教程"><a href="#Freqtrade-使用-Docker-安装教程" class="headerlink" title="Freqtrade 使用 Docker 安装教程"></a>Freqtrade 使用 Docker 安装教程</h1><h1 id="freqtrade官方链接："><a href="#freqtrade官方链接：" class="headerlink" title="freqtrade官方链接："></a>freqtrade官方链接：</h1><p><a href="https://www.freqtrade.io/en/stable/">https://www.freqtrade.io/en/stable/</a></p>
@@ -376,27 +389,9 @@
       </tags>
   </entry>
   <entry>
-    <title>freqtrade-AI学习记录</title>
-    <url>/2025/07/16/freq_AI/</url>
-    <content><![CDATA[<h1 id="Freqtrade-使用"><a href="#Freqtrade-使用" class="headerlink" title="Freqtrade 使用"></a>Freqtrade 使用</h1><p>services:<br>  tensorboard:<br>    image: freqtradeorg&#x2F;freqtrade:stable<br>    volumes:<br>      - “.&#x2F;user_data:&#x2F;freqtrade&#x2F;user_data”<br>    ports:<br>      - “6006:6006”<br>    command: &gt;<br>      tensorboard –logdir user_data&#x2F;models&#x2F;unique-id2 –host 0.0.0.0 –port 6006<br>docker-compose up tensorboard</p>
-<p>#不太会使用tensorbaord进行调试啊</p>
-]]></content>
-      <categories>
-        <category>量化</category>
-      </categories>
-      <tags>
-        <tag>quant</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hello-world</title>
     <url>/2021/01/07/hello-world/</url>
     <content><![CDATA[<h2 id="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"><a href="#自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。" class="headerlink" title="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"></a>自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。</h2><h2 id="在这互联网上开一块自留地，种一点东西。"><a href="#在这互联网上开一块自留地，种一点东西。" class="headerlink" title="在这互联网上开一块自留地，种一点东西。"></a>在这互联网上开一块自留地，种一点东西。</h2><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
-  </entry>
-  <entry>
-    <title>my_heart</title>
-    <url>/2026/03/20/my-heart/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>图片网站集合</title>
@@ -527,6 +522,27 @@
 ]]></content>
   </entry>
   <entry>
+    <title>my_heart</title>
+    <url>/2026/03/20/my-heart/</url>
+    <content><![CDATA[<h2 id="《蛊真人》摘抄"><a href="#《蛊真人》摘抄" class="headerlink" title="《蛊真人》摘抄"></a>《蛊真人》摘抄</h2><p>有时候确实瞻前顾后，想的太多而做的太少</p>
+<hr>
+<p>无数的选择，会衍生出无数的可能。无数的可能，又相互影响。</p>
+<p>方源脑袋急速转动，各种灵光如黑暗中火石碰撞。</p>
+<p>如何做，才能维护自身，又能保全最大的利益？</p>
+<p>他绞尽脑汁。竭尽心神，短短片刻功夫，就想得双耳嗡鸣。</p>
+<p>“等一等！”陡然间，方源雄躯一震。</p>
+<p>“也许……退一步能海阔天空？我是否应该更高瞻远瞩一些？”一个匪夷所思的想法，在他脑海中形成。</p>
+<p>“不行，这样做的话，风险更大！”他旋即摇头，口中喃喃自语，否决了这个想法。</p>
+<p>但这个想法。却像是老树扎根，一时间竟然挥之不去。</p>
+<p>“如果这样做，真的能够成功的话，我的收获将更加巨大！”方源双目放光。</p>
+<p>但下一刻，他又不自觉地摇头：“此法一旦计算稍有疏漏。我就将万劫不复，比落到铁若男手中更惨。毕竟春秋蝉已经使用一次，短时间内再无重生的可能……”</p>
+<p>想着想着，方源的目光渐渐深邃起来。</p>
+<p>忽然他轻笑出声：“想我堂堂一代魔头巨擘，何时畏首畏尾，如此瞻前顾后？只要有一线希望，就该勇于出手。只要有滔天的利益。就该奋不顾身。富贵险中求，什么稳中求胜，慢慢积累？我就是要一步登天！”</p>
+<p>“没错，就这个方案了！失败就死无葬身之地。成功就如蛟龙升天，对今后大计更为有利。呵呵呵，哈哈哈，人生匆匆百年。不过一场豪赌！”</p>
+<hr>
+]]></content>
+  </entry>
+  <entry>
     <title>博客资料</title>
     <url>/2025/12/11/%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%96%99/</url>
     <content><![CDATA[<h1 id="全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索"><a href="#全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索" class="headerlink" title="全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索"></a>全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索</h1><h1 id="https-pixabay-com"><a href="#https-pixabay-com" class="headerlink" title="https://pixabay.com/"></a><a href="https://pixabay.com/">https://pixabay.com/</a></h1><hr>
@@ -570,27 +586,6 @@
       </tags>
   </entry>
   <entry>
-    <title>重启</title>
-    <url>/2025/06/26/%E9%87%8D%E5%90%AF/</url>
-    <content><![CDATA[<h1 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h1><h3 id="本来应该是在很久之前就计划坚持写博客文章，不断输出、不断学习的，中间由于各种问题中断，今天重启。"><a href="#本来应该是在很久之前就计划坚持写博客文章，不断输出、不断学习的，中间由于各种问题中断，今天重启。" class="headerlink" title="本来应该是在很久之前就计划坚持写博客文章，不断输出、不断学习的，中间由于各种问题中断，今天重启。"></a>本来应该是在很久之前就计划坚持写博客文章，不断输出、不断学习的，中间由于各种问题中断，今天重启。</h3><h2 id="摘抄"><a href="#摘抄" class="headerlink" title="摘抄"></a>摘抄</h2><p>你碰到的每一个困境</p>
-<p>本质都是针对你自身的性格弱点量身定制的</p>
-<p>比如经常缺爱的人</p>
-<p>在爱情是遇到更多的背叛</p>
-<p>一直缺钱的人</p>
-<p>在财富的道路上遇到更多的坎坷</p>
-<p>这样的弱点如果没有很好的解决</p>
-<p>那么相似的境遇还好继续</p>
-<p>直到有一天</p>
-<p>你烦了</p>
-<p>你倦了的时候</p>
-<p>开始觉醒了</p>
-<p>那么这个时候你会发现</p>
-<p>这是属于你的试卷</p>
-<p>是你要突破的功课</p>
-<p>这一日</p>
-<h3 id="一切重新开始"><a href="#一切重新开始" class="headerlink" title="一切重新开始"></a>一切重新开始</h3>]]></content>
-  </entry>
-  <entry>
     <title>收藏SQL</title>
     <url>/2022/07/19/%E6%94%B6%E8%97%8F-SQL/</url>
     <content><![CDATA[<hr>
@@ -611,12 +606,6 @@
       <tags>
         <tag>SQL</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>雨巷</title>
-    <url>/2022/08/21/%E9%9B%A8%E5%B7%B7/</url>
-    <content><![CDATA[<h1 id="最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。"><a href="#最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。" class="headerlink" title="最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。"></a>最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。</h1><h2 id="雨巷"><a href="#雨巷" class="headerlink" title="雨巷"></a>雨巷</h2><p>撑着油纸伞，独自<br>彷徨在悠长，悠长<br>又寂寥的雨巷，<br>我希望逢着<br>一个丁香一样地1<br>结着愁怨的姑娘。<br>她是有<br>丁香一样的颜色，<br>丁香一样的芬芳，<br>丁香一样的忧愁，<br>在雨中哀怨，<br>哀怨又彷徨；<br>她彷徨在这寂寥的雨巷，<br>撑着油纸伞<br>像我一样，<br>像我一样地<br>默默彳亍2着，<br>冷漠，凄清，又惆怅。<br>她静默地走近<br>走近，又投出<br>太息3一般的眼光，<br>她飘过<br>像梦一般的，<br>像梦一般的凄婉迷茫。<br>像梦中飘过<br>一枝丁香的，<br>我身旁飘过这女郎；<br>她静默地远了，远了，<br>到了颓圮4的篱墙，<br>走尽这雨巷。<br>在雨的哀曲里，<br>消了她的颜色，<br>散了她的芬芳<br>消散了，甚至她的<br>太息般的眼光，<br>丁香般的惆怅。<br>撑着油纸伞，独自<br>彷徨在悠长，悠长<br>又寂寥的雨巷，<br>我希望飘过<br>一个丁香一样地<br>结着愁怨的姑娘。</p>
-]]></content>
   </entry>
   <entry>
     <title>量化心得</title>
@@ -640,5 +629,32 @@
 <p>风控优先： 在策略失效（回撤达到阈值）时，必须具备强制离场的底层逻辑。</p>
 <p>有些时候，想得太多而做的太少了，先做一个小事情，就是B站发图文，那么多量化书籍，讲好一个策略，如果一开始就要打</p>
 <h2 id="如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。"><a href="#如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。" class="headerlink" title="如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。"></a>如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。</h2><h3 id="5090显卡好贵，跑AI以后还得换设备。"><a href="#5090显卡好贵，跑AI以后还得换设备。" class="headerlink" title="5090显卡好贵，跑AI以后还得换设备。"></a>5090显卡好贵，跑AI以后还得换设备。</h3>]]></content>
+  </entry>
+  <entry>
+    <title>重启</title>
+    <url>/2025/06/26/%E9%87%8D%E5%90%AF/</url>
+    <content><![CDATA[<h1 id="重启"><a href="#重启" class="headerlink" title="重启"></a>重启</h1><h3 id="本来应该是在很久之前就计划坚持写博客文章，不断输出、不断学习的，中间由于各种问题中断，今天重启。"><a href="#本来应该是在很久之前就计划坚持写博客文章，不断输出、不断学习的，中间由于各种问题中断，今天重启。" class="headerlink" title="本来应该是在很久之前就计划坚持写博客文章，不断输出、不断学习的，中间由于各种问题中断，今天重启。"></a>本来应该是在很久之前就计划坚持写博客文章，不断输出、不断学习的，中间由于各种问题中断，今天重启。</h3><h2 id="摘抄"><a href="#摘抄" class="headerlink" title="摘抄"></a>摘抄</h2><p>你碰到的每一个困境</p>
+<p>本质都是针对你自身的性格弱点量身定制的</p>
+<p>比如经常缺爱的人</p>
+<p>在爱情是遇到更多的背叛</p>
+<p>一直缺钱的人</p>
+<p>在财富的道路上遇到更多的坎坷</p>
+<p>这样的弱点如果没有很好的解决</p>
+<p>那么相似的境遇还好继续</p>
+<p>直到有一天</p>
+<p>你烦了</p>
+<p>你倦了的时候</p>
+<p>开始觉醒了</p>
+<p>那么这个时候你会发现</p>
+<p>这是属于你的试卷</p>
+<p>是你要突破的功课</p>
+<p>这一日</p>
+<h3 id="一切重新开始"><a href="#一切重新开始" class="headerlink" title="一切重新开始"></a>一切重新开始</h3>]]></content>
+  </entry>
+  <entry>
+    <title>雨巷</title>
+    <url>/2022/08/21/%E9%9B%A8%E5%B7%B7/</url>
+    <content><![CDATA[<h1 id="最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。"><a href="#最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。" class="headerlink" title="最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。"></a>最近疫情，一种挥之不去的忧愁围绕在心头，读了这首诗，更愁了。</h1><h2 id="雨巷"><a href="#雨巷" class="headerlink" title="雨巷"></a>雨巷</h2><p>撑着油纸伞，独自<br>彷徨在悠长，悠长<br>又寂寥的雨巷，<br>我希望逢着<br>一个丁香一样地1<br>结着愁怨的姑娘。<br>她是有<br>丁香一样的颜色，<br>丁香一样的芬芳，<br>丁香一样的忧愁，<br>在雨中哀怨，<br>哀怨又彷徨；<br>她彷徨在这寂寥的雨巷，<br>撑着油纸伞<br>像我一样，<br>像我一样地<br>默默彳亍2着，<br>冷漠，凄清，又惆怅。<br>她静默地走近<br>走近，又投出<br>太息3一般的眼光，<br>她飘过<br>像梦一般的，<br>像梦一般的凄婉迷茫。<br>像梦中飘过<br>一枝丁香的，<br>我身旁飘过这女郎；<br>她静默地远了，远了，<br>到了颓圮4的篱墙，<br>走尽这雨巷。<br>在雨的哀曲里，<br>消了她的颜色，<br>散了她的芬芳<br>消散了，甚至她的<br>太息般的眼光，<br>丁香般的惆怅。<br>撑着油纸伞，独自<br>彷徨在悠长，悠长<br>又寂寥的雨巷，<br>我希望飘过<br>一个丁香一样地<br>结着愁怨的姑娘。</p>
+]]></content>
   </entry>
 </search>
