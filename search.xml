@@ -234,25 +234,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>AI画画，见证一个时代</title>
-    <url>/2022/09/09/MJ/</url>
-    <content><![CDATA[<h1 id="见证AI崛起于我们的时代"><a href="#见证AI崛起于我们的时代" class="headerlink" title="见证AI崛起于我们的时代"></a>见证AI崛起于我们的时代</h1><p>前几天看到有人用Midjourney生成的数字绘画作品获得了比赛一等奖，恍然惊醒，原来AI已经成长到这种地步了，一种见证AI崛起于这个时代厚重历史感，</p>
-<p>作者用的是Discord频道下Midjourney，输入提示词，然后等待GPU燃烧就可以生成画作。这个过程说起来简单，但实际上还是有难度。这个过程叫做Prompt Engineering</p>
-<p>直接翻译为提示工程，可能不是太准确，网友甚至预测以后会有提示工程师这种全新职业。毕竟利用AI作画，一小时抵的上原来一星期的量，这让人明明白白的感受到什么是降维打击啊。<br><img src="/img/mj/b.png"><br>关于AI是否杀死了艺术，个人认为虎嗅这篇文章分析的有点道理。<br>《美术行业，正在被AI作画杀死？》<br><a href="https://www.huxiu.com/article/651324.html">https://www.huxiu.com/article/651324.html</a></p>
-<h1 id="整理几个AI画画工具"><a href="#整理几个AI画画工具" class="headerlink" title="整理几个AI画画工具"></a>整理几个AI画画工具</h1><p>discord.gg&#x2F;midjourney（公测）</p>
-<p>labs.openai.com&#x2F;waitlist（内测）</p>
-<p><a href="https://beta.dreamstudio.ai/dream%EF%BC%88%E5%85%AC%E6%B5%8B%EF%BC%89">https://beta.dreamstudio.ai/dream（公测）</a></p>
-<h1 id="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"><a href="#对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。" class="headerlink" title="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"></a>对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。</h1><p>一、	抖音的壁纸号，目前已经有不少人在做这个，通过精美的壁纸吸引流量，然后广告变现，但是这个由于护城河很低，也是卷的不行。需要坚持。<br>二、	对于原本的美术设计，游戏设计来说，运用得当可能会是职场杀器，缺陷在于很可能调试出来给提示词直接被公司继承，然后就直接毕业了。<br>三、	对于画家来说确实不是一个好消息，继续坚持可能会更加困难，转型则意味之前的学习成本投入几乎浪费。还是顺势拥抱吧。<br>四、	整理相关知识，卖教程，做知识星球。这个是比较可行的路子。至少可以在这一波冲击中收获一些。</p>
-<p>最后，</p>
-<p>很幸运生在这个伟大的时代，<br>但同时面对这个时代的飞速发展，<br>又感到很无力。<br>网上有个段子说的很好：长城非常壮观雄伟，但是我是修长城的人。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>backtest</title>
-    <url>/2025/09/04/backtest/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>freqtrade-AI学习记录</title>
     <url>/2025/07/16/freq_AI/</url>
     <content><![CDATA[<h1 id="Freqtrade-使用"><a href="#Freqtrade-使用" class="headerlink" title="Freqtrade 使用"></a>Freqtrade 使用</h1><p>services:<br>  tensorboard:<br>    image: freqtradeorg&#x2F;freqtrade:stable<br>    volumes:<br>      - “.&#x2F;user_data:&#x2F;freqtrade&#x2F;user_data”<br>    ports:<br>      - “6006:6006”<br>    command: &gt;<br>      tensorboard –logdir user_data&#x2F;models&#x2F;unique-id2 –host 0.0.0.0 –port 6006<br>docker-compose up tensorboard</p>
@@ -331,6 +312,20 @@
       </tags>
   </entry>
   <entry>
+    <title>AI画画，见证一个时代</title>
+    <url>/2022/09/09/MJ/</url>
+    <content><![CDATA[<h1 id="见证AI崛起于我们的时代"><a href="#见证AI崛起于我们的时代" class="headerlink" title="见证AI崛起于我们的时代"></a>见证AI崛起于我们的时代</h1><p>前几天看到有人用Midjourney生成的数字绘画作品获得了比赛一等奖，恍然惊醒，原来AI已经成长到这种地步了，一种见证AI崛起于这个时代厚重历史感，</p>
+<p>作者用的是Discord频道下Midjourney，输入提示词，然后等待GPU燃烧就可以生成画作。这个过程说起来简单，但实际上还是有难度。这个过程叫做Prompt Engineering</p>
+<p>直接翻译为提示工程，可能不是太准确，网友甚至预测以后会有提示工程师这种全新职业。毕竟利用AI作画，一小时抵的上原来一星期的量，这让人明明白白的感受到什么是降维打击啊。<br><img src="/img/mj/b.png"><br>关于AI是否杀死了艺术，个人认为虎嗅这篇文章分析的有点道理。<br>《美术行业，正在被AI作画杀死？》<br><a href="https://www.huxiu.com/article/651324.html">https://www.huxiu.com/article/651324.html</a></p>
+<h1 id="整理几个AI画画工具"><a href="#整理几个AI画画工具" class="headerlink" title="整理几个AI画画工具"></a>整理几个AI画画工具</h1><p>discord.gg&#x2F;midjourney（公测）</p>
+<p>labs.openai.com&#x2F;waitlist（内测）</p>
+<p><a href="https://beta.dreamstudio.ai/dream%EF%BC%88%E5%85%AC%E6%B5%8B%EF%BC%89">https://beta.dreamstudio.ai/dream（公测）</a></p>
+<h1 id="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"><a href="#对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。" class="headerlink" title="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"></a>对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。</h1><p>一、	抖音的壁纸号，目前已经有不少人在做这个，通过精美的壁纸吸引流量，然后广告变现，但是这个由于护城河很低，也是卷的不行。需要坚持。<br>二、	对于原本的美术设计，游戏设计来说，运用得当可能会是职场杀器，缺陷在于很可能调试出来给提示词直接被公司继承，然后就直接毕业了。<br>三、	对于画家来说确实不是一个好消息，继续坚持可能会更加困难，转型则意味之前的学习成本投入几乎浪费。还是顺势拥抱吧。<br>四、	整理相关知识，卖教程，做知识星球。这个是比较可行的路子。至少可以在这一波冲击中收获一些。</p>
+<p>最后，</p>
+<p>很幸运生在这个伟大的时代，<br>但同时面对这个时代的飞速发展，<br>又感到很无力。<br>网上有个段子说的很好：长城非常壮观雄伟，但是我是修长城的人。</p>
+]]></content>
+  </entry>
+  <entry>
     <title>freqtrade安装简要教程---docker安装</title>
     <url>/2025/07/06/freqtrade/</url>
     <content><![CDATA[<h1 id="Freqtrade-使用-Docker-安装教程"><a href="#Freqtrade-使用-Docker-安装教程" class="headerlink" title="Freqtrade 使用 Docker 安装教程"></a>Freqtrade 使用 Docker 安装教程</h1><h1 id="freqtrade官方链接："><a href="#freqtrade官方链接：" class="headerlink" title="freqtrade官方链接："></a>freqtrade官方链接：</h1><p><a href="https://www.freqtrade.io/en/stable/">https://www.freqtrade.io/en/stable/</a></p>
@@ -392,11 +387,6 @@
       <tags>
         <tag>quant</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>hello-world</title>
-    <url>/2021/01/07/hello-world/</url>
-    <content><![CDATA[<h2 id="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"><a href="#自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。" class="headerlink" title="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"></a>自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。</h2><h2 id="在这互联网上开一块自留地，种一点东西。"><a href="#在这互联网上开一块自留地，种一点东西。" class="headerlink" title="在这互联网上开一块自留地，种一点东西。"></a>在这互联网上开一块自留地，种一点东西。</h2><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
   </entry>
   <entry>
     <title>图片网站集合</title>
@@ -527,8 +517,13 @@
 ]]></content>
   </entry>
   <entry>
-    <title>quant_class</title>
-    <url>/2025/09/04/quant-class/</url>
+    <title>hello-world</title>
+    <url>/2021/01/07/hello-world/</url>
+    <content><![CDATA[<h2 id="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"><a href="#自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。" class="headerlink" title="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"></a>自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。</h2><h2 id="在这互联网上开一块自留地，种一点东西。"><a href="#在这互联网上开一块自留地，种一点东西。" class="headerlink" title="在这互联网上开一块自留地，种一点东西。"></a>在这互联网上开一块自留地，种一点东西。</h2><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+  </entry>
+  <entry>
+    <title>my_heart</title>
+    <url>/2026/03/20/my-heart/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -540,6 +535,32 @@
       </categories>
       <tags>
         <tag>C++</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>又是一年春</title>
+    <url>/2026/02/22/%E6%83%85%E8%AF%9D/</url>
+    <content><![CDATA[<h3 id="生日"><a href="#生日" class="headerlink" title="生日"></a>生日</h3><p>转眼就到了初六，窗外的小孩还在欢乐的放鞭炮，我也正式迈进了28岁。</p>
+<p>谢谢你啊，宝宝。其实我自己都有点想回避这个生日，总觉得数字往上跳一格，肩上的重量就又多了一些。但你不一样，你比我还要上心，非拉着我去买个蛋糕。看着你认真切蛋糕的样子， 那一刻我突然觉得，长大一点也没那么可怕，因为无论如何，都有你陪在我身边。</p>
+<p>成长的焦虑确实是如影随形的。28岁，说大不大，说小也不小了。开始担心父母的身体，担心工作还能不能往上走，担心未来能不能给你一个真正安稳的家。有时候夜里睡不着，侧过身看着你安静的睡脸，就会想，要是时间能慢一点就好了，或者，只要我们一直这样并肩走着，慢一点也没关系。未来那么长，我希望我们始终是彼此最坚定的底气。</p>
+<p>过年回老家，山里头下了好大一场雪。漫山遍野的白，空气冷得发甜，我站在院子里，第一个念头就是：要是你在这儿就好了。想拉着你的手踩在没人走过的雪地上，想看你哈着白气冲我笑，想把那棵挂满冰凌的老柿子树指给你看。</p>
+<p>可是山里条件实在太差了，洗澡得烧水，晚上冷得能听见风从门缝里钻进来。最让我犹豫的是——我怕你不会烤柴火。怕烟熏得你流眼泪，怕你因为冷而缩手缩脚。那一刻我才发现，爱一个人好像就是这样：哪怕是想把全世界最好的风景都给你，最后还是会输给“怕你受一点委屈”。</p>
+<img src="/img/qh/微信图片_20260320145159_135_39.jpg" width="60%" alt="压缩显示">
+
+<p>所以今年有个小小的愿望——等天气暖和了，带你回去看看我长大的地方。那时候山青了，水暖了，像所有平淡的日常那样，只是换一个地方，继续相爱。</p>
+<p>生日快乐给我，快乐给你。<br>谢谢你让我的28岁，从一块蛋糕和一屋子的温暖开始。</p>
+<p>初六夜</p>
+<hr>
+<img src="/img/qh/微信图片_20260320103841_133_39.jpg" width="60%" alt="压缩显示">
+
+<hr>
+]]></content>
+      <categories>
+        <category>文字</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>书信</tag>
       </tags>
   </entry>
   <entry>
@@ -584,6 +605,29 @@
 <p>是你要突破的功课</p>
 <p>这一日</p>
 <h3 id="一切重新开始"><a href="#一切重新开始" class="headerlink" title="一切重新开始"></a>一切重新开始</h3>]]></content>
+  </entry>
+  <entry>
+    <title>量化心得</title>
+    <url>/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<p>量化交易学习心得总结</p>
+<ol>
+<li>幸存者偏差与“低门槛”陷阱<br>低准入门槛 vs. 高竞争门槛： 交易是世界上门槛最低的行业之一（只要开户），但它是竞争最激烈的行业之一（对手是顶尖机构）。</li>
+</ol>
+<p>“新手保护期”与过度自信： 很多人初学阶段恰逢市场红利，误将行情归功于能力，导致在环境切换时迅速溃败。</p>
+<p>网络噪音的真相： 网络上“量化无用论”盛行，是因为大多数人未曾建立科学的交易体系，而真正获利的 5% 往往保持沉默。</p>
+<ol start="2">
+<li>指标的本质：从“迷信”到“工具化”<br>指标不是预言机： 否定指标是因为试图用它预测未来。其实指标只是历史数据的统计规律化，其核心作用是降维（将复杂的行情简化为可决策的信号）。</li>
+</ol>
+<p>消息面的伪命题： 相比于滞后、零散且极易被操纵的消息面，量化指标具有客观性、可回测性和唯一性。</p>
+<p>构建组合逻辑： 失败者依赖单一指标，成功者构建多因子体系。通过不同维度（动量、波动、估值等）的指标对冲单一逻辑失效的风险。</p>
+<ol start="3">
+<li>动态博弈：寻找“非平稳”市场中的确定性<br>策略的半衰期： 市场是一个进化的有机体。当一个策略被大多数人获知时，其超额收益（Alpha）就会被摊薄甚至消失。</li>
+</ol>
+<p>动态调整的维度：</p>
+<p>参数自适应： 市场从震荡转为趋势时，参数需自动调节。</p>
+<p>风控优先： 在策略失效（回撤达到阈值）时，必须具备强制离场的底层逻辑。</p>
+<p>有些时候，想得太多而做的太少了，先做一个小事情，就是B站发图文，那么多量化书籍，讲好一个策略，如果一开始就要打</p>
+<h2 id="如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。"><a href="#如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。" class="headerlink" title="如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。"></a>如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。</h2><h3 id="5090显卡好贵，跑AI以后还得换设备。"><a href="#5090显卡好贵，跑AI以后还得换设备。" class="headerlink" title="5090显卡好贵，跑AI以后还得换设备。"></a>5090显卡好贵，跑AI以后还得换设备。</h3>]]></content>
   </entry>
   <entry>
     <title>雨巷</title>
