@@ -1,0 +1,271 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>newstrategy5_1策略解析 | JRsunny</title><meta name="keywords" content="learn,share,progress,code,"><meta name="author" content="万里无云"><meta name="copyright" content="万里无云"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="从混沌到秩序：一个基于多条件融合与动态仓位调整的 Freqtrade 策略解析量化交易的本质，是在不确定的市场中寻找统计意义上的优势。然而，单一指标或简单规则往往难以适应多变的市场环境。本文解析的 newstrategy5_1 策略，展示了一个成熟量化策略应有的复杂性与自适应性——它融合了十余种买入信号、动态 DCA 加仓、多级止盈止损以及基于市场状态的仓位过滤。下面我们将深入其核心逻辑与亮点实现">
+<meta property="og:type" content="article">
+<meta property="og:title" content="newstrategy5_1策略解析">
+<meta property="og:url" content="http://example.com/2026/06/08/newstrategy5-1/index.html">
+<meta property="og:site_name" content="JRsunny">
+<meta property="og:description" content="从混沌到秩序：一个基于多条件融合与动态仓位调整的 Freqtrade 策略解析量化交易的本质，是在不确定的市场中寻找统计意义上的优势。然而，单一指标或简单规则往往难以适应多变的市场环境。本文解析的 newstrategy5_1 策略，展示了一个成熟量化策略应有的复杂性与自适应性——它融合了十余种买入信号、动态 DCA 加仓、多级止盈止损以及基于市场状态的仓位过滤。下面我们将深入其核心逻辑与亮点实现">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/20260608_1/freqtrade.png">
+<meta property="article:published_time" content="2026-06-08T13:16:28.000Z">
+<meta property="article:modified_time" content="2026-06-08T13:21:30.628Z">
+<meta property="article:author" content="万里无云">
+<meta property="article:tag" content="learn,share,progress,code,">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/20260608_1/freqtrade.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2026/06/08/newstrategy5-1/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="zxIuQKLK97eYuGrwYuEQR_rwv3BmMcxYWF5H78A3FKY"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'newstrategy5_1策略解析',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-06-08 21:21:30'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="JRsunny" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> sitemap</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/sitemap.xml"><span> path</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> baidusitemap</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/baidusitemap.xml"><span> path</span></a></li></ul></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/img/20260608_1/freqtrade.png')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JRsunny</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> sitemap</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/sitemap.xml"><span> path</span></a></li></ul></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><span> baidusitemap</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/baidusitemap.xml"><span> path</span></a></li></ul></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">newstrategy5_1策略解析</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-08T13:16:28.000Z" title="发表于 2026-06-08 21:16:28">2026-06-08</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-06-08T13:21:30.628Z" title="更新于 2026-06-08 21:21:30">2026-06-08</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="newstrategy5_1策略解析"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="从混沌到秩序：一个基于多条件融合与动态仓位调整的-Freqtrade-策略解析"><a href="#从混沌到秩序：一个基于多条件融合与动态仓位调整的-Freqtrade-策略解析" class="headerlink" title="从混沌到秩序：一个基于多条件融合与动态仓位调整的 Freqtrade 策略解析"></a>从混沌到秩序：一个基于多条件融合与动态仓位调整的 Freqtrade 策略解析</h1><p>量化交易的本质，是在不确定的市场中寻找统计意义上的优势。然而，单一指标或简单规则往往难以适应多变的市场环境。本文解析的 <code>newstrategy5_1</code> 策略，展示了一个成熟量化策略应有的复杂性与自适应性——它融合了十余种买入信号、动态 DCA 加仓、多级止盈止损以及基于市场状态的仓位过滤。下面我们将深入其核心逻辑与亮点实现。</p>
+<h2 id="一、策略概览"><a href="#一、策略概览" class="headerlink" title="一、策略概览"></a>一、策略概览</h2><table>
+<thead>
+<tr>
+<th>属性</th>
+<th>配置</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>时间框架</td>
+<td>5 分钟</td>
+</tr>
+<tr>
+<td>启动蜡烛数</td>
+<td>168（确保长周期指标有效）</td>
+</tr>
+<tr>
+<td>持仓调整</td>
+<td>允许（DCA，最多 8 次）</td>
+</tr>
+<tr>
+<td>ROI 动态</td>
+<td>0% 在 208 分钟后</td>
+</tr>
+<tr>
+<td>止损</td>
+<td>自定义动态止损，默认 -99% 由函数覆盖</td>
+</tr>
+<tr>
+<td>回测表现</td>
+<td>801 笔交易，平均利润 4.04%，总收益 +5.7% USDT</td>
+</tr>
+</tbody></table>
+<p>策略的核心哲学：<strong>不依赖单一“圣杯”信号，而是构建多个独立、互补的入场条件，每个条件在特定市场状态下具备正期望；同时通过严谨的仓位管理（DCA）与动态出场，控制回撤、放大利润。</strong></p>
+<h2 id="二、指标工程：多维度的市场画像"><a href="#二、指标工程：多维度的市场画像" class="headerlink" title="二、指标工程：多维度的市场画像"></a>二、指标工程：多维度的市场画像</h2><p>策略在 <code>populate_indicators</code> 中计算了超过 30 种衍生指标，涵盖趋势、动量、波动率、成交量、形态等维度。以下列举几个关键的自定义函数：</p>
+<h3 id="1-EWO（Elliott-Wave-Oscillator）"><a href="#1-EWO（Elliott-Wave-Oscillator）" class="headerlink" title="1. EWO（Elliott Wave Oscillator）"></a>1. EWO（Elliott Wave Oscillator）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">EWO</span>(<span class="params">dataframe, ema_length=<span class="number">5</span>, ema2_length=<span class="number">3</span></span>):</span><br><span class="line">    ema1 = ta.EMA(df, timeperiod=ema_length)</span><br><span class="line">    ema2 = ta.EMA(df, timeperiod=ema2_length)</span><br><span class="line">    emadif = (ema1 - ema2) / df[<span class="string">&#x27;close&#x27;</span>] * <span class="number">100</span></span><br><span class="line">    <span class="keyword">return</span> emadif</span><br></pre></td></tr></table></figure>
+
+<p>两条快速 EMA 的差值归一化，用于捕捉短期动能爆发。当 EWO 很大且为负时，可能代表超跌反弹机会。</p>
+<h3 id="2-Chaikin-Money-Flow-CMF"><a href="#2-Chaikin-Money-Flow-CMF" class="headerlink" title="2. Chaikin Money Flow (CMF)"></a>2. Chaikin Money Flow (CMF)</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">chaikin_money_flow</span>(<span class="params">dataframe, n=<span class="number">20</span></span>):</span><br><span class="line">    mfv = ((close - low) - (high - close)) / (high - low)</span><br><span class="line">    mfv *= volume</span><br><span class="line">    cmf = mfv.rolling(n).<span class="built_in">sum</span>() / volume.rolling(n).<span class="built_in">sum</span>()</span><br><span class="line">    <span class="keyword">return</span> cmf</span><br></pre></td></tr></table></figure>
+
+<p>衡量资金流向，正值表示吸筹，负值表示派发。策略在卖出条件中加入了 <code>cmf &lt; 0</code> 的判断，用于识别“死鱼”行情。</p>
+<h3 id="3-自定义-Pmax（SuperTrend-风格）"><a href="#3-自定义-Pmax（SuperTrend-风格）" class="headerlink" title="3. 自定义 Pmax（SuperTrend 风格）"></a>3. 自定义 Pmax（SuperTrend 风格）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">pmax</span>(<span class="params">df, period, multiplier, length, MAtype, src</span>):</span><br><span class="line">    <span class="comment"># 计算基于 ATR 的动态上下轨，并生成方向信号</span></span><br><span class="line">    <span class="comment"># 返回 pm（价格序列）和 pmx（&#x27;up&#x27;/&#x27;down&#x27;）</span></span><br></pre></td></tr></table></figure>
+
+<p>这是一个类似 SuperTrend 但更灵活的自适应通道，用于判断主要趋势方向。策略在 <code>NFINext37</code> 条件中使用 <code>pm &gt; pmax_thresh</code> 来确认上升趋势。</p>
+<h2 id="三、买入信号：多个独立的“专家委员会”"><a href="#三、买入信号：多个独立的“专家委员会”" class="headerlink" title="三、买入信号：多个独立的“专家委员会”"></a>三、买入信号：多个独立的“专家委员会”</h2><p>策略没有使用单一的买入条件，而是定义了十余个独立的 <code>enter_tag</code>，每个代表一种市场模式。这种设计的好处：</p>
+<ul>
+<li><strong>分散风险</strong>：不同条件在不同市态下表现，避免过拟合单一模式。</li>
+<li><strong>可解释性</strong>：每个信号都可追踪其触发逻辑。</li>
+<li><strong>便于优化</strong>：可单独调整每个信号的参数。</li>
+</ul>
+<p>以下是几个典型信号及其背后的逻辑：</p>
+<h3 id="1-DIP-x2F-Break-信号（均值回归）"><a href="#1-DIP-x2F-Break-信号（均值回归）" class="headerlink" title="1. DIP &#x2F; Break 信号（均值回归）"></a>1. DIP &#x2F; Break 信号（均值回归）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">dataframe.loc[</span><br><span class="line">    ((dataframe[<span class="string">f&#x27;rmi_length_<span class="subst">&#123;self.buy_rmi_length.value&#125;</span>&#x27;</span>] &lt; self.buy_rmi.value) &amp;</span><br><span class="line">     (dataframe[<span class="string">f&#x27;cci_length_<span class="subst">&#123;self.buy_cci_length.value&#125;</span>&#x27;</span>] &lt;= self.buy_cci.value) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;srsi_fk&#x27;</span>] &lt; self.buy_srsi_fk.value) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;bb_delta&#x27;</span>] &gt; self.buy_bb_delta.value) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;bb_width&#x27;</span>] &gt; self.buy_bb_width.value) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;closedelta&#x27;</span>] &gt; dataframe[<span class="string">&#x27;close&#x27;</span>] * self.buy_closedelta.value / <span class="number">1000</span>) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;close&#x27;</span>] &lt; dataframe[<span class="string">&#x27;bb_lowerband3&#x27;</span>] * self.buy_bb_factor.value) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;roc_1h&#x27;</span>] &lt; self.buy_roc_1h.value) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;bb_width_1h&#x27;</span>] &lt; self.buy_bb_width_1h.value)</span><br><span class="line">), [<span class="string">&#x27;enter_long&#x27;</span>, <span class="string">&#x27;enter_tag&#x27;</span>]] = (<span class="number">1</span>, <span class="string">&#x27;DIP signal&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>多个超卖指标共振（RMI、CCI、Stoch RSI、布林带下轨），并辅以 1 小时级别趋势过滤（ROC 与 BB 宽度）。这是一种经典的<strong>左侧抄底</strong>模型。</p>
+<h3 id="2-cluc-HA（Heikin-Ashi-形态突破）"><a href="#2-cluc-HA（Heikin-Ashi-形态突破）" class="headerlink" title="2. cluc_HA（Heikin-Ashi 形态突破）"></a>2. cluc_HA（Heikin-Ashi 形态突破）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">dataframe.loc[                    </span><br><span class="line">    ((dataframe[<span class="string">&#x27;rocr_1h&#x27;</span>] &gt; self.buy_clucha_rocr_1h.value) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;bb_lowerband2_40&#x27;</span>].shift() &gt; <span class="number">0</span>) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;bb_delta_cluc&#x27;</span>] &gt; dataframe[<span class="string">&#x27;ha_close&#x27;</span>] * self.buy_clucha_bbdelta_close.value) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;ha_closedelta&#x27;</span>] &gt; dataframe[<span class="string">&#x27;ha_close&#x27;</span>] * self.buy_clucha_closedelta_close.value) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;tail&#x27;</span>] &lt; dataframe[<span class="string">&#x27;bb_delta_cluc&#x27;</span>] * self.buy_clucha_bbdelta_tail.value) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;ha_close&#x27;</span>] &lt; dataframe[<span class="string">&#x27;bb_lowerband2_40&#x27;</span>].shift()) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;close&#x27;</span>] &gt; (dataframe[<span class="string">&#x27;sup_level_1h&#x27;</span>] * <span class="number">0.88</span>)) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;ha_close&#x27;</span>] &lt; dataframe[<span class="string">&#x27;ha_close&#x27;</span>].shift()) </span><br><span class="line">), [<span class="string">&#x27;enter_long&#x27;</span>, <span class="string">&#x27;enter_tag&#x27;</span>]] = (<span class="number">1</span>, <span class="string">&#x27;cluc_HA&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>基于 Heikin-Ashi 平滑后的价格计算 <code>bb_delta_cluc</code>（布林带宽度）和 <code>tail</code>（下影线长度），捕捉下跌末端的小实体阴线后的反转。同时引入 <code>sup_level_1h</code>（小时线支撑位）进行价格确认。</p>
+<h3 id="3-vwap（基于成交量加权平均价的超卖）"><a href="#3-vwap（基于成交量加权平均价的超卖）" class="headerlink" title="3. vwap（基于成交量加权平均价的超卖）"></a>3. vwap（基于成交量加权平均价的超卖）</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dataframe.loc[</span><br><span class="line">    ((dataframe[<span class="string">&#x27;close&#x27;</span>] &lt; dataframe[<span class="string">&#x27;vwap_low&#x27;</span>]) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;tcp_percent_4&#x27;</span>] &gt; <span class="number">0.053</span>) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;cti&#x27;</span>] &lt; -<span class="number">0.8</span>) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;rsi&#x27;</span>] &lt; <span class="number">35</span>) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;rsi_84&#x27;</span>] &lt; <span class="number">60</span>) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;rsi_112&#x27;</span>] &lt; <span class="number">60</span>) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;volume&#x27;</span>] &gt; <span class="number">0</span>)</span><br><span class="line">), [<span class="string">&#x27;enter_long&#x27;</span>, <span class="string">&#x27;enter_tag&#x27;</span>]] = (<span class="number">1</span>, <span class="string">&#x27;vwap&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>价格跌破 VWAP 下轨，同时短、中、长周期 RSI 均处于低位，<code>tcp_percent_4</code>（4 周期开盘价最高点到收盘价跌幅）超过 5.3%，表明短期急跌。此信号适合<strong>流动性较好的币种</strong>。</p>
+<h3 id="4-NFINext-系列（趋势-动量组合）"><a href="#4-NFINext-系列（趋势-动量组合）" class="headerlink" title="4. NFINext 系列（趋势+动量组合）"></a>4. NFINext 系列（趋势+动量组合）</h3><p>例如 <code>NFINext44</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">dataframe.loc[</span><br><span class="line">    ((dataframe[<span class="string">&#x27;close&#x27;</span>] &lt; (dataframe[<span class="string">&#x27;ema_16&#x27;</span>] * self.buy_44_ma_offset)) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;ewo&#x27;</span>] &lt; self.buy_44_ewo) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;cti&#x27;</span>] &lt; self.buy_44_cti) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;r_480_1h&#x27;</span>] &lt; self.buy_44_r_1h) &amp;</span><br><span class="line">     (dataframe[<span class="string">&#x27;volume&#x27;</span>] &gt; <span class="number">0</span>)</span><br><span class="line">), [<span class="string">&#x27;enter_long&#x27;</span>, <span class="string">&#x27;enter_tag&#x27;</span>]] = (<span class="number">1</span>, <span class="string">&#x27;NFINext44&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>价格远低于 16EMA，EWO 极度为负（超卖），CTI（C-Trend Indicator）显示强下降趋势，同时 1 小时 Williams %R（480 周期）处于极低位置。这是<strong>大周期与小周期共振的超卖</strong>信号。</p>
+<h2 id="四、卖出信号与动态出场"><a href="#四、卖出信号与动态出场" class="headerlink" title="四、卖出信号与动态出场"></a>四、卖出信号与动态出场</h2><p>出场同样不单一，分为三个层级：</p>
+<h3 id="1-基于-Fisher-指标的固定出场"><a href="#1-基于-Fisher-指标的固定出场" class="headerlink" title="1. 基于 Fisher 指标的固定出场"></a>1. 基于 Fisher 指标的固定出场</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">dataframe.loc[</span><br><span class="line">    (dataframe[<span class="string">&#x27;fisher&#x27;</span>] &gt; self.sell_fisher.value) &amp;</span><br><span class="line">    (dataframe[<span class="string">&#x27;ha_high&#x27;</span>].le(dataframe[<span class="string">&#x27;ha_high&#x27;</span>].shift(<span class="number">1</span>))) &amp;</span><br><span class="line">    (dataframe[<span class="string">&#x27;ha_high&#x27;</span>].shift(<span class="number">1</span>).le(dataframe[<span class="string">&#x27;ha_high&#x27;</span>].shift(<span class="number">2</span>))) &amp;</span><br><span class="line">    (dataframe[<span class="string">&#x27;ha_close&#x27;</span>].le(dataframe[<span class="string">&#x27;ha_close&#x27;</span>].shift(<span class="number">1</span>))) &amp;</span><br><span class="line">    (dataframe[<span class="string">&#x27;ema_fast&#x27;</span>] &gt; dataframe[<span class="string">&#x27;ha_close&#x27;</span>]) &amp;</span><br><span class="line">    ((dataframe[<span class="string">&#x27;ha_close&#x27;</span>] * self.sell_bbmiddle_close.value) &gt; dataframe[<span class="string">&#x27;bb_middleband&#x27;</span>]) &amp;</span><br><span class="line">    (dataframe[<span class="string">&#x27;volume&#x27;</span>] &gt; <span class="number">0</span>)</span><br><span class="line">] = (<span class="number">1</span>, <span class="string">&#x27;fisher_sell_signal&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>Fisher 变换将价格转换为高斯分布，数值过高代表极端超买，配合 Heikin-Ashi 高点降低、价格低于快速 EMA 等条件，确认反转。</p>
+<h3 id="2-自定义-exit-中的动态跟踪止盈"><a href="#2-自定义-exit-中的动态跟踪止盈" class="headerlink" title="2. 自定义 exit 中的动态跟踪止盈"></a>2. 自定义 exit 中的动态跟踪止盈</h3><p><code>custom_exit</code> 函数中实现了两个跟踪止盈区间：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (current_profit &gt; self.sell_trail_profit_min_1.value) &amp; (current_profit &lt; self.sell_trail_profit_max_1.value) &amp; </span><br><span class="line">   (((trade.max_rate - trade.open_rate) / <span class="number">100</span>) &gt; (current_profit + self.sell_trail_down_1.value)):</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;trail_target_1&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>其逻辑是：当利润处于 [min1, max1] 区间内，且<strong>最高价回撤幅度</strong>超过当前利润加上一个阈值时，触发止盈。这是一种基于价格回撤的跟踪止损，比简单的移动止损更敏感。</p>
+<h3 id="3-“死鱼”止损"><a href="#3-“死鱼”止损" class="headerlink" title="3. “死鱼”止损"></a>3. “死鱼”止损</h3><p>当持仓已亏损（<code>current_profit &lt; sell_deadfish_profit.value</code>），且市场波动收缩（布林带宽度很小）、价格被中轨压制、成交量萎缩、CMF 为负，认定为“死鱼”行情，强制止损离场，避免资金被长期占用。</p>
+<h2 id="五、亮点代码深度解析"><a href="#五、亮点代码深度解析" class="headerlink" title="五、亮点代码深度解析"></a>五、亮点代码深度解析</h2><h3 id="亮点1：top-percent-change-dca-——-创新性的下跌幅度度量"><a href="#亮点1：top-percent-change-dca-——-创新性的下跌幅度度量" class="headerlink" title="亮点1：top_percent_change_dca —— 创新性的下跌幅度度量"></a>亮点1：<code>top_percent_change_dca</code> —— 创新性的下跌幅度度量</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">top_percent_change_dca</span>(<span class="params">dataframe: DataFrame, length: <span class="built_in">int</span></span>) -&gt; <span class="built_in">float</span>:</span><br><span class="line">    <span class="keyword">if</span> length == <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> (dataframe[<span class="string">&#x27;open&#x27;</span>] - dataframe[<span class="string">&#x27;close&#x27;</span>]) / dataframe[<span class="string">&#x27;close&#x27;</span>]</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> (dataframe[<span class="string">&#x27;open&#x27;</span>].rolling(length).<span class="built_in">max</span>() - dataframe[<span class="string">&#x27;close&#x27;</span>]) / dataframe[<span class="string">&#x27;close&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p>通常我们用 <code>(high - close)/close</code> 或 <code>(open - close)/close</code> 来衡量单根 K 线的下跌。但这里 <code>top_percent_change_dca</code> 度量的是：<strong>从过去 N 根 K 线的开盘价最大值到当前收盘价的跌幅</strong>。这能够捕捉到“开盘后持续走低”的连续下跌形态，是 DCA 决策中的重要过滤条件。例如在 <code>adjust_trade_position</code> 中，若 <code>tpct_change_0 &gt; 1.8%</code> 且收阴，则放弃加仓，避免在急跌中接飞刀。</p>
+<h3 id="亮点2：adjust-trade-position-的条件加仓限制"><a href="#亮点2：adjust-trade-position-的条件加仓限制" class="headerlink" title="亮点2：adjust_trade_position 的条件加仓限制"></a>亮点2：<code>adjust_trade_position</code> 的条件加仓限制</h3><p>策略允许多达 8 次 DCA，但并非无条件。每个加仓层级都有一组前置条件：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> count_of_entries == <span class="number">1</span> <span class="keyword">and</span> (last_candle[<span class="string">&#x27;tpct_change_0&#x27;</span>] &gt; <span class="number">0.018</span>) <span class="keyword">and</span> (last_candle[<span class="string">&#x27;close&#x27;</span>] &lt; last_candle[<span class="string">&#x27;open&#x27;</span>]):</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"><span class="keyword">elif</span> count_of_entries == <span class="number">2</span> <span class="keyword">and</span> (last_candle[<span class="string">&#x27;tpct_change_0&#x27;</span>] &gt; <span class="number">0.018</span>) <span class="keyword">and</span> (last_candle[<span class="string">&#x27;close&#x27;</span>] &lt; last_candle[<span class="string">&#x27;open&#x27;</span>]) <span class="keyword">and</span> (last_candle[<span class="string">&#x27;ema_vwap_diff_50&#x27;</span>] &lt; <span class="number">0.215</span>):</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line">...</span><br><span class="line"><span class="keyword">elif</span> count_of_entries == <span class="number">5</span> <span class="keyword">and</span> (last_candle[<span class="string">&#x27;cmf_1h&#x27;</span>] &lt; <span class="number">0.00</span>) <span class="keyword">and</span> (last_candle[<span class="string">&#x27;rsi_14_1h&#x27;</span>] &lt; <span class="number">30</span>):</span><br><span class="line">    logger.info(<span class="string">f&quot;DCA for <span class="subst">&#123;trade.pair&#125;</span> waiting for cmf_1h to rise above 0...&quot;</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br></pre></td></tr></table></figure>
+
+<p>这种设计防止了在极端恶劣的环境下继续加仓。第 1 次加仓要求当前 K 线不是急跌大阴线；第 2 次要求 EMA-VWAP 偏离不过大；第 5 次开始要求 1 小时 CMF 为正且 RSI &gt;30。<strong>加仓不是盲目的摊平成本，而是基于市场状态的条件触发</strong>。</p>
+<h3 id="亮点3：几何级数增长的安全订单步长与数量"><a href="#亮点3：几何级数增长的安全订单步长与数量" class="headerlink" title="亮点3：几何级数增长的安全订单步长与数量"></a>亮点3：几何级数增长的安全订单步长与数量</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> self.safety_order_step_scale &gt; <span class="number">1</span>:</span><br><span class="line">    safety_order_trigger = <span class="built_in">abs</span>(self.initial_safety_order_trigger) + (<span class="built_in">abs</span>(self.initial_safety_order_trigger) * self.safety_order_step_scale * (math.<span class="built_in">pow</span>(self.safety_order_step_scale, (count_of_entries - <span class="number">1</span>)) - <span class="number">1</span>) / (self.safety_order_step_scale - <span class="number">1</span>))</span><br></pre></td></tr></table></figure>
+
+<p>安全订单的触发间距并非等距，而是按 <code>step_scale=1.2</code> 指数级扩大。这意味着：</p>
+<ul>
+<li>首次加仓在 -1.8% 触发</li>
+<li>第二次在 -1.8 - 2.16 ≈ -3.96% 触发</li>
+<li>第三次在 -1.8 - 2.16 - 2.592 ≈ -6.55% 触发</li>
+</ul>
+<p>配合 <code>volume_scale=1.4</code>（每次加仓金额增加 40%），形成一个<strong>金字塔式加仓</strong>，越跌买得越多，但间距越来越大，避免过度暴露。</p>
+<h2 id="六、总结与启示"><a href="#六、总结与启示" class="headerlink" title="六、总结与启示"></a>六、总结与启示</h2><p><code>newstrategy5_1</code> 策略是一个典型的生产级量化策略，其价值不仅在于回测收益，更在于其设计模式：</p>
+<ol>
+<li><strong>信号冗余与互补</strong>：用多个独立条件替代单一规则，增强鲁棒性。</li>
+<li><strong>DCA 有条件执行</strong>：每次加仓都需满足市场过滤，而非机械执行。</li>
+<li><strong>多级出场机制</strong>：固定止盈、移动回撤止盈、死鱼止损、趋势破坏止损，各司其职。</li>
+<li><strong>参数可优化空间</strong>：大量 <code>IntParameter</code>、<code>DecimalParameter</code> 与 <code>optimize</code> 开关，便于超参调优。</li>
+</ol>
+<p>当然，策略也存在过度优化的风险（例如 <code>buy_params</code> 中多达 20 余个参数），且回测总收益仅 5.7% 略显平庸。但其框架值得借鉴——尤其是将<strong>中庸思想</strong>量化：不偏执于抄底也不追高，通过多个条件组合寻找“适度”的机会，并通过动态仓位控制风险。</p>
+<blockquote>
+<p>量化交易不是寻找完美圣杯，而是构建一个在多数市场状态下都能生存并获利的系统。多策略、多条件、多层级的风控，正是通往稳健之路的基石。</p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">万里无云</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2026/06/08/newstrategy5-1/">http://example.com/2026/06/08/newstrategy5-1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">JRsunny</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/img/20260608_1/freqtrade.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/"><img class="next-cover" src="/img/20260608/1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">盈亏同源：用中庸之道破解交易的矛盾法则</div></div></a></div></nav><hr/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">万里无云</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">7</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎留言评论</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8E%E6%B7%B7%E6%B2%8C%E5%88%B0%E7%A7%A9%E5%BA%8F%EF%BC%9A%E4%B8%80%E4%B8%AA%E5%9F%BA%E4%BA%8E%E5%A4%9A%E6%9D%A1%E4%BB%B6%E8%9E%8D%E5%90%88%E4%B8%8E%E5%8A%A8%E6%80%81%E4%BB%93%E4%BD%8D%E8%B0%83%E6%95%B4%E7%9A%84-Freqtrade-%E7%AD%96%E7%95%A5%E8%A7%A3%E6%9E%90"><span class="toc-number">1.</span> <span class="toc-text">从混沌到秩序：一个基于多条件融合与动态仓位调整的 Freqtrade 策略解析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E7%AD%96%E7%95%A5%E6%A6%82%E8%A7%88"><span class="toc-number">1.1.</span> <span class="toc-text">一、策略概览</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E6%8C%87%E6%A0%87%E5%B7%A5%E7%A8%8B%EF%BC%9A%E5%A4%9A%E7%BB%B4%E5%BA%A6%E7%9A%84%E5%B8%82%E5%9C%BA%E7%94%BB%E5%83%8F"><span class="toc-number">1.2.</span> <span class="toc-text">二、指标工程：多维度的市场画像</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-EWO%EF%BC%88Elliott-Wave-Oscillator%EF%BC%89"><span class="toc-number">1.2.1.</span> <span class="toc-text">1. EWO（Elliott Wave Oscillator）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-Chaikin-Money-Flow-CMF"><span class="toc-number">1.2.2.</span> <span class="toc-text">2. Chaikin Money Flow (CMF)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E8%87%AA%E5%AE%9A%E4%B9%89-Pmax%EF%BC%88SuperTrend-%E9%A3%8E%E6%A0%BC%EF%BC%89"><span class="toc-number">1.2.3.</span> <span class="toc-text">3. 自定义 Pmax（SuperTrend 风格）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E4%B9%B0%E5%85%A5%E4%BF%A1%E5%8F%B7%EF%BC%9A%E5%A4%9A%E4%B8%AA%E7%8B%AC%E7%AB%8B%E7%9A%84%E2%80%9C%E4%B8%93%E5%AE%B6%E5%A7%94%E5%91%98%E4%BC%9A%E2%80%9D"><span class="toc-number">1.3.</span> <span class="toc-text">三、买入信号：多个独立的“专家委员会”</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-DIP-x2F-Break-%E4%BF%A1%E5%8F%B7%EF%BC%88%E5%9D%87%E5%80%BC%E5%9B%9E%E5%BD%92%EF%BC%89"><span class="toc-number">1.3.1.</span> <span class="toc-text">1. DIP &#x2F; Break 信号（均值回归）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-cluc-HA%EF%BC%88Heikin-Ashi-%E5%BD%A2%E6%80%81%E7%AA%81%E7%A0%B4%EF%BC%89"><span class="toc-number">1.3.2.</span> <span class="toc-text">2. cluc_HA（Heikin-Ashi 形态突破）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-vwap%EF%BC%88%E5%9F%BA%E4%BA%8E%E6%88%90%E4%BA%A4%E9%87%8F%E5%8A%A0%E6%9D%83%E5%B9%B3%E5%9D%87%E4%BB%B7%E7%9A%84%E8%B6%85%E5%8D%96%EF%BC%89"><span class="toc-number">1.3.3.</span> <span class="toc-text">3. vwap（基于成交量加权平均价的超卖）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-NFINext-%E7%B3%BB%E5%88%97%EF%BC%88%E8%B6%8B%E5%8A%BF-%E5%8A%A8%E9%87%8F%E7%BB%84%E5%90%88%EF%BC%89"><span class="toc-number">1.3.4.</span> <span class="toc-text">4. NFINext 系列（趋势+动量组合）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9B%9B%E3%80%81%E5%8D%96%E5%87%BA%E4%BF%A1%E5%8F%B7%E4%B8%8E%E5%8A%A8%E6%80%81%E5%87%BA%E5%9C%BA"><span class="toc-number">1.4.</span> <span class="toc-text">四、卖出信号与动态出场</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E5%9F%BA%E4%BA%8E-Fisher-%E6%8C%87%E6%A0%87%E7%9A%84%E5%9B%BA%E5%AE%9A%E5%87%BA%E5%9C%BA"><span class="toc-number">1.4.1.</span> <span class="toc-text">1. 基于 Fisher 指标的固定出场</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%87%AA%E5%AE%9A%E4%B9%89-exit-%E4%B8%AD%E7%9A%84%E5%8A%A8%E6%80%81%E8%B7%9F%E8%B8%AA%E6%AD%A2%E7%9B%88"><span class="toc-number">1.4.2.</span> <span class="toc-text">2. 自定义 exit 中的动态跟踪止盈</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E2%80%9C%E6%AD%BB%E9%B1%BC%E2%80%9D%E6%AD%A2%E6%8D%9F"><span class="toc-number">1.4.3.</span> <span class="toc-text">3. “死鱼”止损</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%94%E3%80%81%E4%BA%AE%E7%82%B9%E4%BB%A3%E7%A0%81%E6%B7%B1%E5%BA%A6%E8%A7%A3%E6%9E%90"><span class="toc-number">1.5.</span> <span class="toc-text">五、亮点代码深度解析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%AE%E7%82%B91%EF%BC%9Atop-percent-change-dca-%E2%80%94%E2%80%94-%E5%88%9B%E6%96%B0%E6%80%A7%E7%9A%84%E4%B8%8B%E8%B7%8C%E5%B9%85%E5%BA%A6%E5%BA%A6%E9%87%8F"><span class="toc-number">1.5.1.</span> <span class="toc-text">亮点1：top_percent_change_dca —— 创新性的下跌幅度度量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%AE%E7%82%B92%EF%BC%9Aadjust-trade-position-%E7%9A%84%E6%9D%A1%E4%BB%B6%E5%8A%A0%E4%BB%93%E9%99%90%E5%88%B6"><span class="toc-number">1.5.2.</span> <span class="toc-text">亮点2：adjust_trade_position 的条件加仓限制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%AE%E7%82%B93%EF%BC%9A%E5%87%A0%E4%BD%95%E7%BA%A7%E6%95%B0%E5%A2%9E%E9%95%BF%E7%9A%84%E5%AE%89%E5%85%A8%E8%AE%A2%E5%8D%95%E6%AD%A5%E9%95%BF%E4%B8%8E%E6%95%B0%E9%87%8F"><span class="toc-number">1.5.3.</span> <span class="toc-text">亮点3：几何级数增长的安全订单步长与数量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%AD%E3%80%81%E6%80%BB%E7%BB%93%E4%B8%8E%E5%90%AF%E7%A4%BA"><span class="toc-number">1.6.</span> <span class="toc-text">六、总结与启示</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析"><img src="/img/20260608_1/freqtrade.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="newstrategy5_1策略解析"/></a><div class="content"><a class="title" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析">newstrategy5_1策略解析</a><time datetime="2026-06-08T13:16:28.000Z" title="发表于 2026-06-08 21:16:28">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则"><img src="/img/20260608/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="盈亏同源：用中庸之道破解交易的矛盾法则"/></a><div class="content"><a class="title" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则">盈亏同源：用中庸之道破解交易的矛盾法则</a><time datetime="2026-06-08T12:57:53.000Z" title="发表于 2026-06-08 20:57:53">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/20/my-heart/" title="my_heart"><img src="/img/pexels-edward-532643054-36490144.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="my_heart"/></a><div class="content"><a class="title" href="/2026/03/20/my-heart/" title="my_heart">my_heart</a><time datetime="2026-03-20T01:01:13.000Z" title="发表于 2026-03-20 09:01:13">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春"><img src="/img/qh/pexels-theerapat-sonphong-22471891-15413759.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="又是一年春"/></a><div class="content"><a class="title" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春">又是一年春</a><time datetime="2026-02-22T02:30:00.000Z" title="发表于 2026-02-22 10:30:00">2026-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得"><img src="/img/pexels-mart-production-7577855.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="量化心得"/></a><div class="content"><a class="title" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得">量化心得</a><time datetime="2025-12-16T08:14:06.000Z" title="发表于 2025-12-16 16:14:06">2025-12-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/20260608_1/freqtrade.png')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026 By 万里无云</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '8kOOa5lA6AguqvfceQQ1HNIu-gzGzoHsz',
+      appKey: 'tL9nsaGys5ImRzuPG85nas8Q',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: false
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !false) {
+  if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body></html>
