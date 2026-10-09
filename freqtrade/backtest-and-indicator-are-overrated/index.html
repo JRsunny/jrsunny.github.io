@@ -1,0 +1,174 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>回测和指标被高估了 | JRsunny</title><meta name="robots" content="noindex"><meta name="keywords" content="learn,share,progress,code,"><meta name="author" content="万里无云"><meta name="copyright" content="万里无云"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="原文标题：Backtest and indicator are overrated原文链接：https:&#x2F;&#x2F;botacademy.ddns.net&#x2F;2026&#x2F;04&#x2F;02&#x2F;backtest-and-indicator-are-overrated&#x2F;发布日期：2026-04-02   ……至少对加密货币交易来说是这样。做好读一篇长文的准备吧。 首先，我会试着解释交易是怎么运作的。简单来说，一笔成功的交">
+<meta property="og:type" content="article">
+<meta property="og:title" content="回测和指标被高估了">
+<meta property="og:url" content="https://jrsunny.github.io/freqtrade/backtest-and-indicator-are-overrated/index.html">
+<meta property="og:site_name" content="JRsunny">
+<meta property="og:description" content="原文标题：Backtest and indicator are overrated原文链接：https:&#x2F;&#x2F;botacademy.ddns.net&#x2F;2026&#x2F;04&#x2F;02&#x2F;backtest-and-indicator-are-overrated&#x2F;发布日期：2026-04-02   ……至少对加密货币交易来说是这样。做好读一篇长文的准备吧。 首先，我会试着解释交易是怎么运作的。简单来说，一笔成功的交">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2026-04-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-10-09T02:44:52.913Z">
+<meta property="article:author" content="万里无云">
+<meta property="article:tag" content="learn,share,progress,code,">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jrsunny.github.io/freqtrade/backtest-and-indicator-are-overrated/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="zxIuQKLK97eYuGrwYuEQR_rwv3BmMcxYWF5H78A3FKY"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '回测和指标被高估了',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2026-10-09 10:44:52'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="JRsunny" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">22</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/freqtrade/"><i class="fa-fw fas fa-graduation-cap"></i><span> Freqtrade教学</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JRsunny</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/freqtrade/"><i class="fa-fw fas fa-graduation-cap"></i><span> Freqtrade教学</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">回测和指标被高估了</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-04-01T16:00:00.000Z" title="发表于 2026-04-02 00:00:00">2026-04-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-10-09T02:44:52.913Z" title="更新于 2026-10-09 10:44:52">2026-10-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ft-tutorial/">freqtrade教学</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ft-tutorial/ft-insight/">心得与认知</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="回测和指标被高估了"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>原文标题：Backtest and indicator are overrated<br>原文链接：<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2026/04/02/backtest-and-indicator-are-overrated/">https://botacademy.ddns.net/2026/04/02/backtest-and-indicator-are-overrated/</a><br>发布日期：2026-04-02</p>
+</blockquote>
+<hr>
+<p>……至少对加密货币交易来说是这样。做好读一篇长文的准备吧。</p>
+<p>首先，我会试着解释交易是怎么运作的。简单来说，一笔成功的交易发生在买卖双方就某个价格达成一致的时候。让我们把加密货币市场想象成你家附近的菜市场。那里有买家（会尽量以低价买入），也有卖家（会尽量以高价卖出）。如果任何一方不愿意做出妥协（要么买家愿意接受更高的价格，要么卖家愿意接受更低的价格），那就不会有任何交易发生。但只要有一方愿意妥协，交易就会达成。</p>
+<p>当一枚币的价格下跌时，实际发生的是大量卖家出于各种原因（stoploss、止盈、战争爆发，或者许多其他原因）愿意以更低的价格卖出。当一枚币的价格上涨时，那意味着大量买家出于各种原因（投资、投机，或者其他）愿意以更高的价格买入。</p>
+<p>任何指标普遍存在的问题是，你试图把那些由许多人基于许多独立的主观原因所做出的交易行为，转化成只依赖 K 线 OHLCV 值的单一公式。你是在把那些数以百万计的独立原因压缩成一个单一公式。你还在做一个假设：当未来出现相似的指标值时，市场会像过去那样做出相同的反应。但我们都知道，事实永远不会如此。首先，那些（比如说）昨天交易过的人，可能今天不会再交易，明天也不会，甚至一年内都不会。市场上会有不同的交易者，采用不同的策略，面对不同的宏观环境（政治、经济等等）。这意味着，市场对看似相似的价格走势，很可能会做出不同的反应。</p>
+<p>这就是为什么无论一个指标的公式有多长、多复杂，它们都和简单指标一样没用。它们无法、也永远不会真正考虑到价格之所以那样变动的真实原因。你只是在把随机的木桩往随机的洞里塞。有时候能塞进去，有时候塞不进去。</p>
+<p>上面这些同样的道理也可以套用到 backtest 上，用来解释为什么一个漂亮的 backtest 结果永远无法保证未来的盈利。你可以试着用 4 年的数据做 backtest，但相比只用 1 年数据做 backtest，它并不会大幅提高你未来盈利的概率。你是基于过去那些交易者所做的交易来测试你的 strategy，而那些交易者现在可能还在交易，也可能已经不在了；即便他们现在还在交易，他们现在用的也可能是不同的策略。而且如上所述，宏观环境也可能不同。这使得过去的结果无法在未来重现。</p>
+<p>让我们用<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/05/09/trading-is-zero-sum-game-part-2/">这篇文章</a>里的例子来说明，同样的交易者使用不同的策略会如何对交易产生不同的影响。取决于 B 和 C 怎么做，A 的交易会有不同的最终结果。这意味着一旦 B 和&#x2F;或 C 改变了他们的策略，或者 B 和 C 被拥有各自策略的 D 和 E 取代，你过去的 backtest 结果就变得完全无关紧要了。</p>
+<p>没有任何法律规定交易者必须在整个交易生涯中只使用一种策略，这意味着你不应该指望过去发生的事会在未来重演。举个简单的例子：仅仅因为一枚币在下跌 -5% 之后上涨了 10%，并不意味着下一次它下跌 -5% 时，就保证会再次上涨 10%。</p>
+<p>让我们看看这两张图。在图 #1 中，BTC&#x2F;USDT 价格跌破 SMA 200 之后，最终又涨了回来</p>
+<p><img src="https://botacademy.ddns.net/wp-content/uploads/2026/04/image-1024x250.png"></p>
+<p>图 #1 – 价格跌破 SMA 200 后回升</p>
+<p>但在图 #2 中，同样的 pair 但不同的时间，价格跌破 SMA 200 之后再也没有涨回来</p>
+<p><img src="https://botacademy.ddns.net/wp-content/uploads/2026/04/image-1-1024x248.png"></p>
+<p>图 #2 – 价格跌破 SMA 200 后再未回升</p>
+<p>你可能会说“那就多加几个指标”。当然，那也许有帮助，但实际上，你只是在其他不确定性之上又叠加了不确定性。多个不确定性并不会构成一个确定性。通常发生的情况是，你最终会得到以下之一：</p>
+<ul>
+<li>非常安全的 strategy，一种在 99% 的市场情况下都很少交易、只在那种罕见的 1% 条件下才交易的 strategy（例如一次非常巨大且突然的市场变化，无论涨跌）。这类 strategy 通常能持续很久，但它低下的利润通常会劝退用户采用这样的 strategy</li>
+<li>非常宽松的 strategy，交易次数很高，基于过去的行为。这类 strategy 通常不会持续太久，但大多数用户会因为那看似存在的盈利潜力而倾向于这种 strategy。</li>
+<li>介于前两种类型之间的 strategy。取决于这种 strategy 更靠近哪一侧，会影响它能持续多久。</li>
+</ul>
+<p>就我写这篇文章时 4 年多的个人经验而言，如果你还想继续使用指标和&#x2F;或做 backtest，你的 strategy 必须瞄准<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/08/24/triangle-of-trading/">交易三角</a>中低交易次数的那一侧。你是要走高胜率还是高平均盈利百分比，由你自己决定。但低交易次数是必须的。如果你仍然追求高交易次数，那么无论你是否遵循交易三角，你的 strategy 都永远无法长期存活。</p>
+<p>你可能会问，那那些卖 strategy 的“交易者”怎么能提供那么高的利润呢？首先，如果你留意的话，他们全都只发布 strategy 的 backtest 结果。他们从不发布自己真实的实盘交易结果，尤其是长期交易结果。正如我上面解释过的，拥有漂亮的 backtest 结果很容易。你面对的是固定且已知的数据。增加 pair 的数量会稍微提高一点难度，但数据仍然是固定且已知的。跑完一次 backtest 之后，如果结果不好，你可以调整一些逻辑来处理那些糟糕的交易，然后 backtest 结果就会变得很棒。实盘交易不会这样运作。在经历了一笔糟糕的交易之后，即便你已经调整了 strategy 来处理那笔糟糕的交易，也无法保证你能在未来避免&#x2F;处理新的糟糕交易。不同的市场、不同的交易者、不同的情况，会带来不同的市场反应。</p>
+<hr>
+<p>这就是为什么我仍然认为手动交易能带来更好的利润，因为你可以把外部因素纳入交易考量，比如全球新闻，而这些因素对市场的影响通常比某些指标数值更大。</p>
+<!-- flag of hidden posts --></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://jrsunny.github.io">万里无云</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jrsunny.github.io/freqtrade/backtest-and-indicator-are-overrated/">https://jrsunny.github.io/freqtrade/backtest-and-indicator-are-overrated/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jrsunny.github.io" target="_blank">JRsunny</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">万里无云</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">22</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎留言评论</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析"><img src="/img/20260608_1/freqtrade.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="newstrategy5_1策略解析"/></a><div class="content"><a class="title" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析">newstrategy5_1策略解析</a><time datetime="2026-06-08T13:16:28.000Z" title="发表于 2026-06-08 21:16:28">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则"><img src="/img/20260608/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="盈亏同源：用中庸之道破解交易的矛盾法则"/></a><div class="content"><a class="title" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则">盈亏同源：用中庸之道破解交易的矛盾法则</a><time datetime="2026-06-08T12:57:53.000Z" title="发表于 2026-06-08 20:57:53">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/20/my-heart/" title="my_heart"><img src="/img/pexels-edward-532643054-36490144.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="my_heart"/></a><div class="content"><a class="title" href="/2026/03/20/my-heart/" title="my_heart">my_heart</a><time datetime="2026-03-20T01:01:13.000Z" title="发表于 2026-03-20 09:01:13">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春"><img src="/img/qh/pexels-theerapat-sonphong-22471891-15413759.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="又是一年春"/></a><div class="content"><a class="title" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春">又是一年春</a><time datetime="2026-02-22T02:30:00.000Z" title="发表于 2026-02-22 10:30:00">2026-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得"><img src="/img/pexels-mart-production-7577855.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="量化心得"/></a><div class="content"><a class="title" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得">量化心得</a><time datetime="2025-12-16T08:14:06.000Z" title="发表于 2025-12-16 16:14:06">2025-12-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026 By 万里无云</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body></html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>指标重要吗？ | JRsunny</title><meta name="robots" content="noindex"><meta name="keywords" content="learn,share,progress,code,"><meta name="author" content="万里无云"><meta name="copyright" content="万里无云"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="原文标题：Indicators matter?原文链接：https:&#x2F;&#x2F;botacademy.ddns.net&#x2F;2025&#x2F;11&#x2F;06&#x2F;indicators-matter&#x2F;发布日期：2025-11-06   这篇帖子是这篇帖子的续篇。如果你还没读过，请先去读一下。 这是我写这篇帖子时的个人观点，基于 4 年多来折腾各种不同类型策略的经验。正如上面链接的帖子所写，我们现在用指标所做的一切，本质上都是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="指标重要吗？">
+<meta property="og:url" content="https://jrsunny.github.io/freqtrade/indicators-matter/index.html">
+<meta property="og:site_name" content="JRsunny">
+<meta property="og:description" content="原文标题：Indicators matter?原文链接：https:&#x2F;&#x2F;botacademy.ddns.net&#x2F;2025&#x2F;11&#x2F;06&#x2F;indicators-matter&#x2F;发布日期：2025-11-06   这篇帖子是这篇帖子的续篇。如果你还没读过，请先去读一下。 这是我写这篇帖子时的个人观点，基于 4 年多来折腾各种不同类型策略的经验。正如上面链接的帖子所写，我们现在用指标所做的一切，本质上都是">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2025-11-05T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-10-09T02:44:52.906Z">
+<meta property="article:author" content="万里无云">
+<meta property="article:tag" content="learn,share,progress,code,">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jrsunny.github.io/freqtrade/indicators-matter/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="zxIuQKLK97eYuGrwYuEQR_rwv3BmMcxYWF5H78A3FKY"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '指标重要吗？',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-10-09 10:44:52'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="JRsunny" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">22</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/freqtrade/"><i class="fa-fw fas fa-graduation-cap"></i><span> Freqtrade教学</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JRsunny</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/freqtrade/"><i class="fa-fw fas fa-graduation-cap"></i><span> Freqtrade教学</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">指标重要吗？</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-11-05T16:00:00.000Z" title="发表于 2025-11-06 00:00:00">2025-11-06</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-10-09T02:44:52.906Z" title="更新于 2026-10-09 10:44:52">2026-10-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ft-tutorial/">freqtrade教学</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ft-tutorial/ft-insight/">心得与认知</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="指标重要吗？"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>原文标题：Indicators matter?<br>原文链接：<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/11/06/indicators-matter/">https://botacademy.ddns.net/2025/11/06/indicators-matter/</a><br>发布日期：2025-11-06</p>
+</blockquote>
+<hr>
+<p>这篇帖子是<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/04/18/the-failproof-method-of-avoid-overfitting/">这篇帖子</a>的续篇。如果你还没读过，请先去读一下。</p>
+<p>这是我写这篇帖子时的个人观点，基于 4 年多来折腾各种不同类型策略的经验。正如上面链接的帖子所写，我们现在用指标所做的一切，本质上都是在试图用过去的数据预测未来。用不用 FreqAI，游戏规则都一样，只是玩法不同而已。</p>
+<p>智者常说“条条大路通罗马”，这句话的前提是罗马真的存在。我们真的有可能预测未来吗？还是不得不承认“条条大路通死胡同”？</p>
+<h3 id="试图预测未来"><a href="#试图预测未来" class="headerlink" title="试图预测未来"></a>试图预测未来</h3><p>是的，我相信我们多少能预测一点未来。它不会是 100% 准确，但通过一些设置，它可以带来可持续的利润，只不过不会是你想象中或想要的那种利润量。正如我在<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/07/15/the-deadliest-sin-of-algo-trader/">这里</a>说过的，你需要设定一个现实的目标。有了现实的目标，你的工作会轻松很多，因为你不需要 100% 的预测成功率就能获得长期利润。</p>
+<p>那么我上面提到的设置是什么？不，不是一份“最佳”指标清单。那部分的重要性只能排在中游。如果你想预测某个东西的行为，首先你得确保这个“东西”不是反复无常的。在前面那个例子里，如果 Frog 是个冲动的人，那么无论你觉得自己的方法有多先进，你预测他们下一个选择的概率都会非常低。交易也是一样。你要选择那些走势可预测、不“冲动”的 pair（也就是说，不容易被拉高出货）。那些合适的 pair 通常是市值排名较高的 pair。选对 pair 会让你的交易生涯轻松得多。相信我。</p>
+<p>那么选好 pair 之后，就该挑指标了，对吧？不。你现在需要先确定策略的方向，我在<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/08/24/triangle-of-trading/">这里</a>写过。这重要吗？重要，因为它会影响你的入场和出场逻辑有多激进或多宽松。你需要选择你想多频繁地入场交易，以及你的盈利和亏损目标有多高或多低。</p>
+<p>为什么这些很重要？首先，如上所述，我们不会有 100% 的预测准确率。所以你是想走数量路线（大量交易，指望对的比错的多），还是质量路线（交易更少，但对的比错的多的概率更高）？这是入场方面。至于出场方面，我们应该把利润目标定多高？用指标来做出场决策，还是用 FreqAI 来预测出场目标，道理都一样，就是它们都无法做到 100% 预测。就我个人而言，既然入场已经存在不确定性（不会 100% 准确），为什么还要让出场也承受同样的不确定性，从而增加更多风险呢？这就是我在自己的 strategy 上设置固定 ROI、而不使用条件出场的原因。当然，我也需要观察市场，看看实际可用的 ROI 是多少。比如，指望 BTC 交易有 10% 的 ROI 几乎是不可能的。自己做研究，找到合适的 ROI。我的建议是，别贪心。快速出场远比试图最大化利润要好。在加密货币里，“趋势”可能在几秒内就被打破。这样一来，我只需要专注于入场逻辑就行了。</p>
+<p>之后，我们才可以开始看指标。个人观点，没有什么所谓的最佳指标。你需要做的是拥有各种不同类型的指标，让它们关注不同的东西。而且在这些指标上使用不同的长度&#x2F;周期变体可能更好，最好是看更大的图景。举个例子，如果你用 RSI，那就计算 14、28 和 56 的 RSI。不要用太小的长度&#x2F;周期，它们会让你的预测更不准确。</p>
+<p>做上面这些事情，个人而言在这段旅程中帮到了我。如果你一直在尝试其他方法却不断失败，不妨试试我的方法。不要害怕尝试新想法，不管它听起来有多蠢。你随时可以用 dry mode 运行 bot 来测试那些新想法。不要让自己承受不必要的风险。</p>
+<h3 id="我目前正在走的路"><a href="#我目前正在走的路" class="headerlink" title="我目前正在走的路"></a>我目前正在走的路</h3><p>尽管我上面写了那些，目前我正在测试一个完全不需要指标的想法。我只需要看价格行为和一些 OHLCV 的平均值。这个想法的核心（再一次）是为它选对 pair。这个想法所需的 pair 与上面那个策略所需的 pair 完全不同。这个想法背后是什么？只是一些观察，发现某些 pair 上存在一些指标可能检测不到的重复模式。所以我没有依赖指标，而是观察市场在某些条件下如何反应，以及这些反应是否可重复。这类想法无法 backtest，你也找不到任何书或科学论文讨论它。它会成功吗？我不知道，但正如我上面说的，不要害怕尝试新想法。</p>
+<h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><p>你可能已经注意到，我走的这两条路都从同一件事开始，那就是 pair 选择。每个 pair 都有自己的特性，这意味着适合交易它们的 strategy 也会不同。比如，如果你想交易低市值的 pair，那么用均值回归来交易它们可能并不合适，尤其是当它们正在被拉高出货的时候。你很可能在试图接飞刀时被套住（在一个还在下跌途中的 pair 上开多单）。</p>
+<p>请花些时间认真研究你的 pair 选择，试着为你的 strategy 挑出合适的 pair。好的 pair 选择比选对指标更重要。</p>
+<!-- flag of hidden posts --></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://jrsunny.github.io">万里无云</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jrsunny.github.io/freqtrade/indicators-matter/">https://jrsunny.github.io/freqtrade/indicators-matter/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jrsunny.github.io" target="_blank">JRsunny</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">万里无云</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">22</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎留言评论</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%AF%95%E5%9B%BE%E9%A2%84%E6%B5%8B%E6%9C%AA%E6%9D%A5"><span class="toc-number">1.</span> <span class="toc-text">试图预测未来</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%88%91%E7%9B%AE%E5%89%8D%E6%AD%A3%E5%9C%A8%E8%B5%B0%E7%9A%84%E8%B7%AF"><span class="toc-number">2.</span> <span class="toc-text">我目前正在走的路</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BB%93%E8%AE%BA"><span class="toc-number">3.</span> <span class="toc-text">结论</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析"><img src="/img/20260608_1/freqtrade.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="newstrategy5_1策略解析"/></a><div class="content"><a class="title" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析">newstrategy5_1策略解析</a><time datetime="2026-06-08T13:16:28.000Z" title="发表于 2026-06-08 21:16:28">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则"><img src="/img/20260608/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="盈亏同源：用中庸之道破解交易的矛盾法则"/></a><div class="content"><a class="title" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则">盈亏同源：用中庸之道破解交易的矛盾法则</a><time datetime="2026-06-08T12:57:53.000Z" title="发表于 2026-06-08 20:57:53">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/20/my-heart/" title="my_heart"><img src="/img/pexels-edward-532643054-36490144.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="my_heart"/></a><div class="content"><a class="title" href="/2026/03/20/my-heart/" title="my_heart">my_heart</a><time datetime="2026-03-20T01:01:13.000Z" title="发表于 2026-03-20 09:01:13">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春"><img src="/img/qh/pexels-theerapat-sonphong-22471891-15413759.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="又是一年春"/></a><div class="content"><a class="title" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春">又是一年春</a><time datetime="2026-02-22T02:30:00.000Z" title="发表于 2026-02-22 10:30:00">2026-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得"><img src="/img/pexels-mart-production-7577855.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="量化心得"/></a><div class="content"><a class="title" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得">量化心得</a><time datetime="2025-12-16T08:14:06.000Z" title="发表于 2025-12-16 16:14:06">2025-12-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026 By 万里无云</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body></html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Freqai 还是 hyperopt？ | JRsunny</title><meta name="robots" content="noindex"><meta name="keywords" content="learn,share,progress,code,"><meta name="author" content="万里无云"><meta name="copyright" content="万里无云"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="原文标题：Freqai or hyperopt?原文链接：https:&#x2F;&#x2F;botacademy.ddns.net&#x2F;2025&#x2F;04&#x2F;02&#x2F;freqai-or-hyperopt&#x2F;发布日期：2025-04-02    我该用哪个？FreqAI 还是 hyperopt，还是两个都用？FreqAI 比 hyperopt 更好吗？  上面这些是新用户经常问的问题。答案很简单：哪个能改进你的 strategy">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Freqai 还是 hyperopt？">
+<meta property="og:url" content="https://jrsunny.github.io/freqtrade/freqai-or-hyperopt/index.html">
+<meta property="og:site_name" content="JRsunny">
+<meta property="og:description" content="原文标题：Freqai or hyperopt?原文链接：https:&#x2F;&#x2F;botacademy.ddns.net&#x2F;2025&#x2F;04&#x2F;02&#x2F;freqai-or-hyperopt&#x2F;发布日期：2025-04-02    我该用哪个？FreqAI 还是 hyperopt，还是两个都用？FreqAI 比 hyperopt 更好吗？  上面这些是新用户经常问的问题。答案很简单：哪个能改进你的 strategy">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2025-04-01T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-10-09T02:44:52.903Z">
+<meta property="article:author" content="万里无云">
+<meta property="article:tag" content="learn,share,progress,code,">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jrsunny.github.io/freqtrade/freqai-or-hyperopt/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="zxIuQKLK97eYuGrwYuEQR_rwv3BmMcxYWF5H78A3FKY"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Freqai 还是 hyperopt？',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-10-09 10:44:52'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="JRsunny" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">22</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/freqtrade/"><i class="fa-fw fas fa-graduation-cap"></i><span> Freqtrade教学</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JRsunny</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/freqtrade/"><i class="fa-fw fas fa-graduation-cap"></i><span> Freqtrade教学</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Freqai 还是 hyperopt？</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-04-01T16:00:00.000Z" title="发表于 2025-04-02 00:00:00">2025-04-02</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-10-09T02:44:52.903Z" title="更新于 2026-10-09 10:44:52">2026-10-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ft-tutorial/">freqtrade教学</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ft-tutorial/ft-qa/">问答与概念</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Freqai 还是 hyperopt？"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>原文标题：Freqai or hyperopt?<br>原文链接：<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/04/02/freqai-or-hyperopt/">https://botacademy.ddns.net/2025/04/02/freqai-or-hyperopt/</a><br>发布日期：2025-04-02</p>
+</blockquote>
+<hr>
+<blockquote>
+<p>我该用哪个？FreqAI 还是 hyperopt，还是两个都用？FreqAI 比 hyperopt 更好吗？</p>
+</blockquote>
+<p>上面这些是新用户经常问的问题。答案很简单：哪个能改进你的 strategy，就用哪个。两者做的事情不同，也能以不同的方式改进你的 strategy。让我简单解释一下它们各自到底在做什么。</p>
+<h2 id="Hyperopt"><a href="#Hyperopt" class="headerlink" title="Hyperopt"></a>Hyperopt</h2><p><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/09/23/myth-blowing-hyperopt-will-turn-any-strategies-to-rocket-strategies/">Hyperopt 只是一系列 backtest，用来找出能产生最低 loss 值的参数</a>。它使用历史数据来找出这些参数。过去表现良好的参数并不能保证未来依然表现良好。Hyperopt 无法预测未来，因为它不涉及任何机器学习。</p>
+<p>Freqtrade 不会自动运行 hyperopt 流程。所以如果你想在未来更新参数，要么手动运行 hyperopt 流程，要么写个脚本按指定间隔自动运行。</p>
+<p>Hyperopt 的一个例子是：你想找出哪个 EMA 适合你的 <code>dataframe[&quot;close&quot;] &lt; dataframe[&quot;EMA_x&quot;]</code> 逻辑。根据你指定的 loss 函数，假设 hyperopt 发现 EMA_100 是最佳参数。它未来还会表现良好吗？没人知道。</p>
+<h2 id="FreqAI"><a href="#FreqAI" class="headerlink" title="FreqAI"></a>FreqAI</h2><p>为简单起见，本文中我将描述 regressor&#x2F;classifier 模型的作用。简单来说，它们做的事情是接收定义好的 <code>features</code>（基于过去数据），并用这些数据来预测指定的（未来）<code>targets</code>。FreqAI 不知道（也不关心）strategy 是否盈利。它只关心能否产生好的预测。你的责任是知道如何利用这些 targets 来创建盈利的 strategy。</p>
+<p>举个例子，让我们拿<a target="_blank" rel="noopener" href="https://github.com/freqtrade/freqtrade/blob/develop/freqtrade/templates/FreqaiExampleStrategy.py">这个官方示例 strategy</a> 来说。模型会使用定义好的 features（rsi、mfi、hour 等）来预测 target <code>dataframe[&quot;&amp;-s_close&quot;]</code>，也就是预测未来 <code>label_period_candles</code> 根 K 线价格的平均走势。如何使用这个预测取决于你的创造力。示例中使用的逻辑可能盈利，也可能不盈利。但如上所述，这并不是 FreqAI 关注的重点。</p>
+<p>使用 FreqAI 的优势在于它会按定义的频率重新训练，这意味着它会通过重新计算 targets 来自动适应市场。FreqAI 的劣势在于，正如我上面多次重复的，即使它能准确预测 targets，也无法保证这会让你的 strategy 盈利。甚至连过去盈利的保证都没有，而 hyperopt 至少还能提供这一点（并不是说过去盈利就能保证未来盈利）。</p>
+<h2 id="那么哪个更好？"><a href="#那么哪个更好？" class="headerlink" title="那么哪个更好？"></a>那么哪个更好？</h2><p>两者都不比另一个更好。它们做的事情不同，关注的方向也不同。就我个人而言，我在自己的一些 strategy 上两个都用。你只需要理解它们各自提供什么，以及如何正确利用它们。根据我的经验，FreqAI 可能比 hyperopt 需要更多时间来学习，因为你需要大量试错才能找到 features 和 targets 的良好组合。你不会想要太多 features，否则训练模型会花上很久。有些 features 可能不是好的 features，或者与现有的相似 features 冗余。</p>
+<!-- flag of hidden posts --></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://jrsunny.github.io">万里无云</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jrsunny.github.io/freqtrade/freqai-or-hyperopt/">https://jrsunny.github.io/freqtrade/freqai-or-hyperopt/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jrsunny.github.io" target="_blank">JRsunny</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">万里无云</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">22</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎留言评论</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Hyperopt"><span class="toc-number">1.</span> <span class="toc-text">Hyperopt</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#FreqAI"><span class="toc-number">2.</span> <span class="toc-text">FreqAI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%82%A3%E4%B9%88%E5%93%AA%E4%B8%AA%E6%9B%B4%E5%A5%BD%EF%BC%9F"><span class="toc-number">3.</span> <span class="toc-text">那么哪个更好？</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析"><img src="/img/20260608_1/freqtrade.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="newstrategy5_1策略解析"/></a><div class="content"><a class="title" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析">newstrategy5_1策略解析</a><time datetime="2026-06-08T13:16:28.000Z" title="发表于 2026-06-08 21:16:28">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则"><img src="/img/20260608/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="盈亏同源：用中庸之道破解交易的矛盾法则"/></a><div class="content"><a class="title" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则">盈亏同源：用中庸之道破解交易的矛盾法则</a><time datetime="2026-06-08T12:57:53.000Z" title="发表于 2026-06-08 20:57:53">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/20/my-heart/" title="my_heart"><img src="/img/pexels-edward-532643054-36490144.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="my_heart"/></a><div class="content"><a class="title" href="/2026/03/20/my-heart/" title="my_heart">my_heart</a><time datetime="2026-03-20T01:01:13.000Z" title="发表于 2026-03-20 09:01:13">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春"><img src="/img/qh/pexels-theerapat-sonphong-22471891-15413759.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="又是一年春"/></a><div class="content"><a class="title" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春">又是一年春</a><time datetime="2026-02-22T02:30:00.000Z" title="发表于 2026-02-22 10:30:00">2026-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得"><img src="/img/pexels-mart-production-7577855.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="量化心得"/></a><div class="content"><a class="title" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得">量化心得</a><time datetime="2025-12-16T08:14:06.000Z" title="发表于 2025-12-16 16:14:06">2025-12-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026 By 万里无云</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body></html>

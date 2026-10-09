@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>Freqtrade 教学（中文翻译合集） | JRsunny</title><meta name="keywords" content="learn,share,progress,code,"><meta name="author" content="万里无云"><meta name="copyright" content="万里无云"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这里收录 98 篇 Freqtrade 相关文章的中文翻译，原文全部来自 botacademy.ddns.net。 译文保留原文所有代码块（逐字未改动），专有名词保持英文。版权归原作者所有，本合集仅作个人学习查阅之用。 这些译文被设置为「不进首页 &#x2F; 归档 &#x2F; RSS &#x2F; 站内搜索」（hidden: true），只能从这个目录页或直接链接进入，不会打扰博客正文。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Freqtrade 教学（中文翻译合集）">
+<meta property="og:url" content="https://jrsunny.github.io/freqtrade/index.html">
+<meta property="og:site_name" content="JRsunny">
+<meta property="og:description" content="这里收录 98 篇 Freqtrade 相关文章的中文翻译，原文全部来自 botacademy.ddns.net。 译文保留原文所有代码块（逐字未改动），专有名词保持英文。版权归原作者所有，本合集仅作个人学习查阅之用。 这些译文被设置为「不进首页 &#x2F; 归档 &#x2F; RSS &#x2F; 站内搜索」（hidden: true），只能从这个目录页或直接链接进入，不会打扰博客正文。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2026-10-08T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-10-09T02:44:52.385Z">
+<meta property="article:author" content="万里无云">
+<meta property="article:tag" content="learn,share,progress,code,">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jrsunny.github.io/freqtrade/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="zxIuQKLK97eYuGrwYuEQR_rwv3BmMcxYWF5H78A3FKY"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Freqtrade 教学（中文翻译合集）',
+  isPost: false,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: false,
+  postUpdate: '2026-10-09 10:44:52'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="JRsunny" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">22</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/freqtrade/"><i class="fa-fw fas fa-graduation-cap"></i><span> Freqtrade教学</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-top-img" id="page-header"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JRsunny</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/freqtrade/"><i class="fa-fw fas fa-graduation-cap"></i><span> Freqtrade教学</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav></header><main class="layout" id="content-inner"><div id="page"><h1 class="page-title">Freqtrade 教学（中文翻译合集）</h1><div id="article-container"><blockquote>
+<p>这里收录 <strong>98 篇</strong> Freqtrade 相关文章的中文翻译，原文全部来自 <a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/09/table-of-contents-for-freqtrade/">botacademy.ddns.net</a>。</p>
+<p>译文保留原文所有代码块（逐字未改动），专有名词保持英文。<strong>版权归原作者所有</strong>，本合集仅作个人学习查阅之用。</p>
+<p>这些译文被设置为「不进首页 &#x2F; 归档 &#x2F; RSS &#x2F; 站内搜索」（<code>hidden: true</code>），只能从这个目录页或直接链接进入，不会打扰博客正文。</p>
+</blockquote>
+<h2 id="入门与总览（5-篇）"><a href="#入门与总览（5-篇）" class="headerlink" title="入门与总览（5 篇）"></a>入门与总览（5 篇）</h2><ul>
+<li><a href="/freqtrade/quick-freqtrade-tutorial-for-beginners/">Freqtrade 初学者快速教程</a>　<code>2023-07-09</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/09/quick-freqtrade-tutorial-for-beginners/">Quick Freqtrade Tutorial for Beginners</a></sub></li>
+<li><a href="/freqtrade/table-of-contents-for-freqtrade/">Freqtrade 目录</a>　<code>2023-07-09</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/09/table-of-contents-for-freqtrade/">Table of Contents for Freqtrade</a></sub></li>
+<li><a href="/freqtrade/thanks-freqtrade-i-m-quitting-my-job-right-now/">感谢Freqtrade！！！我现在就要辞职了！！！</a>　<code>2024-04-15</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/04/15/thanks-freqtrade-im-quitting-my-job-right-now/">Thanks Freqtrade!!! I’m quitting my job right now!!!</a></sub></li>
+<li><a href="/freqtrade/dashbot-unofficial-freqtrade-mobile-dashboard/">DashBot – 非官方 Freqtrade 移动仪表板</a>　<code>2025-10-23</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/10/23/dashbot-unofficial-freqtrade-mobile-dashboard/">DashBot – Unofficial Freqtrade Mobile Dashboard</a></sub></li>
+<li><a href="/freqtrade/algo-trading-for-dummies/">傻瓜式算法交易</a>　<code>2026-01-27</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2026/01/27/algo-trading-for-dummies/">Algo Trading For Dummies</a></sub></li>
+</ul>
+<h2 id="回测与Hyperopt（11-篇）"><a href="#回测与Hyperopt（11-篇）" class="headerlink" title="回测与Hyperopt（11 篇）"></a>回测与Hyperopt（11 篇）</h2><ul>
+<li><a href="/freqtrade/backtest-traps-custom-exit/">回测陷阱——自定义退出</a>　<code>2023-07-09</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/09/backtest-traps-custom-exit/">Backtest traps – Custom Exit</a></sub></li>
+<li><a href="/freqtrade/backtest-traps-trailing-stoploss/">回测陷阱——追踪止损</a>　<code>2023-07-09</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/09/backtest-traps-trailing-stoploss/">Backtest traps – trailing stoploss</a></sub></li>
+<li><a href="/freqtrade/how-to-reduce-memory-usage-on-backtesthyperopt/">如何在回测&#x2F;hyperopt中减少内存使用</a>　<code>2023-07-09</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/09/how-to-reduce-memory-usage-on-backtest-hyperopt/">How to reduce memory usage on backtest&#x2F;hyperopt</a></sub></li>
+<li><a href="/freqtrade/backtest-traps-roi/">回测陷阱——ROI</a>　<code>2023-07-12</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/12/backtest-traps-roi/">Backtest traps – ROI</a></sub></li>
+<li><a href="/freqtrade/myth-blowing-hyperopt-will-turn-any-strategies-to-rocket-strategies/">打破神话：hyperopt 不会把任何策略变成火箭策略</a>　<code>2023-09-23</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/09/23/myth-blowing-hyperopt-will-turn-any-strategies-to-rocket-strategies/">Myth-blowing : Hyperopt will turn any strategies to rocket strategies</a></sub></li>
+<li><a href="/freqtrade/why-my-backtest-result-is-different-from-my-drylive-result/">为什么我的回测结果与模拟&#x2F;实盘结果不同？</a>　<code>2023-10-11</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/11/why-my-backtest-result-is-different-from-my-dry-live-result/">Why my backtest result is different from my dry&#x2F;live result?</a></sub></li>
+<li><a href="/freqtrade/why-my-backtest-took-a-long-time-to-complete/">为什么我的回测需要很长时间才能完成？</a>　<code>2023-12-11</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/12/11/why-my-backtest-took-a-long-time-to-complete/">Why my backtest took a long time to complete?</a></sub></li>
+<li><a href="/freqtrade/specific-hyperopt-params-for-specific-pairs/">针对特定交易对的特定hyperopt参数</a>　<code>2024-04-18</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/04/18/specific-hyperopt-params-for-specific-pairs/">Specific hyperopt params for specific pairs</a></sub></li>
+<li><a href="/freqtrade/the-failproof-method-of-avoid-overfitting/">避免过拟合的万无一失方法</a>　<code>2024-04-18</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/04/18/the-failproof-method-of-avoid-overfitting/">The failproof method of avoid overfitting</a></sub></li>
+<li><a href="/freqtrade/hidden-trap-of-doing-backtest-in-batches/">批量进行回测的隐藏陷阱</a>　<code>2024-10-10</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/10/10/hidden-trap-of-doing-backtest-in-batches/">Hidden trap of doing backtest in batches</a></sub></li>
+<li><a href="/freqtrade/best-metrics-for-hyperopt-loss/">hyperopt损失的最佳指标</a>　<code>2025-05-05</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/05/05/best-metrics-for-hyperopt-loss/">Best metrics for hyperopt loss</a></sub></li>
+</ul>
+<h2 id="策略开发（FSD-系列）（13-篇）"><a href="#策略开发（FSD-系列）（13-篇）" class="headerlink" title="策略开发（FSD 系列）（13 篇）"></a>策略开发（FSD 系列）（13 篇）</h2><ul>
+<li><a href="/freqtrade/fsd-basic-template-of-a-strategy/">FSD – 策略的基本模板</a>　<code>2023-10-18</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/18/fsd-basic-template-of-a-strategy/">FSD – Basic Template of a Strategy</a></sub></li>
+<li><a href="/freqtrade/fsd-create-moving-average-cross-strategy/">FSD – 创建移动平均线交叉策略</a>　<code>2023-10-18</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/18/fsd-create-moving-average-cross-strategy/">FSD – Create moving average cross strategy</a></sub></li>
+<li><a href="/freqtrade/fsd-custom-exit/">FSD – 自定义退出</a>　<code>2023-10-18</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/18/fsd-custom-exit/">FSD – Custom exit</a></sub></li>
+<li><a href="/freqtrade/fsd-trailing-stoploss/">FSD – 追踪止损</a>　<code>2023-10-18</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/18/fsd-trailing-stoploss/">FSD – Trailing stoploss</a></sub></li>
+<li><a href="/freqtrade/fsd-custom-indicators-part-1/">FSD – 自定义指标 第1部分</a>　<code>2023-10-19</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/19/fsd-custom-indicators-part-1/">FSD – Custom indicators part 1</a></sub></li>
+<li><a href="/freqtrade/fsd-custom-indicators-part-2/">FSD – 自定义指标第二部分</a>　<code>2023-10-19</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/19/fsd-custom-indicators-part-2/">FSD – Custom indicators part 2</a></sub></li>
+<li><a href="/freqtrade/fsd-technical-libraries/">FSD – 技术库</a>　<code>2023-10-19</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/19/fsd-technical-libraries/">FSD – Technical libraries</a></sub></li>
+<li><a href="/freqtrade/fsd-using-multiple-timeframes/">FSD – 使用多个时间框架</a>　<code>2023-10-19</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/19/fsd-using-multiple-timeframes/">FSD – Using multiple timeframes</a></sub></li>
+<li><a href="/freqtrade/fsd-multiple-entry-and-exit-logics/">FSD – 多重入场与出场逻辑</a>　<code>2023-10-20</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/20/fsd-multiple-entry-and-exit-logics/">FSD – Multiple entry and exit logics</a></sub></li>
+<li><a href="/freqtrade/fsd-specific-exit-for-specific-entry/">FSD – 针对特定入场设置特定出场</a>　<code>2023-10-21</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/21/fsd-specific-exit-for-specific-entry/">FSD – Specific exit for specific entry</a></sub></li>
+<li><a href="/freqtrade/fsd-why-lookahead-and-recursive-issues-happened/">FSD – 为什么会出现前视和递归问题</a>　<code>2023-11-04</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/11/04/fsd-why-lookahead-and-recursive-issues-happened/">FSD – Why lookahead and recursive issues happened</a></sub></li>
+<li><a href="/freqtrade/fsd-how-to-use-atr-for-exits-roi-and-stoploss/">FSD – 如何使用ATR进行退出（ROI和stoploss）</a>　<code>2024-03-04</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/03/04/fsd-how-to-use-atr-for-exits-roi-and-stoploss/">FSD – How to use ATR for exits (ROI and stoploss)</a></sub></li>
+<li><a href="/freqtrade/fsd-better-way-of-using-atr-for-exits/">FSD – 使用ATR进行退出的更好方法</a>　<code>2024-04-18</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/04/18/fsd-better-way-of-using-atr-for-exits/">FSD – Better way of using ATR for exits</a></sub></li>
+</ul>
+<h2 id="策略技巧与代码片段（21-篇）"><a href="#策略技巧与代码片段（21-篇）" class="headerlink" title="策略技巧与代码片段（21 篇）"></a>策略技巧与代码片段（21 篇）</h2><ul>
+<li><a href="/freqtrade/how-to-define-informative-timeframe-s/">如何定义信息时间框架？</a>　<code>2023-07-14</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/14/how-to-define-informative-timeframes/">How to define informative timeframe(s)?</a></sub></li>
+<li><a href="/freqtrade/recursive-formula-bias/">递归公式偏差</a>　<code>2023-07-20</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/20/recursive-loop-bias/">Recursive formula bias</a></sub></li>
+<li><a href="/freqtrade/how-to-set-stake-amount/">如何设置 stake 金额</a>　<code>2023-07-25</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/25/how-to-set-stake-amount/">How to set stake amount</a></sub></li>
+<li><a href="/freqtrade/delayed-entry-triggers-part-1/">延迟入场触发 – 第1部分</a>　<code>2023-07-28</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/28/delayed-entry-triggers-part-1/">Delayed entry triggers – Part 1</a></sub></li>
+<li><a href="/freqtrade/use-locally-downloaded-candles-data-on-drylive-run/">在模拟&#x2F;实盘运行中使用本地下载的K线数据</a>　<code>2023-08-05</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/08/05/use-locally-downloaded-candles-data-on-dry-live-run/">Use locally-downloaded candles’ data on dry&#x2F;live run</a></sub></li>
+<li><a href="/freqtrade/how-to-set-up-tailscale-for-freqtrade/">如何为 Freqtrade 设置 Tailscale</a>　<code>2023-08-11</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/08/11/how-to-set-up-tailscale-for-freqtrade/">How to set up Tailscale for Freqtrade</a></sub></li>
+<li><a href="/freqtrade/how-to-disable-auto-pairlock/">如何禁用自动配对锁定</a>　<code>2023-08-14</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/08/14/how-to-disable-auto-pairlock/">How to disable auto pairlock</a></sub></li>
+<li><a href="/freqtrade/different-roi-trailing-and-stoploss-for-each-pairs/">为每个交易对设置不同的ROI、追踪止损和止损</a>　<code>2023-08-17</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/08/17/different-roi-trailing-and-stoploss-for-each-pairs/">Different ROI, trailing and stoploss for each pairs</a></sub></li>
+<li><a href="/freqtrade/how-to-combine-multiple-bots-into-one-frequi/">如何将多个机器人合并到一个freqUI中</a>　<code>2023-09-17</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/09/17/how-to-combine-multiple-bots-into-one-frequi/">How to combine multiple bots into one frequi</a></sub></li>
+<li><a href="/freqtrade/simple-pandas-snippets/">简单的 Pandas 代码片段</a>　<code>2023-10-11</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/11/simple-pandas-snippets/">Simple Pandas Snippets</a></sub></li>
+<li><a href="/freqtrade/simple-additional-entries-code/">简单的附加条目代码</a>　<code>2023-10-15</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/15/simple-additional-entries-code/">Simple Additional Entries Code</a></sub></li>
+<li><a href="/freqtrade/trailing-custom-exit/">追踪自定义退出</a>　<code>2023-10-15</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/15/trailing-custom-exit/">Trailing Custom Exit</a></sub></li>
+<li><a href="/freqtrade/additional-entries-based-of-dataframe-value/">基于Dataframe值的附加条目</a>　<code>2023-10-17</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/17/additional-entries-based-of-dataframe-value/">Additional Entries Based of Dataframe Value</a></sub></li>
+<li><a href="/freqtrade/signal-and-trade-candle/">信号与交易蜡烛图</a>　<code>2023-10-21</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/21/signal-and-trade-candle/">Signal and Trade Candle</a></sub></li>
+<li><a href="/freqtrade/set-up-binance-proxy/">设置币安代理</a>　<code>2023-10-29</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/29/set-up-binance-proxy/">Set up binance proxy</a></sub></li>
+<li><a href="/freqtrade/set-up-kucoin-proxy/">设置 kucoin 代理</a>　<code>2023-10-30</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/30/set-up-kucoin-proxy/">Set up kucoin proxy</a></sub></li>
+<li><a href="/freqtrade/how-to-use-older-version-of-freqtrade/">如何使用旧版本的Freqtrade</a>　<code>2023-12-03</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/12/03/how-to-use-older-version-of-freqtrade/">How to use older version of Freqtrade</a></sub></li>
+<li><a href="/freqtrade/turn-roi-and-exit-signal-into-trailing-exit/">将ROI和退出信号转为追踪退出</a>　<code>2024-01-11</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/01/11/turn-roi-and-exit-signal-into-trailing-exit/">Turn ROI and Exit Signal into trailing exit</a></sub></li>
+<li><a href="/freqtrade/data-required-to-avoid-recursive-loop-issue/">避免递归循环问题所需的数据</a>　<code>2024-05-14</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/05/14/data-required-to-avoid-recursive-loop-issue/">Data required to avoid recursive loop issue</a></sub></li>
+<li><a href="/freqtrade/how-to-trade-only-x-amount-of-pairs-with-lowesthighest-y-indicator-value/">如何仅交易指标值最低&#x2F;最高的x个交易对</a>　<code>2024-06-26</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/06/26/how-to-trade-only-x-amount-of-pairs-with-lowest-highest-y-indicator-value/">How to trade only x amount of pairs with lowest&#x2F;highest Y indicator value</a></sub></li>
+<li><a href="/freqtrade/understanding-process-only-new-candles/">理解 process_only_new_candles</a>　<code>2025-02-14</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/02/14/understanding-process_only_new_candles/">Understanding process_only_new_candles</a></sub></li>
+</ul>
+<h2 id="心得与认知（30-篇）"><a href="#心得与认知（30-篇）" class="headerlink" title="心得与认知（30 篇）"></a>心得与认知（30 篇）</h2><ul>
+<li><a href="/freqtrade/why-nostalgiaforinfinity-shouldn-t-be-used-for-live-trading/">为什么NostalgiaForInfinity不应用于实盘交易</a>　<code>2023-07-11</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/11/why-nostalgiaforinfinity-shouldnt-be-used-for-live-trading/">Why NostalgiaForInfinity shouldn’t be used for live trading</a></sub></li>
+<li><a href="/freqtrade/how-dataframe-looked-like-after-merging-informative-data/">合并信息性数据后，dataframe看起来如何</a>　<code>2023-07-27</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/27/how-dataframe-looked-like-after-merging-informative-data/">How dataframe looked like after merging informative data</a></sub></li>
+<li><a href="/freqtrade/no-trade-no-loss/">无交易 &#x3D; 无损失</a>　<code>2023-08-09</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/08/09/no-trade-no-loss/">No trade &#x3D; no loss</a></sub></li>
+<li><a href="/freqtrade/one-important-issue-of-using-volume-pairlist-on-drylive-trading/">在dry&#x2F;live交易中使用volume pairlist的一个重要问题</a>　<code>2023-08-11</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/08/11/one-important-issue-of-using-volume-pairlist-on-dry-live-trading/">One important issue of using volume pairlist on dry&#x2F;live trading</a></sub></li>
+<li><a href="/freqtrade/volume-vs-static-pairlist-based-of-marketcap-which-one-is-better/">基于交易量的交易对列表与静态交易对列表（基于市值），哪个更好？</a>　<code>2023-08-27</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/08/27/volume-vs-static-pairlist-based-of-marketcap-which-one-is-better/">Volume vs static pairlist (based of marketcap), which one is better?</a></sub></li>
+<li><a href="/freqtrade/futures-leverage-and-liquidation/">期货 – 杠杆与清算</a>　<code>2023-09-20</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/09/20/futures-leverage-and-liquidation/">Futures – Leverage and Liquidation</a></sub></li>
+<li><a href="/freqtrade/detail-of-dry-runs/">干运行详情</a>　<code>2023-10-06</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/06/detail-of-dry-runs/">Detail of dry-runs</a></sub></li>
+<li><a href="/freqtrade/why-volume-matters/">为什么成交量很重要</a>　<code>2023-11-11</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/11/11/why-volume-matters/">Why volume matters</a></sub></li>
+<li><a href="/freqtrade/crossed-check-vs-simple-comparison/">交叉检查与简单比较</a>　<code>2024-02-13</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/02/13/crossed-check-vs-simple-comparison/">Crossed check vs simple comparison</a></sub></li>
+<li><a href="/freqtrade/more-pairs-more-profits/">更多交易对，更多利润！！！！</a>　<code>2024-05-09</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/05/09/more-pairs-more-profits/">More pairs, more profits!!!!</a></sub></li>
+<li><a href="/freqtrade/the-market-is-bad/">市场行情不佳</a>　<code>2024-07-05</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/07/05/the-market-is-bad/">The market is bad</a></sub></li>
+<li><a href="/freqtrade/the-deadliest-sin-of-algo-trader/">算法交易者最致命的原罪</a>　<code>2024-07-15</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/07/15/the-deadliest-sin-of-algo-trader/">The deadliest sin of algo trader</a></sub></li>
+<li><a href="/freqtrade/the-bot-ignores-past-signals/">机器人忽略过去的信号！！！！</a>　<code>2024-07-20</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/07/20/the-bot-ignores-past-signals/">The bot ignores past signals!!!!</a></sub></li>
+<li><a href="/freqtrade/multiple-bots-using-one-wallet/">多个机器人共用一个钱包</a>　<code>2024-07-27</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/07/27/multiple-bots-using-one-wallet/">Multiple bots using one wallet</a></sub></li>
+<li><a href="/freqtrade/my-algo-trading-approach/">我的算法交易方法</a>　<code>2024-07-29</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/07/29/my-algo-trading-approach/">My algo trading approach</a></sub></li>
+<li><a href="/freqtrade/picking-the-right-coin-s/">选择正确的币种</a>　<code>2024-08-24</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/08/24/picking-the-right-coins/">Picking the right coin(s)</a></sub></li>
+<li><a href="/freqtrade/triangle-of-trading/">交易三角</a>　<code>2024-08-24</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/08/24/triangle-of-trading/">Triangle of Trading</a></sub></li>
+<li><a href="/freqtrade/are-you-addicted-to-trading/">你对交易上瘾了吗？</a>　<code>2024-11-16</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/11/16/are-you-addicted-to-trading/">Are you addicted to trading?</a></sub></li>
+<li><a href="/freqtrade/do-i-need-to-be-good-at-programming/">我需要擅长编程吗？</a>　<code>2024-12-06</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/12/06/do-i-need-to-be-good-at-programming/">Do I need to be good at programming?</a></sub></li>
+<li><a href="/freqtrade/sharing-profitable-strategy/">分享盈利策略？</a>　<code>2025-02-14</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/02/14/sharing-profitable-strategy/">Sharing profitable strategy?</a></sub></li>
+<li><a href="/freqtrade/trading-is-zero-sum-game/">交易是零和游戏</a>　<code>2025-02-16</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/02/16/trading-is-zero-sum-game/">Trading is zero-sum game</a></sub></li>
+<li><a href="/freqtrade/do-i-need-to-be-good-at-manual-trading/">我需要擅长手动交易吗？</a>　<code>2025-02-25</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/02/25/do-i-need-to-be-good-at-manual-trading/">Do I need to be good at manual trading?</a></sub></li>
+<li><a href="/freqtrade/trading-is-zero-sum-game-part-2/">交易是零和游戏——第二部分</a>　<code>2025-05-09</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/05/09/trading-is-zero-sum-game-part-2/">Trading is zero-sum game – part 2</a></sub></li>
+<li><a href="/freqtrade/indicators-matter/">指标重要吗？</a>　<code>2025-11-06</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/11/06/indicators-matter/">Indicators matter?</a></sub></li>
+<li><a href="/freqtrade/how-i-created-my-first-working-strategy/">我如何创建我的第一个有效策略</a>　<code>2025-11-22</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/11/22/how-i-created-my-first-working-strategy/">How I created my first working strategy</a></sub></li>
+<li><a href="/freqtrade/the-fried-chicken-method/">炸鸡方法</a>　<code>2025-12-03</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/12/03/the-fried-chicken-method/">The fried chicken method</a></sub></li>
+<li><a href="/freqtrade/know-your-enemy/">了解你的敌人</a>　<code>2026-01-08</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2026/01/08/know-your-enemy/">Know your enemy</a></sub></li>
+<li><a href="/freqtrade/difference-between-dry-and-live-run/">干跑和实盘运行的区别</a>　<code>2026-02-12</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2026/02/12/difference-between-dry-and-live-run/">Difference between dry and live run</a></sub></li>
+<li><a href="/freqtrade/backtest-and-indicator-are-overrated/">回测和指标被高估了</a>　<code>2026-04-02</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2026/04/02/backtest-and-indicator-are-overrated/">Backtest and indicator are overrated</a></sub></li>
+<li><a href="/freqtrade/20260426-current-strategy-approach/">20260426 – 当前策略方法</a>　<code>2026-04-26</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2026/04/26/20260426-current-strategy-approach/">20260426 – Current strategy approach</a></sub></li>
+</ul>
+<h2 id="问答与概念（10-篇）"><a href="#问答与概念（10-篇）" class="headerlink" title="问答与概念（10 篇）"></a>问答与概念（10 篇）</h2><ul>
+<li><a href="/freqtrade/what-is-the-best-strategy/">什么是最好的策略？</a>　<code>2023-07-09</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/09/what-is-the-best-strategy/">What is the best strategy?</a></sub></li>
+<li><a href="/freqtrade/trade-rate-on-dry-run-falls-outside-candle/">模拟交易中的交易率超出K线范围</a>　<code>2023-07-18</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/18/trade-rate-on-dry-run-falls-outside-candle/">Trade rate on dry-run falls outside candle</a></sub></li>
+<li><a href="/freqtrade/i-found-a-lambo-strategy-online/">我在网上找到了一个兰博基尼策略！！！！！！</a>　<code>2023-07-20</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/20/i-found-a-lambo-strategy-online/">I found a lambo strategy online!!!!!!</a></sub></li>
+<li><a href="/freqtrade/how-important-is-dry-run/">干跑有多重要？</a>　<code>2023-10-01</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/01/how-important-is-dry-run/">How important is dry-run?</a></sub></li>
+<li><a href="/freqtrade/misconception-about-candle-s-timestamp/">关于K线时间戳的误解</a>　<code>2023-10-14</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/14/misconception-about-candles-timestamp/">Misconception about candle’s timestamp</a></sub></li>
+<li><a href="/freqtrade/one-for-all-strategy/">通用策略</a>　<code>2023-11-06</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/11/06/one-for-all-strategy/">One-for-all strategy</a></sub></li>
+<li><a href="/freqtrade/how-long-is-the-warm-up-time/">预热时间有多长？</a>　<code>2024-05-16</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/05/16/how-long-is-the-warm-up-time/">How long is the warm-up time?</a></sub></li>
+<li><a href="/freqtrade/tradable-balance-ratio-issue-with-multiple-bots/">多机器人场景下的tradable_balance_ratio问题</a>　<code>2025-02-07</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/02/07/tradable_balance_ratio-issue-with-multiple-bots/">tradable_balance_ratio issue with multiple bots</a></sub></li>
+<li><a href="/freqtrade/freqai-or-hyperopt/">Freqai 还是 hyperopt？</a>　<code>2025-04-02</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/04/02/freqai-or-hyperopt/">Freqai or hyperopt?</a></sub></li>
+<li><a href="/freqtrade/how-freqtrade-applies-leverage/">Freqtrade如何应用杠杆</a>　<code>2025-10-23</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2025/10/23/how-freqtrade-applies-leverage/">How Freqtrade applies leverage</a></sub></li>
+</ul>
+<h2 id="实战策略（2-篇）"><a href="#实战策略（2-篇）" class="headerlink" title="实战策略（2 篇）"></a>实战策略（2 篇）</h2><ul>
+<li><a href="/freqtrade/st-kasuari-btc/">ST – Kasuari BTC</a>　<code>2024-05-02</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/05/02/st-kasuari-btc/">ST – Kasuari BTC</a></sub></li>
+<li><a href="/freqtrade/st-holding-strategy/">ST – 持有策略</a>　<code>2026-01-03</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2026/01/03/st-holding-strategy/">ST – Holding Strategy</a></sub></li>
+</ul>
+<h2 id="服务器运维（6-篇）"><a href="#服务器运维（6-篇）" class="headerlink" title="服务器运维（6 篇）"></a>服务器运维（6 篇）</h2><ul>
+<li><a href="/freqtrade/how-to-create-new-sudo-enabled-user/">如何创建新的启用sudo的用户</a>　<code>2023-09-13</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/09/13/how-to-create-new-sudo-enabled-user/">How to create new sudo-enabled user</a></sub></li>
+<li><a href="/freqtrade/how-to-install-docker-compose-on-ubuntu/">如何在Ubuntu上安装docker-compose</a>　<code>2023-09-13</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/09/13/how-to-install-docker-compose-on-ubuntu/">How to install docker-compose on Ubuntu</a></sub></li>
+<li><a href="/freqtrade/install-php8-4-and-modules-on-ubuntu/">在Ubuntu上安装PHP8.4和模块</a>　<code>2023-09-13</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/09/13/install-php8-2-and-modules-on-ubuntu/">Install PHP8.4 and modules on Ubuntu</a></sub></li>
+<li><a href="/freqtrade/install-python-3-13-on-ubuntu-24-0422-0420-0418-04/">在 Ubuntu 24.04|22.04|20.04|18.04 上安装 Python 3.13</a>　<code>2023-09-21</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/09/21/install-python-3-10-on-ubuntu-22-0420-0418-04/">Install Python 3.13 on Ubuntu 24.04|22.04|20.04|18.04</a></sub></li>
+<li><a href="/freqtrade/create-modify-and-delete-swapfile-on-ubuntu/">在Ubuntu上创建、修改和删除swapfile</a>　<code>2023-10-04</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/10/04/create-modify-and-delete-swapfile-on-ubuntu/">Create, modify and delete swapfile on Ubuntu</a></sub></li>
+<li><a href="/freqtrade/keep-your-bot-secure/">保持你的机器人安全</a>　<code>2026-09-22</code>　<sub><a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2026/09/22/keep-your-bot-secure/">Keep your bot secure</a></sub></li>
+</ul>
+</div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">万里无云</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">22</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎留言评论</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析"><img src="/img/20260608_1/freqtrade.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="newstrategy5_1策略解析"/></a><div class="content"><a class="title" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析">newstrategy5_1策略解析</a><time datetime="2026-06-08T13:16:28.000Z" title="发表于 2026-06-08 21:16:28">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则"><img src="/img/20260608/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="盈亏同源：用中庸之道破解交易的矛盾法则"/></a><div class="content"><a class="title" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则">盈亏同源：用中庸之道破解交易的矛盾法则</a><time datetime="2026-06-08T12:57:53.000Z" title="发表于 2026-06-08 20:57:53">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/20/my-heart/" title="my_heart"><img src="/img/pexels-edward-532643054-36490144.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="my_heart"/></a><div class="content"><a class="title" href="/2026/03/20/my-heart/" title="my_heart">my_heart</a><time datetime="2026-03-20T01:01:13.000Z" title="发表于 2026-03-20 09:01:13">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春"><img src="/img/qh/pexels-theerapat-sonphong-22471891-15413759.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="又是一年春"/></a><div class="content"><a class="title" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春">又是一年春</a><time datetime="2026-02-22T02:30:00.000Z" title="发表于 2026-02-22 10:30:00">2026-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得"><img src="/img/pexels-mart-production-7577855.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="量化心得"/></a><div class="content"><a class="title" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得">量化心得</a><time datetime="2025-12-16T08:14:06.000Z" title="发表于 2025-12-16 16:14:06">2025-12-16</time></div></div></div></div><div class="card-widget card-categories"><div class="item-headline">
+            <i class="fas fa-folder-open"></i>
+            <span>分类</span>
+            <a class="card-more-btn" href="/categories/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a>
+            </div>
+            <ul class="card-category-list" id="aside-cat-list">
+            <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ft-tutorial/"><span class="card-category-list-name">freqtrade教学</span><span class="card-category-list-count">98</span></a><ul class="card-category-list child"><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ft-tutorial/ft-basics/"><span class="card-category-list-name">入门与总览</span><span class="card-category-list-count">5</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ft-tutorial/ft-backtest/"><span class="card-category-list-name">回测与Hyperopt</span><span class="card-category-list-count">11</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ft-tutorial/ft-live/"><span class="card-category-list-name">实战策略</span><span class="card-category-list-count">2</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ft-tutorial/ft-insight/"><span class="card-category-list-name">心得与认知</span><span class="card-category-list-count">30</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ft-tutorial/ft-ops/"><span class="card-category-list-name">服务器运维</span><span class="card-category-list-count">6</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ft-tutorial/ft-fsd/"><span class="card-category-list-name">策略开发（FSD 系列）</span><span class="card-category-list-count">13</span></a></li><li class="card-category-list-item "><a class="card-category-list-link" href="/categories/ft-tutorial/ft-snippets/"><span class="card-category-list-name">策略技巧与代码片段</span><span class="card-category-list-count">21</span></a></li></ul></li>
+            </ul></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/AI%E7%BB%98%E7%94%BB/" style="font-size: 1.1em; color: #999">AI绘画</a> <a href="/tags/C/" style="font-size: 1.1em; color: #999">C++</a> <a href="/tags/Docker/" style="font-size: 1.1em; color: #999">Docker</a> <a href="/tags/FreqAI/" style="font-size: 1.1em; color: #999">FreqAI</a> <a href="/tags/Hexo/" style="font-size: 1.1em; color: #999">Hexo</a> <a href="/tags/Midjourney/" style="font-size: 1.1em; color: #999">Midjourney</a> <a href="/tags/SQL/" style="font-size: 1.1em; color: #999">SQL</a> <a href="/tags/freqtrade/" style="font-size: 1.5em; color: #99a9bf">freqtrade</a> <a href="/tags/%E4%B9%A6%E4%BF%A1/" style="font-size: 1.1em; color: #999">书信</a> <a href="/tags/%E4%BA%A4%E6%98%93/" style="font-size: 1.23em; color: #999ea6">交易</a> <a href="/tags/%E4%BA%A4%E6%98%93%E5%BF%83%E5%BE%97/" style="font-size: 1.1em; color: #999">交易心得</a> <a href="/tags/%E4%BA%A4%E6%98%93%E5%BF%83%E7%90%86/" style="font-size: 1.1em; color: #999">交易心理</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 1.1em; color: #999">博客</a> <a href="/tags/%E5%9B%BE%E7%89%87%E7%B4%A0%E6%9D%90/" style="font-size: 1.23em; color: #999ea6">图片素材</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E5%A4%A7%E7%BA%B2/" style="font-size: 1.1em; color: #999">学习大纲</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E7%BD%91%E7%AB%99/" style="font-size: 1.1em; color: #999">学习网站</a> <a href="/tags/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/" style="font-size: 1.23em; color: #999ea6">学习资源</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 1.1em; color: #999">建站</a> <a href="/tags/%E6%91%98%E6%8A%84/" style="font-size: 1.23em; color: #999ea6">摘抄</a> <a href="/tags/%E7%AD%96%E7%95%A5/" style="font-size: 1.1em; color: #999">策略</a> <a href="/tags/%E7%B4%A0%E6%9D%90%E7%BD%91%E7%AB%99/" style="font-size: 1.1em; color: #999">素材网站</a> <a href="/tags/%E7%BC%96%E7%A8%8B/" style="font-size: 1.1em; color: #999">编程</a> <a href="/tags/%E8%AF%97%E6%AD%8C/" style="font-size: 1.1em; color: #999">诗歌</a> <a href="/tags/%E8%AF%BB%E4%B9%A6/" style="font-size: 1.1em; color: #999">读书</a> <a href="/tags/%E9%87%8F%E5%8C%96/" style="font-size: 1.1em; color: #999">量化</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 1.37em; color: #99a4b2">随笔</a></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>归档</span><a class="card-more-btn" href="/archives/" title="查看更多">
+    <i class="fas fa-angle-right"></i></a></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/06/"><span class="card-archive-list-date">六月 2026</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/03/"><span class="card-archive-list-date">三月 2026</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2026/02/"><span class="card-archive-list-date">二月 2026</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/12/"><span class="card-archive-list-date">十二月 2025</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/09/"><span class="card-archive-list-date">九月 2025</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/07/"><span class="card-archive-list-date">七月 2025</span><span class="card-archive-list-count">2</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2025/06/"><span class="card-archive-list-date">六月 2025</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2022/09/"><span class="card-archive-list-date">九月 2022</span><span class="card-archive-list-count">2</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站资讯</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">17</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总访问量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2026-10-09T02:45:21.743Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026 By 万里无云</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body></html>

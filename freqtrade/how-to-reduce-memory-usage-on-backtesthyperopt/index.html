@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>如何在回测/hyperopt中减少内存使用 | JRsunny</title><meta name="robots" content="noindex"><meta name="keywords" content="learn,share,progress,code,"><meta name="author" content="万里无云"><meta name="copyright" content="万里无云"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="原文标题：How to reduce memory usage on backtest&#x2F;hyperopt原文链接：https:&#x2F;&#x2F;botacademy.ddns.net&#x2F;2023&#x2F;07&#x2F;09&#x2F;how-to-reduce-memory-usage-on-backtest-hyperopt&#x2F;发布日期：2023-07-09   突发新闻，如果你还不知道的话，hyperopt 其实就是并行执行">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在回测&#x2F;hyperopt中减少内存使用">
+<meta property="og:url" content="https://jrsunny.github.io/freqtrade/how-to-reduce-memory-usage-on-backtesthyperopt/index.html">
+<meta property="og:site_name" content="JRsunny">
+<meta property="og:description" content="原文标题：How to reduce memory usage on backtest&#x2F;hyperopt原文链接：https:&#x2F;&#x2F;botacademy.ddns.net&#x2F;2023&#x2F;07&#x2F;09&#x2F;how-to-reduce-memory-usage-on-backtest-hyperopt&#x2F;发布日期：2023-07-09   突发新闻，如果你还不知道的话，hyperopt 其实就是并行执行">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2023-07-08T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-10-09T02:44:52.848Z">
+<meta property="article:author" content="万里无云">
+<meta property="article:tag" content="learn,share,progress,code,">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jrsunny.github.io/freqtrade/how-to-reduce-memory-usage-on-backtesthyperopt/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="zxIuQKLK97eYuGrwYuEQR_rwv3BmMcxYWF5H78A3FKY"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '如何在回测/hyperopt中减少内存使用',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-10-09 10:44:52'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="JRsunny" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">22</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/freqtrade/"><i class="fa-fw fas fa-graduation-cap"></i><span> Freqtrade教学</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JRsunny</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/freqtrade/"><i class="fa-fw fas fa-graduation-cap"></i><span> Freqtrade教学</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">如何在回测/hyperopt中减少内存使用</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-07-08T16:00:00.000Z" title="发表于 2023-07-09 00:00:00">2023-07-09</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-10-09T02:44:52.848Z" title="更新于 2026-10-09 10:44:52">2026-10-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ft-tutorial/">freqtrade教学</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ft-tutorial/ft-backtest/">回测与Hyperopt</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="如何在回测/hyperopt中减少内存使用"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>原文标题：How to reduce memory usage on backtest&#x2F;hyperopt<br>原文链接：<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2023/07/09/how-to-reduce-memory-usage-on-backtest-hyperopt/">https://botacademy.ddns.net/2023/07/09/how-to-reduce-memory-usage-on-backtest-hyperopt/</a><br>发布日期：2023-07-09</p>
+</blockquote>
+<hr>
+<p>突发新闻，如果你还不知道的话，hyperopt 其实就是并行执行的 backtest。好了，现在进入正题。</p>
+<p>当你进行 backtest&#x2F;hyperopt 时，K线数据和 dataframe 都会被存储在内存中，而不是你的硬盘上。这就是为什么你需要确保你的 strategy 在内存使用上是高效的，尤其是当你想要用大量币种、在很宽的时间范围内、用一个包含大量指标的 strategy 来做 backtest&#x2F;hyperopt 时。根据我的经验，人们（在不知不觉中）把内存浪费在了冗余的东西上，比如</p>
+<h2 id="把用不到的数据存进-dataframe"><a href="#把用不到的数据存进-dataframe" class="headerlink" title="把用不到的数据存进 dataframe"></a>把用不到的数据存进 dataframe</h2><p>以这段代码为例</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">bb_40 = qtpylib.bollinger_bands(dataframe[&#x27;close&#x27;], window=40, stds=2)</span><br><span class="line">dataframe[&#x27;lower&#x27;] = bb_40[&#x27;lower&#x27;]</span><br><span class="line">dataframe[&#x27;mid&#x27;] = bb_40[&#x27;mid&#x27;]</span><br><span class="line">dataframe[&#x27;bbdelta&#x27;] = (dataframe[&#x27;mid&#x27;] - dataframe[&#x27;lower&#x27;]).abs()</span><br></pre></td></tr></table></figure>
+
+
+<p>上面的代码会为每个币种往 dataframe 里存 3 个新列。如果你在 strategy 里确实用到了这 3 个列，那没问题。但这个特定的 strategy 显然完全没用到 <em>mid</em> 值，只是拿它来计算 <em>bbdelta</em>。所以你白白用 1 个用不到的列填满了内存。因此，与其把 <em>mid</em> 存进 dataframe，你可以把上面的代码改成这样</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bb_40 = qtpylib.bollinger_bands(dataframe[&#x27;close&#x27;], window=40, stds=2)</span><br><span class="line">dataframe[&#x27;lower&#x27;] = bb_40[&#x27;lower&#x27;]</span><br><span class="line">dataframe[&#x27;bbdelta&#x27;] = (bb_40[&#x27;mid&#x27;] - dataframe[&#x27;lower&#x27;]).abs()</span><br></pre></td></tr></table></figure>
+
+
+<p>现在你只存 2 个列而不是 3 个。省下来的空间可以用来 backtest 稍微多一点的币种和&#x2F;或更宽的时间范围，诸如此类。另一个坏习惯的例子是这段代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dataframe[&#x27;sma_5&#x27;] = ta.SMA(dataframe, timeperiod=5)</span><br><span class="line">dataframe[&#x27;lips&#x27;] = ta.SMA(dataframe, timeperiod=5)</span><br></pre></td></tr></table></figure>
+
+
+<p>这个 strategy 写了一个重复的列，它的值和另一个列完全相同。和前面的例子一样，你在浪费宝贵的内存。所以当你写 strategy 时，一定要留意你想往 dataframe 里存什么。这可能会帮你省下相当可观的内存。</p>
+<h2 id="在-populate-indicators-里放循环（针对-hyperopt）"><a href="#在-populate-indicators-里放循环（针对-hyperopt）" class="headerlink" title="在 populate_indicators 里放循环（针对 hyperopt）"></a>在 populate_indicators 里放循环（针对 hyperopt）</h2><p>举个例子，假设你想 hyperopt 入场时使用的 EMA 长度，取值范围在 5 到 15 之间。有两种做法。</p>
+<p><strong>在 populate_indicators 里生成这些列</strong></p>
+<p>人们要么手动做，要么写一个循环把 <em>ema_5</em> 到 <em>ema_15</em> 的列生成到 dataframe 里。这种方法的问题在于，你基本上生成了 10 个用不到的列（假设你只是拿它们用于入场逻辑），白白占着内存。更好的做法（在我看来）是……</p>
+<p><strong>在 populate_trade_entry 里生成这个列</strong></p>
+<p>为长度创建一个 hyperopt 参数，例如</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">buy_length_ema = IntParameter(5, 15, default=5, optimize=True)</span><br></pre></td></tr></table></figure>
+
+
+<p>然后在 populate_entry_trend 里</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -&gt; DataFrame:</span><br><span class="line">    dataframe[&#x27;ema_buy&#x27;] = ta.EMA(dataframe, int(self.buy_length_ema.value))</span><br></pre></td></tr></table></figure>
+
+
+<p>现在你不再创建 11 个列，而只创建 1 个列，同时仍然能够对 <em>ema_buy</em> 的长度参数进行 hyperopt。你会省下大量内存。</p>
+<p>如果你已经做到了上面两点，但还想进一步减少内存占用，并且能接受更长的 hyperopt 完成时间，那么你可以用这两种方法</p>
+<h2 id="把-job-数量限制为-1（针对-hyperopt）"><a href="#把-job-数量限制为-1（针对-hyperopt）" class="headerlink" title="把 job 数量限制为 1（针对 hyperopt）"></a>把 job 数量限制为 1（针对 hyperopt）</h2><p>正如开头所说，hyperopt 其实就是并行执行的 backtest。遗憾的是，它们不会在各个 backtest 之间共享 dataframe。这意味着你用的 CPU 核心越多，占用的内存就越多。要想尽可能少用内存，你需要把使用的 CPU 核心限制为 1。</p>
+<h2 id="把只用一次的指标放到各自对应的函数里计算"><a href="#把只用一次的指标放到各自对应的函数里计算" class="headerlink" title="把只用一次的指标放到各自对应的函数里计算"></a>把只用一次的指标放到各自对应的函数里计算</h2><p>例如，你的入场逻辑只用到 ema_15。与其在 populate_indicators 里计算这个指标并把值存进 dataframe（也就意味着它被存进了内存），你完全可以在 populate_entry_trend 里这样计算</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">def populate_entry_trend(self, dataframe: DataFrame, metadata: dict) -&gt; DataFrame:</span><br><span class="line">    ema_15 = ta.EMA(dataframe, 15)</span><br></pre></td></tr></table></figure>
+
+
+<p>这样你会省下内存，但完成时间会更长，因为这意味着 <em>ema_15</em> 会在每个 epoch 都被计算一次，而如果你把它放在 populate_indicators 里就只会计算一次。对于 backtest 来说，完成时间变长这个代价可能微不足道，因为无论哪种方式你都只计算一次。</p>
+<hr>
+<hr>
+<!-- flag of hidden posts --></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://jrsunny.github.io">万里无云</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jrsunny.github.io/freqtrade/how-to-reduce-memory-usage-on-backtesthyperopt/">https://jrsunny.github.io/freqtrade/how-to-reduce-memory-usage-on-backtesthyperopt/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jrsunny.github.io" target="_blank">JRsunny</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">万里无云</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">22</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎留言评论</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%8A%E7%94%A8%E4%B8%8D%E5%88%B0%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AD%98%E8%BF%9B-dataframe"><span class="toc-number">1.</span> <span class="toc-text">把用不到的数据存进 dataframe</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8-populate-indicators-%E9%87%8C%E6%94%BE%E5%BE%AA%E7%8E%AF%EF%BC%88%E9%92%88%E5%AF%B9-hyperopt%EF%BC%89"><span class="toc-number">2.</span> <span class="toc-text">在 populate_indicators 里放循环（针对 hyperopt）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%8A-job-%E6%95%B0%E9%87%8F%E9%99%90%E5%88%B6%E4%B8%BA-1%EF%BC%88%E9%92%88%E5%AF%B9-hyperopt%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">把 job 数量限制为 1（针对 hyperopt）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%8A%E5%8F%AA%E7%94%A8%E4%B8%80%E6%AC%A1%E7%9A%84%E6%8C%87%E6%A0%87%E6%94%BE%E5%88%B0%E5%90%84%E8%87%AA%E5%AF%B9%E5%BA%94%E7%9A%84%E5%87%BD%E6%95%B0%E9%87%8C%E8%AE%A1%E7%AE%97"><span class="toc-number">4.</span> <span class="toc-text">把只用一次的指标放到各自对应的函数里计算</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析"><img src="/img/20260608_1/freqtrade.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="newstrategy5_1策略解析"/></a><div class="content"><a class="title" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析">newstrategy5_1策略解析</a><time datetime="2026-06-08T13:16:28.000Z" title="发表于 2026-06-08 21:16:28">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则"><img src="/img/20260608/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="盈亏同源：用中庸之道破解交易的矛盾法则"/></a><div class="content"><a class="title" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则">盈亏同源：用中庸之道破解交易的矛盾法则</a><time datetime="2026-06-08T12:57:53.000Z" title="发表于 2026-06-08 20:57:53">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/20/my-heart/" title="my_heart"><img src="/img/pexels-edward-532643054-36490144.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="my_heart"/></a><div class="content"><a class="title" href="/2026/03/20/my-heart/" title="my_heart">my_heart</a><time datetime="2026-03-20T01:01:13.000Z" title="发表于 2026-03-20 09:01:13">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春"><img src="/img/qh/pexels-theerapat-sonphong-22471891-15413759.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="又是一年春"/></a><div class="content"><a class="title" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春">又是一年春</a><time datetime="2026-02-22T02:30:00.000Z" title="发表于 2026-02-22 10:30:00">2026-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得"><img src="/img/pexels-mart-production-7577855.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="量化心得"/></a><div class="content"><a class="title" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得">量化心得</a><time datetime="2025-12-16T08:14:06.000Z" title="发表于 2025-12-16 16:14:06">2025-12-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026 By 万里无云</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body></html>

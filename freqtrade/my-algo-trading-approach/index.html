@@ -1,0 +1,167 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>我的算法交易方法 | JRsunny</title><meta name="robots" content="noindex"><meta name="keywords" content="learn,share,progress,code,"><meta name="author" content="万里无云"><meta name="copyright" content="万里无云"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="原文标题：My algo trading approach原文链接：https:&#x2F;&#x2F;botacademy.ddns.net&#x2F;2024&#x2F;07&#x2F;29&#x2F;my-algo-trading-approach&#x2F;发布日期：2024-07-29   继我上一篇关于算法交易中贪婪的文章之后，你们中的一些人可能会想，那么一个现实的好目标到底是什么。我将分享我自己的算法交易方法。请注意，这些方法都不是基于任何科学实验或">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的算法交易方法">
+<meta property="og:url" content="https://jrsunny.github.io/freqtrade/my-algo-trading-approach/index.html">
+<meta property="og:site_name" content="JRsunny">
+<meta property="og:description" content="原文标题：My algo trading approach原文链接：https:&#x2F;&#x2F;botacademy.ddns.net&#x2F;2024&#x2F;07&#x2F;29&#x2F;my-algo-trading-approach&#x2F;发布日期：2024-07-29   继我上一篇关于算法交易中贪婪的文章之后，你们中的一些人可能会想，那么一个现实的好目标到底是什么。我将分享我自己的算法交易方法。请注意，这些方法都不是基于任何科学实验或">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg">
+<meta property="article:published_time" content="2024-07-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-10-09T02:44:52.897Z">
+<meta property="article:author" content="万里无云">
+<meta property="article:tag" content="learn,share,progress,code,">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://jrsunny.github.io/freqtrade/my-algo-trading-approach/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="zxIuQKLK97eYuGrwYuEQR_rwv3BmMcxYWF5H78A3FKY"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '我的算法交易方法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2026-10-09 10:44:52'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="JRsunny" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/Avatar.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">22</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/freqtrade/"><i class="fa-fw fas fa-graduation-cap"></i><span> Freqtrade教学</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">JRsunny</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div><div class="menus_item"><a class="site-page" href="/music/"><i class="fa-fw fas fa-music"></i><span> Music</span></a></div><div class="menus_item"><a class="site-page" href="/freqtrade/"><i class="fa-fw fas fa-graduation-cap"></i><span> Freqtrade教学</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">我的算法交易方法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-07-28T16:00:00.000Z" title="发表于 2024-07-29 00:00:00">2024-07-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-10-09T02:44:52.897Z" title="更新于 2026-10-09 10:44:52">2026-10-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ft-tutorial/">freqtrade教学</a><i class="fas fa-angle-right post-meta-separator"></i><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/ft-tutorial/ft-insight/">心得与认知</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="我的算法交易方法"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p>原文标题：My algo trading approach<br>原文链接：<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/07/29/my-algo-trading-approach/">https://botacademy.ddns.net/2024/07/29/my-algo-trading-approach/</a><br>发布日期：2024-07-29</p>
+</blockquote>
+<hr>
+<p>继<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/07/15/the-deadliest-sin-of-algo-trader/">我上一篇</a>关于算法交易中贪婪的文章之后，你们中的一些人可能会想，那么一个现实的好目标到底是什么。我将分享我自己的算法交易方法。请注意，这些方法都不是基于任何科学实验或类似的东西。它们全都基于我自己的经验、别人分享的内容（好的和坏的），以及我自己的推理。</p>
+<h3 id="Pairs-选择"><a href="#Pairs-选择" class="headerlink" title="Pairs 选择"></a>Pairs 选择</h3><p>我有两种类型的 strategy。第一种只交易 BTC。对于这个 strategy，我双向交易。第二种类型交易市值最高的 pairs，排除 meme 币。是的，有少数 meme 币拥有很高的市值。这就是为什么我先生成 top 50 pairs 的列表，然后移除 meme 币。接着我用这个修改后的列表进行实盘交易。</p>
+<h3 id="退出原则"><a href="#退出原则" class="headerlink" title="退出原则"></a>退出原则</h3><p>正如上一篇文章（在本文开头有链接）中提到的，最好有一个现实的利润目标。对我来说，如果一年能获得 10% 的利润，对我来说已经足够好了。这意味着我的目标只是每月 0.83% 的利润，或者为了简单起见，我们把它凑整到每月 1% 的利润。我只需要每月有一笔 1% 的交易。这个目标真的是触手可及的。低 ROI 也是基于<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/08/24/triangle-of-trading/">这篇文章</a>，在那篇文章中我的偏好是高胜率和中等交易次数。这意味着我将不得不接受（相对）较低的 ROI。</p>
+<p>那么困难的部分是什么？贪婪。“1% 的交易？拜托。如果我赚这么低的利润，什么时候才能变富？”正如<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/04/15/thanks-freqtrade-im-quitting-my-job-right-now/">这里</a>所说，永远不要考虑用算法交易来替代你的全职工作，因为它永远做不到。把它看作是副业收入。</p>
+<p>我也不使用硬 stoploss（基于亏损百分比）。相反，我使用基于指标的退出逻辑，无论交易是否盈利都会退出交易。最近我还使用 freqai 生成额外的指标（targets），以便在 BTC 处于最大值&#x2F;最小值时退出，或者检测到 outlier 时退出。</p>
+<p>除了基于指标的退出，我还使用基于时间的退出。在交易开仓后经过 20 根 candles，roi 会被移动到 -roi。所以，例如，如果我的初始 roi 是 1%，在 20 根 candle 之后，roi 会被下调到 -1%。</p>
+<h3 id="不要害怕止损"><a href="#不要害怕止损" class="headerlink" title="不要害怕止损"></a>不要害怕止损</h3><p>有时候指标或基于时间的 roi 会无法捕捉到糟糕的交易。这时我就会手动止损，停止 bot，并重新修改 strategy。</p>
+<p>很多人害怕止损。在他们看来，止损意味着你承认自己的 strategy 选择是错误的，而没有多少人愿意承认自己是错的。</p>
+<h3 id="关于我-pair-选择的解释"><a href="#关于我-pair-选择的解释" class="headerlink" title="关于我 pair 选择的解释"></a>关于我 pair 选择的解释</h3><p>一开始，我交易 80 个成交量 pairs，然后降到 60，然后 40，然后 top 20 市值 pairs。最近我也在试验仅交易 btc 的 strat。到目前为止，只有最后两种方法能给出稳定的长期表现。说到表现，我指的不是大利润。我指的是稳定的利润和小的（或没有）亏损。针对特定 pairs 制定 strategy 的想法其实并不新鲜。以前其他用户也尝试过，尽管大多数（如果不是全部）都失败了。当我试图分析为什么他们都失败了时，原因是因为他们在交易 altcoins。</p>
+<p>人们喜欢交易 altcoins（尤其是低市值币）的主要原因是这些币有很大的波动性和价格变化。它们可以在短时间内变化超过 10%。虽然这很诱人，但他们忘了同样的波动性也会伤害他们。这些币在任何方向上都可以有很大的变化。当你在错误的方向上进入交易时，你就完蛋了。</p>
+<p>交易 top 20 市值币背后的推理很简单。与低市值币相比，它们（相对）波动性较小，即使 BTC 下跌时也是如此。虽然这会降低可能的利润，但也会限制我潜在的亏损。</p>
+<p>而对于我的仅交易 BTC 的 strat，主要想法是因为 BTC 是加密货币之王。当 BTC 大幅波动时，几乎所有币都会跟随。只有当 BTC 横盘时，其他币才能有自己的走势。这意味着试图预测 altcoins 的走势更难，因为你必须考虑 altcoins 自身的走势和 BTC 的走势。这就是为什么对于我的 top 20 市值 strat，它们只做多。我仍然对做多逻辑没有完全的信心，加入做空只会增加不必要的风险。</p>
+<h3 id="入场是关键"><a href="#入场是关键" class="headerlink" title="入场是关键"></a><strong>入场是关键</strong></h3><p>由于我的退出非常简单（1% ROI 和几个简单的退出逻辑），不需要优化高级的退出逻辑。这意味着我可以把所有时间都花在入场工作上。而且由于我的目标只是每月一笔交易，这让你更容易专注于好的入场，而不需要在可疑的入场上下注。也没有压力要求每天至少有一笔交易。你只需要等到最好的入场信号出现。</p>
+<h3 id="All-for-one-not-one-for-all"><a href="#All-for-one-not-one-for-all" class="headerlink" title="All for one, not one for all"></a><strong>All for one, not one for all</strong></h3><p>有些人喜欢有一个大的“完整” strategy，里面有很多入场逻辑。就个人而言，我更喜欢有很多 bot，它们各自有特定的逻辑，并<a target="_blank" rel="noopener" href="https://botacademy.ddns.net/2024/07/27/multiple-bots-using-one-wallet/">让它们在一个 wallet 上工作</a>。这让你更容易专注于特定的想法。在你完成那个想法之后，你可以用不同的想法运行一个新的 bot，以此类推。当你发现某个想法没有按预期工作时，你可以直接停止那个特定的 bot，让其他 bot 继续工作，而不是不得不停止一个 bot 只为了修复它的一部分。</p>
+<p>最后但最重要的一点是……</p>
+<h3 id="睡个好觉"><a href="#睡个好觉" class="headerlink" title="睡个好觉"></a>睡个好觉</h3><p>如果你因为 FT bot 而晚上睡不好觉，那么你的 strategy 设置错了。无论利润是大是小，衡量 strategy 好坏的第一个指标可以从你（作为 bot 的所有者）有多信任它能在交易中做到最好来看，你可以睡个好觉，而不必担心它可能在你睡觉时开糟糕的交易。</p>
+<p>说到底，上面这些观点都只是我个人的看法。在我人生的这个阶段，内心的平静比肾上腺素飙升更珍贵。我坚信，只要你能享受这段漫长而崎岖的算法交易之旅，你就能长期坚持下去，而不会把自己烧尽。虽然我无法保证你会在路的尽头找到宝藏，但我希望你能在沿途收获一些知识，它们或许会在你人生的某个地方派上用场。</p>
+<!-- flag of hidden posts --></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://jrsunny.github.io">万里无云</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://jrsunny.github.io/freqtrade/my-algo-trading-approach/">https://jrsunny.github.io/freqtrade/my-algo-trading-approach/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://jrsunny.github.io" target="_blank">JRsunny</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div><nav class="pagination-post" id="pagination"></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/Avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">万里无云</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">26</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">22</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">欢迎留言评论</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Pairs-%E9%80%89%E6%8B%A9"><span class="toc-number">1.</span> <span class="toc-text">Pairs 选择</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%80%E5%87%BA%E5%8E%9F%E5%88%99"><span class="toc-number">2.</span> <span class="toc-text">退出原则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8D%E8%A6%81%E5%AE%B3%E6%80%95%E6%AD%A2%E6%8D%9F"><span class="toc-number">3.</span> <span class="toc-text">不要害怕止损</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%88%91-pair-%E9%80%89%E6%8B%A9%E7%9A%84%E8%A7%A3%E9%87%8A"><span class="toc-number">4.</span> <span class="toc-text">关于我 pair 选择的解释</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%A5%E5%9C%BA%E6%98%AF%E5%85%B3%E9%94%AE"><span class="toc-number">5.</span> <span class="toc-text">入场是关键</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#All-for-one-not-one-for-all"><span class="toc-number">6.</span> <span class="toc-text">All for one, not one for all</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9D%A1%E4%B8%AA%E5%A5%BD%E8%A7%89"><span class="toc-number">7.</span> <span class="toc-text">睡个好觉</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析"><img src="/img/20260608_1/freqtrade.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="newstrategy5_1策略解析"/></a><div class="content"><a class="title" href="/2026/06/08/newstrategy5-1/" title="newstrategy5_1策略解析">newstrategy5_1策略解析</a><time datetime="2026-06-08T13:16:28.000Z" title="发表于 2026-06-08 21:16:28">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则"><img src="/img/20260608/1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="盈亏同源：用中庸之道破解交易的矛盾法则"/></a><div class="content"><a class="title" href="/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/" title="盈亏同源：用中庸之道破解交易的矛盾法则">盈亏同源：用中庸之道破解交易的矛盾法则</a><time datetime="2026-06-08T12:57:53.000Z" title="发表于 2026-06-08 20:57:53">2026-06-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/03/20/my-heart/" title="my_heart"><img src="/img/pexels-edward-532643054-36490144.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="my_heart"/></a><div class="content"><a class="title" href="/2026/03/20/my-heart/" title="my_heart">my_heart</a><time datetime="2026-03-20T01:01:13.000Z" title="发表于 2026-03-20 09:01:13">2026-03-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春"><img src="/img/qh/pexels-theerapat-sonphong-22471891-15413759.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="又是一年春"/></a><div class="content"><a class="title" href="/2026/02/22/%E6%83%85%E8%AF%9D/" title="又是一年春">又是一年春</a><time datetime="2026-02-22T02:30:00.000Z" title="发表于 2026-02-22 10:30:00">2026-02-22</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得"><img src="/img/pexels-mart-production-7577855.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="量化心得"/></a><div class="content"><a class="title" href="/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/" title="量化心得">量化心得</a><time datetime="2025-12-16T08:14:06.000Z" title="发表于 2025-12-16 16:14:06">2025-12-16</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('https://i.loli.net/2020/05/01/gkihqEjXxJ5UZ1C.jpg')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2026 By 万里无云</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/hibiki.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true}});</script></body></html>
