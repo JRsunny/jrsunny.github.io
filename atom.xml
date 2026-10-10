@@ -340,9 +340,9 @@
     <category term="生活" scheme="https://jrsunny.github.io/categories/essays/life/"/>
     
     
-    <category term="摘抄" scheme="https://jrsunny.github.io/tags/%E6%91%98%E6%8A%84/"/>
-    
     <category term="随笔" scheme="https://jrsunny.github.io/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+    <category term="摘抄" scheme="https://jrsunny.github.io/tags/%E6%91%98%E6%8A%84/"/>
     
   </entry>
   
@@ -453,9 +453,9 @@
     <category term="编程学习" scheme="https://jrsunny.github.io/categories/collections/programming/"/>
     
     
-    <category term="学习资源" scheme="https://jrsunny.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/"/>
-    
     <category term="SQL" scheme="https://jrsunny.github.io/tags/SQL/"/>
+    
+    <category term="学习资源" scheme="https://jrsunny.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/"/>
     
   </entry>
   
@@ -481,9 +481,9 @@
     <category term="编程学习" scheme="https://jrsunny.github.io/categories/collections/programming/"/>
     
     
-    <category term="C++" scheme="https://jrsunny.github.io/tags/C/"/>
-    
     <category term="学习资源" scheme="https://jrsunny.github.io/tags/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90/"/>
+    
+    <category term="C++" scheme="https://jrsunny.github.io/tags/C/"/>
     
   </entry>
   

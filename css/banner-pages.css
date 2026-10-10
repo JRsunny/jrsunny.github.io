@@ -1,0 +1,67 @@
+/* ==========================================================================
+   归档 / 标签 / 分类 页横幅增强
+   --------------------------------------------------------------------------
+   背景图本身由 _config.butterfly.yml 的 archive_img / tag_img / category_img
+   与 source/tags/index.md、source/categories/index.md 的 top_img 指定，
+   本文件只负责两件事：
+
+   1. 加深标题区的遮罩。主题默认遮罩是整幅均匀的 rgba(0,0,0,.3)，
+      雪山、云层这类中高调图片下，居中的白色页面标题（#site-title）
+      对比度不足、发虚。这里改为「上下深、中间略浅」的渐变：
+      底部加深同时提升导航栏（#nav，固定在顶部 60px）的可读性。
+   2. 统一这三个页型里正文卡片的背景与圆角(可选)。
+
+   加载顺序：主题在 head.pug 先引入 asset.main_css，随后才输出 inject.head，
+   因此本文件天然排在主题样式之后，同特异度即可生效。
+   ========================================================================== */
+
+/* ---------- 1. 页面横幅：按页型固定背景图 + 强化暗化遮罩 ---------- */
+
+#page-header:is(.not-home-page, .post-bg) {
+  background-position: center center;
+  background-size: cover;
+}
+
+/* 归档页 /archives/ 及全部分页 */
+#page-header:is(.not-home-page, .post-bg):has(+ .layout #archive) {
+  background-image: url('/img/banner/banner-archives.jpg');
+}
+
+/* 标签总览页 /tags/ 与子标签页 /tags/<标签名>/ */
+#page-header:is(.not-home-page, .post-bg):has(+ .layout #tag) {
+  background-image: url('/img/banner/banner-tags.jpg');
+}
+
+/* 分类总览页 /categories/ 与子分类页 #page 内为 .category-lists / .category-list */
+#page-header:is(.not-home-page, .post-bg):has(+ .layout #page .category-lists) {
+  background-image: url('/img/banner/banner-categories.jpg');
+}
+
+/* 强化遮罩：覆盖主题的 background-color: alpha(#000, .3) */
+#page-header:has(+ .layout #archive):before,
+#page-header:has(+ .layout #tag):before,
+#page-header:has(+ .layout #page .category-lists):before {
+  background-color: rgba(0, 0, 0, .34);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, .55) 0,
+    rgba(0, 0, 0, .12) 26%,
+    rgba(0, 0, 0, .10) 50%,
+    rgba(0, 0, 0, .58) 100%
+  );
+}
+
+/* 标题补一层更实的投影，保证在亮部图片上也立得住 */
+#page-header:has(+ .layout #archive) #site-title,
+#page-header:has(+ .layout #tag) #site-title,
+#page-header:has(+ .layout #page .category-lists) #site-title {
+  text-shadow: 0 2px 10px rgba(0, 0, 0, .55), 0 1px 3px rgba(0, 0, 0, .45);
+}
+
+/* ---------- 2. #page-header 之外：这三个页型的正文卡片 ---------- */
+
+/* 分类页的分类树：数字与链接的配色沿用主题变量，此处只做轻微留白优化 */
+#page .category-lists .category-list-count {
+  margin-left: 4px;
+}
+</标签名>
