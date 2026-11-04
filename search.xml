@@ -1,6 +1,487 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>AI画画，见证一个时代</title>
+    <url>/2022/09/09/MJ/</url>
+    <content><![CDATA[<h1 id="见证AI崛起于我们的时代"><a href="#见证AI崛起于我们的时代" class="headerlink" title="见证AI崛起于我们的时代"></a>见证AI崛起于我们的时代</h1><p>前几天看到有人用Midjourney生成的数字绘画作品获得了比赛一等奖，恍然惊醒，原来AI已经成长到这种地步了，一种见证AI崛起于这个时代厚重历史感，</p>
+<p>作者用的是Discord频道下Midjourney，输入提示词，然后等待GPU燃烧就可以生成画作。这个过程说起来简单，但实际上还是有难度。这个过程叫做Prompt Engineering</p>
+<p>直接翻译为提示工程，可能不是太准确，网友甚至预测以后会有提示工程师这种全新职业。毕竟利用AI作画，一小时抵的上原来一星期的量，这让人明明白白的感受到什么是降维打击啊。<br><img src="/img/mj/b.png"><br>关于AI是否杀死了艺术，个人认为虎嗅这篇文章分析的有点道理。<br>《美术行业，正在被AI作画杀死？》<br><a href="https://www.huxiu.com/article/651324.html">https://www.huxiu.com/article/651324.html</a></p>
+<h1 id="整理几个AI画画工具"><a href="#整理几个AI画画工具" class="headerlink" title="整理几个AI画画工具"></a>整理几个AI画画工具</h1><p>discord.gg&#x2F;midjourney（公测）</p>
+<p>labs.openai.com&#x2F;waitlist（内测）</p>
+<p><a href="https://beta.dreamstudio.ai/dream%EF%BC%88%E5%85%AC%E6%B5%8B%EF%BC%89">https://beta.dreamstudio.ai/dream（公测）</a></p>
+<h1 id="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"><a href="#对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。" class="headerlink" title="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"></a>对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。</h1><p>一、	抖音的壁纸号，目前已经有不少人在做这个，通过精美的壁纸吸引流量，然后广告变现，但是这个由于护城河很低，也是卷的不行。需要坚持。<br>二、	对于原本的美术设计，游戏设计来说，运用得当可能会是职场杀器，缺陷在于很可能调试出来给提示词直接被公司继承，然后就直接毕业了。<br>三、	对于画家来说确实不是一个好消息，继续坚持可能会更加困难，转型则意味之前的学习成本投入几乎浪费。还是顺势拥抱吧。<br>四、	整理相关知识，卖教程，做知识星球。这个是比较可行的路子。至少可以在这一波冲击中收获一些。</p>
+<p>最后，</p>
+<p>很幸运生在这个伟大的时代，<br>但同时面对这个时代的飞速发展，<br>又感到很无力。<br>网上有个段子说的很好：长城非常壮观雄伟，但是我是修长城的人。</p>
+]]></content>
+      <categories>
+        <category>科技观察</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI绘画</tag>
+        <tag>Midjourney</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hello-world</title>
+    <url>/2021/01/07/hello-world/</url>
+    <content><![CDATA[<h2 id="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"><a href="#自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。" class="headerlink" title="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"></a>自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。</h2><h2 id="在这互联网上开一块自留地，种一点东西。"><a href="#在这互联网上开一块自留地，种一点东西。" class="headerlink" title="在这互联网上开一块自留地，种一点东西。"></a>在这互联网上开一块自留地，种一点东西。</h2><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+      <categories>
+        <category>随笔文字</category>
+        <category>建站随笔</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>一次 0x133 蓝屏排查实录：从怀疑所有驱动到锁定无线网卡的电源管理</title>
+    <url>/2026/11/04/0x133%E8%93%9D%E5%B1%8F%E6%8E%92%E6%9F%A5%E5%AE%9E%E5%BD%95/</url>
+    <content><![CDATA[<p>七月的一个下午，屏幕毫无征兆地冻住了——不是卡顿，是整个画面定在原处，键盘灯还亮着，按什么都没反应。几十秒后屏幕一黑，接着是那行这两年越来越眼熟的字：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">你的电脑遇到问题，需要重启。</span><br><span class="line">终止代码：DPC_WATCHDOG_VIOLATION</span><br></pre></td></tr></table></figure>
+
+<p>从那天起，这台笔记本每天要这么死 1~4 次，整整 17 天没有一天例外。日志里 <code>Kernel-Power 41</code> 和 <code>EventLog 6008</code> 与每次死机一一对应。</p>
+<p>排查前后持续了几个月，走了两次明显的弯路：先是在转储里扫字符串找驱动，然后是把 <code>amdgpio2.sys</code> 当成元凶。真正的转折点是 <code>!blackboxpnp</code> 这条几乎没人提的命令——它把六次崩溃里的六次，都指向了同一块硬件：Intel AX200 无线模块所在的 PCIe 根端口。</p>
+<p>这篇文章按时间顺序把整个过程写下来：错在哪、怎么证伪、最后改了哪三样东西，以及为什么“5 天不崩”这一次能算数。</p>
+<blockquote>
+<p><strong>设备</strong>：机械革命 无界14X（MECHREVO WUJIE14XA）／AMD Ryzen 7 8845HS + Radeon 780M／Windows 11 25H2<br><strong>故障</strong>：每天卡死 1~4 次，卡住几十秒后黑屏重启，终止代码恒为 <code>0x00000133</code><br><strong>结果</strong>：修复后 5 天零崩溃（统计显著性 P ≈ 3×10⁻⁷）</p>
+</blockquote>
+<span id="more"></span>
+
+<h2 id="先说结论"><a href="#先说结论" class="headerlink" title="先说结论"></a>先说结论</h2><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>答案</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>终止代码</td>
+<td><code>0x00000133</code> <code>DPC_WATCHDOG_VIOLATION</code>，参数有两种形态</td>
+</tr>
+<tr>
+<td>转储归因</td>
+<td><code>amdgpio2.sys</code> 的中断服务例程超时——但它是<strong>受害者</strong></td>
+</tr>
+<tr>
+<td>真凶</td>
+<td>Intel AX200 的电源管理 &#x2F; PCIe 链路行为，拖垮了共享中断与电源生态</td>
+</tr>
+<tr>
+<td>无效尝试</td>
+<td>更新 <code>amdgpio2.sys</code>（从 2.2.0.130 换到 2.2.0.137，照崩）</td>
+</tr>
+<tr>
+<td>有效修复</td>
+<td>AX200 双驱动更新 + 禁止网卡断电 + 关闭 PCIe ASPM</td>
+</tr>
+<tr>
+<td>验证</td>
+<td>5 天内 <code>Kernel-Power 41</code> 从 15 次降到 0，蓝屏 9→0，live dump 5+→0</td>
+</tr>
+</tbody></table>
+<h2 id="一、症状：一天崩四次"><a href="#一、症状：一天崩四次" class="headerlink" title="一、症状：一天崩四次"></a>一、症状：一天崩四次</h2><p>这台机器从 7 月开始频繁“整机假死”：</p>
+<ul>
+<li>鼠标、键盘、画面<strong>全部冻结</strong>，按什么都没反应；</li>
+<li>卡住<strong>几十秒到几分钟</strong>后，屏幕黑掉，出现“你的电脑遇到问题，需要重启”，下面一行小字给出终止代码；</li>
+<li>日志里 <code>Kernel-Power 41</code>（异常断电）和 <code>EventLog 6008</code>（意外关机）与每次死机一一对应；</li>
+<li>最严重的时候一天崩 4 次，<strong>17 天里没有一天不崩</strong>。</li>
+</ul>
+<p>终止代码始终是同一个：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">0x00000133  DPC_WATCHDOG_VIOLATION</span><br></pre></td></tr></table></figure>
+
+<p>参数在不同崩溃间是两种形态：</p>
+<table>
+<thead>
+<tr>
+<th>形态</th>
+<th>参数</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>累积超时</td>
+<td><code>Arg1=0x1, Arg2=0x1e00</code></td>
+<td>系统在 <code>DISPATCH_LEVEL</code> 及以上的<strong>累计</strong>时间超过看门狗周期</td>
+</tr>
+<tr>
+<td>单次超时</td>
+<td><code>Arg1=0x0, Arg2=0x500, Arg3=0x500</code></td>
+<td><strong>单个</strong> DPC&#x2F;ISR 连续执行超限（计数正好撞到配额）</td>
+</tr>
+</tbody></table>
+<h2 id="二、先理解这个错误码在说什么"><a href="#二、先理解这个错误码在说什么" class="headerlink" title="二、先理解这个错误码在说什么"></a>二、先理解这个错误码在说什么</h2><p>Windows 内核用 IRQL 给代码分级。在 <strong><code>DISPATCH_LEVEL</code> 及以上</strong>，代码必须遵守三条铁律：</p>
+<ol>
+<li>不能被线程调度抢占（没有“时间片用完就切走”）；</li>
+<li>不能访问分页内存（触发缺页就要降回 <code>PASSIVE_LEVEL</code>）；</li>
+<li>不能做任何“等待”（只能自旋）。</li>
+</ol>
+<p><strong>这就是为什么“驱动卡住”的表现是整机卡死，而不是某个程序变慢</strong>——普通程序跑在 <code>PASSIVE_LEVEL</code>，卡了会被切走；而 ISR&#x2F;DPC 卡住，同处理器上所有更低 IRQL 的工作全部排不上队，包括时钟、键鼠、显示、磁盘中断。</p>
+<p>看门狗（<code>nt!KiDpcWatchdog</code>）<strong>在时钟中断里</strong>检查这个时间，超了就调 <code>KeBugCheckEx(0x133)</code>。</p>
+<p>由此得到一个重要推论：<strong>蓝屏的调用栈顶部永远是“报信的处理器”</strong>，它只负责调用 <code>KeBugCheckEx</code>，不一定是闯祸的那个。真正的元凶要靠 <code>Stack.Pointer</code> 和归因桶去找。</p>
+<h2 id="三、第一步就走错了：字符串扫描转储"><a href="#三、第一步就走错了：字符串扫描转储" class="headerlink" title="三、第一步就走错了：字符串扫描转储"></a>三、第一步就走错了：字符串扫描转储</h2><p>一开始我的思路很朴素：把 minidump 复制出来，<strong>扫描里面的字符串，提取崩溃时加载的驱动清单</strong>，然后比对不同时期的驱动差异。</p>
+<p><strong>这个方法是无效的。</strong> 一个内核转储里本来就有上百个已加载驱动，“当时在场的驱动”和“闯祸的驱动”完全是两件事。按这个思路，最后只能得到一张“所有第三方驱动都可疑”的清单，无法排序，也就无法收敛。</p>
+<p>更糟的是，它容易得出<strong>看起来很有说服力、实际是错的</strong>结论。</p>
+<h2 id="四、一个把人带偏很远的假线索"><a href="#四、一个把人带偏很远的假线索" class="headerlink" title="四、一个把人带偏很远的假线索"></a>四、一个把人带偏很远的假线索</h2><p>分析日志时我发现：<strong>所有 <code>P1=1</code> 的崩溃，<code>P3</code> 参数都以 <code>0x53C8</code> 结尾</strong>。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">0x133 (0x1, 0x1e00, 0xfffff805d53c53c8, 0x0)</span><br><span class="line">0x133 (0x1, 0x1e00, 0xfffff803783c53c8, 0x0)</span><br><span class="line">0x133 (0x1, 0x1e00, 0xfffff804b83c53c8, 0x0)</span><br><span class="line">                              ^^^^^^ 都一样！</span><br></pre></td></tr></table></figure>
+
+<p>很容易得出“<strong>每次蓝屏参数完全一致 → 指向同一内核代码路径 → 某个驱动的固定缺陷</strong>”。</p>
+<p><strong>但这是错的。</strong> 当 <code>P1=1</code> 时，<code>P3</code> 并不是崩溃地址，而是：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">P3 = nt!DPC_WATCHDOG_GLOBAL_TRIAGE_BLOCK 的指针</span><br></pre></td></tr></table></figure>
+
+<p>这是 <code>ntoskrnl</code> 里一个<strong>固定偏移的数据结构</strong>（本例偏移 <code>0x3c53c8</code>）。每次开机内核基址被 KASLR 重新随机化，页对齐意味着低 12 位必然一模一样。<strong>它跟“哪条代码路径”毫无关系。</strong></p>
+<blockquote>
+<p>这个坑值得记下来：<strong>看 <code>0x133</code> 的参数时，不要用 <code>P3</code> 的低位去“聚类”。</strong></p>
+</blockquote>
+<h2 id="五、正确的第一步：加载符号再分析"><a href="#五、正确的第一步：加载符号再分析" class="headerlink" title="五、正确的第一步：加载符号再分析"></a>五、正确的第一步：加载符号再分析</h2><p>真正有效的工具是 WinDbg &#x2F; <code>kd.exe</code> 加符号服务器。装好新版 WinDbg（MSIX 包内含 <code>kd.exe</code>，免管理员）之后：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$kd</span>  = <span class="string">&#x27;C:\Program Files\WindowsApps\Microsoft.WinDbg_&lt;版本&gt;_x64__8wekyb3d8bbwe\amd64\kd.exe&#x27;</span></span><br><span class="line"><span class="variable">$sym</span> = <span class="string">&#x27;srv*C:\Symbols*https://msdl.microsoft.com/download/symbols&#x27;</span></span><br><span class="line"></span><br><span class="line">&amp; <span class="variable">$kd</span> <span class="literal">-z</span> <span class="string">&#x27;C:\Windows\Minidump\xxx.dmp&#x27;</span> <span class="literal">-y</span> <span class="variable">$sym</span> `</span><br><span class="line">      <span class="literal">-logo</span> <span class="string">&#x27;C:\temp\out.log&#x27;</span> `</span><br><span class="line">      <span class="literal">-c</span> <span class="string">&#x27;!analyze -v; !blackboxpnp; q&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>⚠️ <strong>关键技巧：用 <code>-logo</code> 让调试器自己写文件，不要用管道重定向。</strong><br>在某些受限环境下，把 kd 的标准输出重定向到管道会刷屏报 <code>Could not write to pipe, 1450</code>（<code>ERROR_NO_SYSTEM_RESOURCES</code>），分析永远跑不完。<code>-logo</code> 绕开管道，日志是完整的。</p>
+</blockquote>
+<p><code>!analyze -v</code> 的输出里，真正有用的是这几行：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">DPC_TIMEOUT_TYPE: DPC_QUEUE_EXECUTION_TIMEOUT_EXCEEDED</span><br><span class="line">Stack.Pointer:    ISR</span><br><span class="line">SYMBOL_NAME:      amdgpio2+2935</span><br><span class="line">MODULE_NAME:      amdgpio2</span><br><span class="line">IMAGE_NAME:       amdgpio2.sys</span><br><span class="line">FAILURE_BUCKET_ID: 0x133_ISR_amdgpio2!unknown_function</span><br></pre></td></tr></table></figure>
+
+<p><strong><code>FAILURE_BUCKET_ID</code> 才是归因结论</strong>，它由调试器算出来，不是字符串扫描能得到的。</p>
+<p>一开始我锁定的就是它：<strong>AMD GPIO 控制器驱动</strong>（<code>amdgpio2.sys</code>）的中断服务例程执行超时。</p>
+<p>当时的证据链看起来非常完整：</p>
+<ul>
+<li>6 份转储里 <strong>2 份</strong>精确点名 <code>amdgpio2+0x2935</code>，<strong>同一偏移</strong>（不同 KASLR 基址、不同开机时长的两次崩溃能复现同一个“模块+偏移”，不可能是栈上垃圾）；</li>
+<li>调用栈里能看到 <code>nt!KiChainedDispatch</code> → <code>KiScanInterruptObjectList</code>（<strong>链式共享中断</strong>：多个设备共用一条中断线，内核要按链表逐个调用 ISR，一个卡住后面全轮不到）；</li>
+<li>系统日志里 <strong>21 次</strong> <code>ACPI</code> 事件 13「嵌入式控制器 EC 未在超时时间内响应」，且集中在蓝屏前 1~2 分钟，<strong>每 5 秒刷一次</strong>；</li>
+<li>8 次 <code>UcmUcsiCx.sys</code>（USB Type-C &#x2F; UCSI）的 live dump，微软官方定义就是“<strong>固件未按时响应 UCSI 命令</strong>”。</li>
+</ul>
+<p>链条看起来是：<code>amdgpio2</code> 的 ISR 卡死 → EC&#x2F;Type-C 中断得不到服务 → 看门狗蓝屏。</p>
+<p><strong>于是我自然而然做了一件事：更新 <code>amdgpio2.sys</code>。</strong></p>
+<h2 id="六、第一次实验：更新-GPIO-驱动，失败了"><a href="#六、第一次实验：更新-GPIO-驱动，失败了" class="headerlink" title="六、第一次实验：更新 GPIO 驱动，失败了"></a>六、第一次实验：更新 GPIO 驱动，失败了</h2><p>查到的版本差异确实很夸张：</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>出问题的版本</th>
+<th>更新后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>版本号</td>
+<td>2.2.0.130</td>
+<td>2.2.0.137</td>
+</tr>
+<tr>
+<td><strong>PE 链接时间戳</strong></td>
+<td><strong>2020-03-11</strong></td>
+<td><strong>2026-03-23</strong></td>
+</tr>
+<tr>
+<td>文件大小</td>
+<td>56,024 字节</td>
+<td>60,264 字节</td>
+</tr>
+</tbody></table>
+<p>也就是说，<strong>一个 2020 年构建的二进制，被装在 2026 年的 Windows 11 25H2 + Hawk Point 平台上跑了六年</strong>（文件日期显示 2022，那只是 AMD 打包的时间）。</p>
+<p>更新过程很顺利，设备挂载版本确实换了：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">AMD GPIO Controller   2.2.0.130 → 2.2.0.137</span><br><span class="line">ImagePath → ...\DriverStore\FileRepository\amdgpio2.inf_amd64_xxx\amdgpio2.sys  ← 新路径</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这里有个很实用的验收要点：<strong>不要用 <code>C:\Windows\System32\drivers\amdgpio2.sys</code> 判断生效版本</strong>，那个位置常常留着旧副本。要看设备实际挂载的版本：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-CimInstance</span> Win32_PnPSignedDriver | <span class="built_in">Where-Object</span> DeviceName <span class="operator">-match</span> <span class="string">&#x27;AMD GPIO&#x27;</span> |</span><br><span class="line">  <span class="built_in">Select-Object</span> DeviceName, DriverVersion, DriverDate, InfName | <span class="built_in">Format-List</span></span><br></pre></td></tr></table></figure>
+</blockquote>
+<p><strong>结果：14 小时后再次崩。</strong> 之后半个月继续每天崩 1~4 次，转储依旧归因 <code>amdgpio2</code>。</p>
+<table>
+<thead>
+<tr>
+<th>崩溃时刻</th>
+<th>amdgpio2 版本</th>
+<th>归因</th>
+<th>偏移</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10-09 16:27</td>
+<td>2.2.0.130</td>
+<td><code>0x133_ISR_amdgpio2</code></td>
+<td>+0x2935</td>
+</tr>
+<tr>
+<td>10-12 17:30</td>
+<td>2.2.0.130</td>
+<td><code>0x133_ISR_amdgpio2</code></td>
+<td>+0x2935</td>
+</tr>
+<tr>
+<td><strong>10-13 11:05</strong></td>
+<td><strong>2.2.0.137（新版）</strong></td>
+<td><strong><code>0x133_ISR_amdgpio2</code></strong></td>
+<td><strong>+0x2c85</strong></td>
+</tr>
+<tr>
+<td>10-28 15:14</td>
+<td>2.2.0.137</td>
+<td><code>0x133_ISR_amdgpio2</code></td>
+<td>+0x2fff</td>
+</tr>
+<tr>
+<td>10-29 11:30</td>
+<td>2.2.0.137</td>
+<td><code>0x133_ISR_amdgpio2</code></td>
+<td>+0x2b64</td>
+</tr>
+<tr>
+<td>10-30 14:58</td>
+<td>2.2.0.137</td>
+<td><code>0x133_ISR_WppRecorder!WppAutoLogTrace</code></td>
+<td>+0x1d6</td>
+</tr>
+</tbody></table>
+<p><strong>两个版本都在同一个位置以同样方式超时，偏移随二进制重建而变化。</strong> 这推翻了“某个版本代码缺陷”的假设——</p>
+<blockquote>
+<p><strong><code>amdgpio2</code> 是受害者&#x2F;报信者，不是元凶。得去找“是什么把它的 ISR 拖住了”。</strong></p>
+</blockquote>
+<h2 id="七、真正的突破口：-blackboxpnp"><a href="#七、真正的突破口：-blackboxpnp" class="headerlink" title="七、真正的突破口：!blackboxpnp"></a>七、真正的突破口：<code>!blackboxpnp</code></h2><p>WinDbg 有个很不显眼但极有价值的命令：<code>!blackboxpnp</code>。它读取崩溃时保存的 <strong>BlackBox PnP 记录</strong>——“崩溃前最后一次即插即用活动”。</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">0: kd&gt; !blackboxpnp</span><br><span class="line">        PnpActivityTime    : 134376450726760352</span><br><span class="line">        PnpEventInformation: 3</span><br><span class="line">        PnpEventInProgress : 0</span><br><span class="line">        PnpProblemCode     : 24</span><br><span class="line">        DeviceId           : SWD\RADIO\Bluetooth_...</span><br></pre></td></tr></table></figure>
+
+<p>把 6 份能读出这条记录的转储排在一起，结果惊人地一致：</p>
+<table>
+<thead>
+<tr>
+<th>崩溃时刻</th>
+<th>最后一次 PnP 活动设备</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>10-08、10-09、10-10×2、10-12 17:30</td>
+<td><code>SWD\RADIO\Bluetooth_...</code>（蓝牙无线电设备）</td>
+<td>码 24，未在进行中</td>
+</tr>
+<tr>
+<td><strong>10-13 11:05</strong></td>
+<td><strong><code>PCI\VEN_1022&amp;DEV_14EE&amp;...&amp;0&amp;12</code></strong></td>
+<td>码 54，<code>PnpEventInProgress=1</code>（操作正在执行）</td>
+</tr>
+</tbody></table>
+<p><strong>6&#x2F;6 全部落在一块硬件上：Intel AX200 无线模块（Wi-Fi + 蓝牙二合一）。</strong></p>
+<p>前 5 次指的是它的蓝牙无线电设备，第 6 次指的是<strong>承载它的那条 PCIe 根端口</strong>，而且那次 PnP 操作<strong>正在执行中</strong>。</p>
+<h2 id="八、把-PCIe-拓扑画出来"><a href="#八、把-PCIe-拓扑画出来" class="headerlink" title="八、把 PCIe 拓扑画出来"></a>八、把 PCIe 拓扑画出来</h2><p>知道 <code>DEV_14EE</code> 是 AMD 的 PCIe 根端口还不够，得知道<strong>它下面挂的是谁</strong>。用一段脚本遍历父子关系即可：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$pci</span> = <span class="built_in">Get-PnpDevice</span> <span class="literal">-PresentOnly</span> | <span class="built_in">Where-Object</span> &#123; <span class="variable">$_</span>.InstanceId <span class="operator">-match</span> <span class="string">&#x27;^PCI\\&#x27;</span> &#125;</span><br><span class="line"><span class="keyword">foreach</span> (<span class="variable">$d</span> <span class="keyword">in</span> <span class="variable">$pci</span>) &#123;</span><br><span class="line">    <span class="variable">$parent</span> = (<span class="built_in">Get-PnpDeviceProperty</span> <span class="literal">-InstanceId</span> <span class="variable">$d</span>.InstanceId `</span><br><span class="line">                 <span class="literal">-KeyName</span> <span class="string">&#x27;DEVPKEY_Device_Parent&#x27;</span>).Data</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$parent</span> <span class="operator">-match</span> <span class="string">&#x27;DEV_14EE|DEV_14EB&#x27;</span>) &#123;</span><br><span class="line">        <span class="string">&quot;&#123;0,-42&#125; &lt;- &#123;1&#125;&quot;</span> <span class="operator">-f</span> <span class="variable">$d</span>.FriendlyName, (<span class="variable">$parent</span> <span class="operator">-replace</span> <span class="string">&#x27;.*\\&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>输出直接给出了答案：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">AMD PCIe 根端口 DEV_14EE</span><br><span class="line">  ├─ &amp;0&amp;11  → Motorcomm YT6801 千兆有线网卡</span><br><span class="line">  ├─ &amp;0&amp;12  → Intel(R) Wi-Fi 6 AX200 160MHz   ← 崩溃瞬间正在被 PnP 操作</span><br><span class="line">  └─ &amp;0&amp;14  → Standard NVM Express Controller（NVMe SSD）</span><br></pre></td></tr></table></figure>
+
+<p><strong>崩溃发生时，Windows 正在对“承载 AX200 无线网卡的那条 PCIe 根端口”执行 PnP 操作。</strong></p>
+<p>回头再看系统日志，所有碎片瞬间对上了：</p>
+<ul>
+<li><code>NDIS 10317</code>「Wi-Fi 虚拟网卡<strong>电源转换失败</strong>」<strong>83 次</strong>；</li>
+<li><code>Netwtw10</code>（Intel 无线驱动）内部错误 &#x2F; 固件重置 <strong>30 次</strong>、微端口重置看门狗 <strong>8 次</strong>；</li>
+<li>而当时的无线驱动是 <strong>2023-11-29 的 23.20.0.4</strong>，跑在 2026 年的系统上。</li>
+</ul>
+<p>修正后的因果链：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">Intel AX200 的电源管理 / PCIe 链路行为异常</span><br><span class="line">        ↓</span><br><span class="line">Windows 反复给它做电源切换 / 重新枚举</span><br><span class="line">        ↓  触发其所在 PCIe 根端口的 PnP 操作与链路状态变化</span><br><span class="line">        ↓  每次变化都伴随中断与 ACPI/GPIO 交互</span><br><span class="line">AMD GPIO 控制器（amdgpio2）的 ISR 被反复重入 / 长时间占据</span><br><span class="line">        ↓</span><br><span class="line">DPC 看门狗判定超时 → 0x133；或整机硬死（连转储都写不出）</span><br></pre></td></tr></table></figure>
+
+<p>这也解释了两件此前想不通的事：</p>
+<ol>
+<li><strong>为什么换 amdgpio2 驱动没用</strong>——它是被动方；</li>
+<li><strong>为什么下游症状那么杂</strong>——EC 超时、UCSI 超时、TPM 初始化失败、NVMe 控制器重置、AMD 自家看门狗 dump 全都在报，因为它们共享同一片中断&#x2F;电源生态。</li>
+</ol>
+<h2 id="九、顺手证伪了两个“硬件直觉”"><a href="#九、顺手证伪了两个“硬件直觉”" class="headerlink" title="九、顺手证伪了两个“硬件直觉”"></a>九、顺手证伪了两个“硬件直觉”</h2><p>到这一步，很多人（包括我自己）会怀疑硬件：<strong>全金属机身，卡死前风扇狂转，是不是静电或过热？</strong></p>
+<h3 id="过热：证据不支持"><a href="#过热：证据不支持" class="headerlink" title="过热：证据不支持"></a>过热：证据不支持</h3><table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ACPI 热区读数</td>
+<td><strong>两个数据源互相矛盾</strong>：<code>MSAcpi_ThermalZoneTemperature</code> 有时报 79.1 °C，性能计数器报 45.0 °C；同一时刻 SSD 只有 33~45 °C。79 °C 的机身配 33 °C 的 SSD 不合常理</td>
+</tr>
+<tr>
+<td>限温点</td>
+<td>固件<strong>根本没有暴露</strong>被动&#x2F;主动限温点，热管理完全由 EC 自主处理，Windows 侧没有可见性</td>
+</tr>
+<tr>
+<td>固件限频事件</td>
+<td><code>Kernel-Processor-Power</code> 45 天内 1024 条<strong>全是 ID 55</strong>（开机能力枚举），<code>37/38/39/86</code>（限频&#x2F;降频）<strong>0 条</strong></td>
+</tr>
+<tr>
+<td>硬件级错误</td>
+<td><code>WHEA-Logger</code> 90 天 <strong>0 条</strong>（无机器检查错误、无 PCIe AER）</td>
+</tr>
+</tbody></table>
+<p><strong>如果是真正的过热保护，应该表现为直接断电或 WHEA 记录，而不是一个能被判定、还能写出完整转储的看门狗蓝屏。</strong></p>
+<p>而且后面还有一条反证：修复后的观察期里，ACPI 热区曾读到 <strong>76.1 °C 依然没有崩</strong>。</p>
+<p><strong>关于“卡死前风扇狂转”</strong>，有个反直觉的解释：这可能是<strong>结果而非原因</strong>——EC 停止响应或 CPU 被 ISR 空转占满时，风扇会失去正常调节被拉到最大。本机有直接的「EC 未响应」证据，所以更像结果。</p>
+<h3 id="静电：基本可以排除"><a href="#静电：基本可以排除" class="headerlink" title="静电：基本可以排除"></a>静电：基本可以排除</h3><table>
+<thead>
+<tr>
+<th>检查项</th>
+<th>结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>硬件级错误</td>
+<td><code>WHEA-Logger</code> 90 天 0 条</td>
+</tr>
+<tr>
+<td>崩溃前插拔事件</td>
+<td>某次崩溃前 12 分钟内<strong>无</strong>任何 USB&#x2F;PD&#x2F;电源&#x2F;合盖事件；最后一次电源切换在 2 小时前</td>
+</tr>
+<tr>
+<td>物理常识</td>
+<td>全金属机身是<strong>导体</strong>，不会像塑料那样“积累”静电；ESD 风险主要来自人体经接口放电，典型表现是<strong>瞬间冻结&#x2F;复位</strong>，而不是能写出转储的 <code>0x133</code></td>
+</tr>
+</tbody></table>
+<p>不过要留个口子：统计里有一批“连转储都没写出来”的硬死机（60 天内 <code>41</code> 事件 67 次 vs 蓝屏 34 次，差约 33 次），这一类确实符合断电&#x2F;静电&#x2F;过热关机的特征，不能完全排除。</p>
+<h2 id="十、最终修复：三件事"><a href="#十、最终修复：三件事" class="headerlink" title="十、最终修复：三件事"></a>十、最终修复：三件事</h2><p>定位到“无线模块的电源&#x2F;链路行为”后，动作就很明确了。<strong>用 Intel 官方工具和系统设置，一共三件：</strong></p>
+<h3 id="1-更新两套驱动（Wi-Fi-x2F-蓝牙）"><a href="#1-更新两套驱动（Wi-Fi-x2F-蓝牙）" class="headerlink" title="1. 更新两套驱动（Wi-Fi &#x2F; 蓝牙）"></a>1. 更新两套驱动（Wi-Fi &#x2F; 蓝牙）</h3><p>AX200 是同一模块上的两个独立设备：Wi-Fi 是 <strong>PCIe 设备</strong>（<code>PCI\VEN_8086&amp;DEV_2723</code>），蓝牙是<strong>独立的 USB 设备</strong>（<code>USB\VID_8087&amp;PID_0029</code>）——两套完全不同的驱动，必须分别更新。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>升级前</th>
+<th>升级后</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Wi-Fi</td>
+<td>23.20.0.4（2023-11-29）</td>
+<td><strong>24.20.2.1（2026-02-12）</strong></td>
+</tr>
+<tr>
+<td>蓝牙</td>
+<td>23.90.0.8（2024-10-18）</td>
+<td><strong>24.10.0.4（2025-11-10）</strong></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>装之前务必核对数字签名：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="built_in">Get-AuthenticodeSignature</span> <span class="string">&#x27;.\WiFi-xx.x-Driver64-Win10-Win11.exe&#x27;</span> |</span><br><span class="line">  <span class="built_in">Select-Object</span> Status, SignerCertificate</span><br></pre></td></tr></table></figure>
+
+<p>蓝牙驱动其实 Windows Update 的可选更新里就有更新的版本，不一定需要额外下载。</p>
+</blockquote>
+<h3 id="2-禁止系统把网卡断电"><a href="#2-禁止系统把网卡断电" class="headerlink" title="2. 禁止系统把网卡断电"></a>2. 禁止系统把网卡断电</h3><p>设备属性里的「<strong>电源管理</strong>」标签——注意它是<strong>独立标签页</strong>，不是「高级」列表里的一项——很多 OEM 驱动 INF 并不注册这个页，所以你会找不到。等价开关是注册表：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">HKLM\SYSTEM\CurrentControlSet\Enum\&lt;设备实例ID&gt;\Device Parameters</span><br><span class="line">    PnPCapabilities  (DWORD) = 0x18</span><br></pre></td></tr></table></figure>
+
+<p><code>0x18</code> 同时禁止“允许计算机关闭此设备以节省电源”和“允许此设备唤醒计算机”。<strong>Wi-Fi 和蓝牙两块都要设</strong>，改完需要重启或禁用&#x2F;启用设备才生效。</p>
+<p>同时在「高级」标签里关掉省电&#x2F;唤醒项（不同驱动版本条目名不同）：</p>
+<figure class="highlight text"><table><tr><td class="code"><pre><span class="line">唤醒幻数据包     → 停用</span><br><span class="line">唤醒模式匹配     → 停用</span><br><span class="line">数据包合并       → 停用   ← 这项最能减少网卡进入低功耗态</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-关掉-PCIe-链路状态电源管理（ASPM）"><a href="#3-关掉-PCIe-链路状态电源管理（ASPM）" class="headerlink" title="3. 关掉 PCIe 链路状态电源管理（ASPM）"></a>3. 关掉 PCIe 链路状态电源管理（ASPM）</h3><p>这是<strong>最关键的一项</strong>：它直接决定 PCIe 链路会不会频繁进 L1&#x2F;L2。当前如果是“最大电源节省”，改成“关闭”或“中等”：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 0=关闭  1=中等电源节省  2=最大电源节省</span></span><br><span class="line">powercfg /setacvalueindex SCHEME_CURRENT SUB_PCIEXPRESS ASPM <span class="number">0</span></span><br><span class="line">powercfg /setdcvalueindex SCHEME_CURRENT SUB_PCIEXPRESS ASPM <span class="number">0</span></span><br><span class="line">powercfg /setactive SCHEME_CURRENT</span><br></pre></td></tr></table></figure>
+
+<p>顺便把无线适配器的节能模式也拉到最高性能（尤其<strong>电池</strong>档，默认常是“中等节能”）：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line">powercfg /setdcvalueindex SCHEME_CURRENT `</span><br><span class="line">  <span class="number">19</span>cbb8fa<span class="literal">-5279-450e-9fac-8a3d5fedd0c1</span> `</span><br><span class="line">  <span class="number">12</span>bbebe6<span class="literal">-58d6-4636-95bb-3217ef867c1a</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
+
+<p>再关掉快速启动（<code>HiberbootEnabled = 0</code>），让每次开关机都是完整电源循环。</p>
+<h2 id="十一、验证结果：5-天零崩溃"><a href="#十一、验证结果：5-天零崩溃" class="headerlink" title="十一、验证结果：5 天零崩溃"></a>十一、验证结果：5 天零崩溃</h2><table>
+<thead>
+<tr>
+<th>指标</th>
+<th>修复前 5 天</th>
+<th><strong>观察期 5 天</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>Kernel-Power 41</code>（异常断电）</td>
+<td><strong>15 次</strong></td>
+<td><strong>0 次</strong></td>
+</tr>
+<tr>
+<td>蓝屏 <code>1001</code></td>
+<td><strong>9 次</strong></td>
+<td><strong>0 次</strong></td>
+</tr>
+<tr>
+<td><code>EventLog 6008</code></td>
+<td><strong>15 次</strong></td>
+<td><strong>0 次</strong></td>
+</tr>
+<tr>
+<td><code>ACPI 13</code>（EC 未响应）</td>
+<td><strong>3 次</strong></td>
+<td><strong>0 次</strong></td>
+</tr>
+<tr>
+<td>新增 minidump</td>
+<td>5+ 份</td>
+<td><strong>0 份</strong></td>
+</tr>
+<tr>
+<td><strong>新增 live kernel dump</strong></td>
+<td>5+ 份</td>
+<td><strong>0 份</strong></td>
+</tr>
+</tbody></table>
+<p><strong>最有力的指标是最后一行。</strong> 那些 <code>AMD_WATCHDOG</code>、<code>UcmUcsiCx</code>、<code>DripsWatchdog</code> 的 live dump 是<strong>不产生蓝屏的隐性故障</strong>，此前每几天就冒一份。观察期内<strong>一份都没有</strong>——说明不只是“侥幸没崩”，而是平台级停顿本身消失了。</p>
+<p>另外还有一次<strong>连续运行 52.7 小时</strong>无异常（而此前 17 天里没有任何一天不崩）。</p>
+<p><strong>统计意义</strong>：修复前基率 3.0 次&#x2F;天，5 天预期 15 次，实际 0 次——泊松估计 <strong>P ≈ e⁻¹⁵ ≈ 3×10⁻⁷</strong>。</p>
+<h3 id="归因必须诚实说"><a href="#归因必须诚实说" class="headerlink" title="归因必须诚实说"></a>归因必须诚实说</h3><p>这次<strong>同时改了 7 项</strong>，所以不能说“就是某一项修好的”。但有两点是确定的：</p>
+<ul>
+<li><strong>单独更新 <code>amdgpio2.sys</code> 无效</strong>（换完驱动后仍每天崩 1~4 次，转储照样点名它）；</li>
+<li><strong>有效的变化发生在「AX200 驱动 + 无线&#x2F;PCIe 电源管理」这一层</strong>，与前面的机制推导一致。</li>
+</ul>
+<h2 id="十二、可复用的排查清单"><a href="#十二、可复用的排查清单" class="headerlink" title="十二、可复用的排查清单"></a>十二、可复用的排查清单</h2><p>如果哪天你也遇到 <code>0x133</code> &#x2F; 频繁整机假死，按这个顺序走。</p>
+<h3 id="第一步：拿到正确的归因（别做字符串扫描）"><a href="#第一步：拿到正确的归因（别做字符串扫描）" class="headerlink" title="第一步：拿到正确的归因（别做字符串扫描）"></a>第一步：拿到正确的归因（别做字符串扫描）</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1) 转储需要管理员权限才能复制</span></span><br><span class="line"><span class="comment"># 2) 用 kd + 符号服务器分析，务必用 -logo 而非管道重定向</span></span><br><span class="line">kd <span class="literal">-z</span> &lt;dump&gt; <span class="literal">-y</span> <span class="string">&quot;srv*C:\Symbols*https://msdl.microsoft.com/download/symbols&quot;</span> `</span><br><span class="line">   <span class="literal">-logo</span> out.log <span class="literal">-c</span> <span class="string">&quot;!analyze -v; !blackboxpnp; !dpcs; q&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>重点看三个字段：<code>FAILURE_BUCKET_ID</code>（归因）、<code>DPC_TIMEOUT_TYPE</code>（超时类型）、<code>Stack.Pointer</code>（谁在超时）。</p>
+<h3 id="第二步：别把“被点名的驱动”直接当元凶"><a href="#第二步：别把“被点名的驱动”直接当元凶" class="headerlink" title="第二步：别把“被点名的驱动”直接当元凶"></a>第二步：别把“被点名的驱动”直接当元凶</h3><p>问一句：<strong>它是主动作恶，还是被动挨打？</strong></p>
+<p>判断方法：<strong>换掉它的版本再观察</strong>。如果换版本后仍然崩在它身上（只是偏移变了），那它是受害者，要去找“谁在踩它”。</p>
+<h3 id="第三步：用-blackboxpnp-找设备"><a href="#第三步：用-blackboxpnp-找设备" class="headerlink" title="第三步：用 !blackboxpnp 找设备"></a>第三步：用 <code>!blackboxpnp</code> 找设备</h3><p>这是被严重低估的线索——它直接告诉你崩溃前最后一次 PnP 活动涉及哪个设备。落在某个设备上 6&#x2F;6 次，就不是巧合。</p>
+<h3 id="第四步：把-PCIe-拓扑和设备对应起来"><a href="#第四步：把-PCIe-拓扑和设备对应起来" class="headerlink" title="第四步：把 PCIe 拓扑和设备对应起来"></a>第四步：把 PCIe 拓扑和设备对应起来</h3><figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$pci</span> = <span class="built_in">Get-PnpDevice</span> <span class="literal">-PresentOnly</span> | <span class="built_in">Where-Object</span> &#123; <span class="variable">$_</span>.InstanceId <span class="operator">-match</span> <span class="string">&#x27;^PCI\\&#x27;</span> &#125;</span><br><span class="line"><span class="keyword">foreach</span> (<span class="variable">$d</span> <span class="keyword">in</span> <span class="variable">$pci</span>) &#123;</span><br><span class="line">    <span class="variable">$parent</span> = (<span class="built_in">Get-PnpDeviceProperty</span> <span class="literal">-InstanceId</span> <span class="variable">$d</span>.InstanceId `</span><br><span class="line">                 <span class="literal">-KeyName</span> <span class="string">&#x27;DEVPKEY_Device_Parent&#x27;</span>).Data</span><br><span class="line">    <span class="keyword">if</span> (<span class="variable">$parent</span> <span class="operator">-match</span> <span class="string">&#x27;DEV_&#x27;</span>) &#123;</span><br><span class="line">        <span class="string">&quot;&#123;0,-42&#125; &lt;- &#123;1&#125;&quot;</span> <span class="operator">-f</span> <span class="variable">$d</span>.FriendlyName, (<span class="variable">$parent</span> <span class="operator">-replace</span> <span class="string">&#x27;.*\\&#x27;</span>,<span class="string">&#x27;&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="第五步：三个“电源管理”必查项"><a href="#第五步：三个“电源管理”必查项" class="headerlink" title="第五步：三个“电源管理”必查项"></a>第五步：三个“电源管理”必查项</h3><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>查什么</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>设备属性 → <strong>电源管理</strong>标签</td>
+<td>“允许计算机关闭此设备以节省电源”是否取消；标签缺失就用 <code>PnPCapabilities=0x18</code></td>
+</tr>
+<tr>
+<td>设备属性 → <strong>高级</strong>标签</td>
+<td><code>数据包合并</code> &#x2F; <code>唤醒幻数据包</code> &#x2F; <code>唤醒模式匹配</code> &#x2F; <code>U-APSD</code> 是否该关</td>
+</tr>
+<tr>
+<td>电源选项 → <strong>PCIe 链接状态电源管理</strong></td>
+<td>是否还是“最大电源节省”</td>
+</tr>
+</tbody></table>
+<h3 id="第六步：看驱动的“代际”"><a href="#第六步：看驱动的“代际”" class="headerlink" title="第六步：看驱动的“代际”"></a>第六步：看驱动的“代际”</h3><p>查驱动的 <strong>PE 链接时间戳</strong>，而不只是文件日期：</p>
+<figure class="highlight powershell"><table><tr><td class="code"><pre><span class="line"><span class="variable">$b</span> = [<span class="type">IO.File</span>]::ReadAllBytes(<span class="string">&#x27;C:\Windows\System32\drivers\xxx.sys&#x27;</span>)</span><br><span class="line"><span class="variable">$peOff</span> = [<span class="type">BitConverter</span>]::ToInt32(<span class="variable">$b</span>,<span class="number">0</span>x3C)</span><br><span class="line"><span class="variable">$ts</span>    = [<span class="type">BitConverter</span>]::ToUInt32(<span class="variable">$b</span>,<span class="variable">$peOff</span>+<span class="number">8</span>)</span><br><span class="line">[<span class="built_in">DateTime</span><span class="type">Offset</span>]::FromUnixTimeSeconds(<span class="variable">$ts</span>).ToLocalTime()   <span class="comment"># 这才是真正的构建时间</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="第七步：验证要算基率"><a href="#第七步：验证要算基率" class="headerlink" title="第七步：验证要算基率"></a>第七步：验证要算基率</h3><p>“改完之后不崩了”只有在<strong>对照基率</strong>下才有意义。本例基率 3 次&#x2F;天，5 天 0 次就是 P≈3×10⁻⁷；如果基率是 0.1 次&#x2F;天，5 天 0 次就几乎没有说服力。</p>
+<h2 id="十三、几个随手记下的小坑"><a href="#十三、几个随手记下的小坑" class="headerlink" title="十三、几个随手记下的小坑"></a>十三、几个随手记下的小坑</h2><ol>
+<li><strong><code>P3</code> 低 12 位相同 ≠ 同一代码路径</strong>（那是 <code>DPC_WATCHDOG_GLOBAL_TRIAGE_BLOCK</code> 的固定偏移，KASLR 的必然结果）。</li>
+<li><strong>triage minidump 不含驱动代码页</strong>，所以别指望在转储里反汇编出错的那几条指令（会报 <code>Memory access error</code>）。</li>
+<li><strong><code>C:\Windows\System32\drivers\xxx.sys</code> 可能是陈旧副本</strong>，PnP 驱动实际从 <code>DriverStore</code> 加载，验收要看设备挂载版本。</li>
+<li><strong>kd 的输出别走管道</strong>，用 <code>-logo</code>。</li>
+<li><strong>PowerShell 5.1 读无 BOM 的 UTF-8 脚本会按 GBK 解析</strong>，中文全变乱码、还可能吃掉引号花括号导致语法错误。写 <code>.ps1</code> 给 5.1 用，要么带 BOM，要么纯 ASCII。</li>
+<li><strong>Windows Update 的“可选更新 → 驱动程序更新”里常藏着比 OEM 官网更新的驱动</strong>，本例的蓝牙驱动就是从那里装的，比官网方便。</li>
+<li><strong>5 天不崩不等于彻底好了</strong>，覆盖高发场景（高负载、视频会议、合盖唤醒、插拔外接显示器）才能算验证充分。</li>
+</ol>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这个案子最值得记的不是“哪个驱动坏了”，而是两个方法论上的教训：</p>
+<ul>
+<li><strong>归因要用调试器算出来的 <code>FAILURE_BUCKET_ID</code>，不是靠肉眼在转储里找字符串</strong>；</li>
+<li><strong><code>0x133</code> 点名的驱动，很可能只是最后一个被压垮的人，而不是开枪的人。</strong></li>
+</ul>
+<p>从“怀疑所有驱动”，到锁定 <code>amdgpio2</code>，再到发现它其实是被踩的，最后落到“无线网卡的 PCIe 电源行为”——<strong>每一步都在缩小范围，而每一次“看起来很有说服力的结论”都需要一次对照实验去证伪。</strong></p>
+]]></content>
+      <categories>
+        <category>科技观察</category>
+      </categories>
+      <tags>
+        <tag>Windows</tag>
+        <tag>蓝屏排查</tag>
+        <tag>WinDbg</tag>
+        <tag>驱动</tag>
+        <tag>电源管理</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>FreqtradeOutline</title>
     <url>/2025/09/09/FreqtradeOutline/</url>
     <content><![CDATA[<h1 id="Freqtrade量化交易新手入门到精通教学大纲"><a href="#Freqtrade量化交易新手入门到精通教学大纲" class="headerlink" title="Freqtrade量化交易新手入门到精通教学大纲"></a>Freqtrade量化交易新手入门到精通教学大纲</h1><h2 id="课程简介"><a href="#课程简介" class="headerlink" title="课程简介"></a>课程简介</h2><p>本课程基于Freqtrade 2025.8 stable版本，从零开始讲解加密货币量化交易框架的使用，涵盖环境搭建、策略开发、回测优化到实盘交易的全流程。参考《零基础Python量化教程》和《量化从入门到精通》的经典结构，结合实战案例帮助新手快速掌握量化交易技能。</p>
@@ -242,32 +723,60 @@
       </tags>
   </entry>
   <entry>
-    <title>AI画画，见证一个时代</title>
-    <url>/2022/09/09/MJ/</url>
-    <content><![CDATA[<h1 id="见证AI崛起于我们的时代"><a href="#见证AI崛起于我们的时代" class="headerlink" title="见证AI崛起于我们的时代"></a>见证AI崛起于我们的时代</h1><p>前几天看到有人用Midjourney生成的数字绘画作品获得了比赛一等奖，恍然惊醒，原来AI已经成长到这种地步了，一种见证AI崛起于这个时代厚重历史感，</p>
-<p>作者用的是Discord频道下Midjourney，输入提示词，然后等待GPU燃烧就可以生成画作。这个过程说起来简单，但实际上还是有难度。这个过程叫做Prompt Engineering</p>
-<p>直接翻译为提示工程，可能不是太准确，网友甚至预测以后会有提示工程师这种全新职业。毕竟利用AI作画，一小时抵的上原来一星期的量，这让人明明白白的感受到什么是降维打击啊。<br><img src="/img/mj/b.png"><br>关于AI是否杀死了艺术，个人认为虎嗅这篇文章分析的有点道理。<br>《美术行业，正在被AI作画杀死？》<br><a href="https://www.huxiu.com/article/651324.html">https://www.huxiu.com/article/651324.html</a></p>
-<h1 id="整理几个AI画画工具"><a href="#整理几个AI画画工具" class="headerlink" title="整理几个AI画画工具"></a>整理几个AI画画工具</h1><p>discord.gg&#x2F;midjourney（公测）</p>
-<p>labs.openai.com&#x2F;waitlist（内测）</p>
-<p><a href="https://beta.dreamstudio.ai/dream%EF%BC%88%E5%85%AC%E6%B5%8B%EF%BC%89">https://beta.dreamstudio.ai/dream（公测）</a></p>
-<h1 id="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"><a href="#对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。" class="headerlink" title="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"></a>对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。</h1><p>一、	抖音的壁纸号，目前已经有不少人在做这个，通过精美的壁纸吸引流量，然后广告变现，但是这个由于护城河很低，也是卷的不行。需要坚持。<br>二、	对于原本的美术设计，游戏设计来说，运用得当可能会是职场杀器，缺陷在于很可能调试出来给提示词直接被公司继承，然后就直接毕业了。<br>三、	对于画家来说确实不是一个好消息，继续坚持可能会更加困难，转型则意味之前的学习成本投入几乎浪费。还是顺势拥抱吧。<br>四、	整理相关知识，卖教程，做知识星球。这个是比较可行的路子。至少可以在这一波冲击中收获一些。</p>
-<p>最后，</p>
-<p>很幸运生在这个伟大的时代，<br>但同时面对这个时代的飞速发展，<br>又感到很无力。<br>网上有个段子说的很好：长城非常壮观雄伟，但是我是修长城的人。</p>
-]]></content>
-      <categories>
-        <category>科技观察</category>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI绘画</tag>
-        <tag>Midjourney</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>freqtrade-AI学习记录</title>
-    <url>/2025/07/16/freq_AI/</url>
-    <content><![CDATA[<h1 id="Freqtrade-使用"><a href="#Freqtrade-使用" class="headerlink" title="Freqtrade 使用"></a>Freqtrade 使用</h1><p>services:<br>  tensorboard:<br>    image: freqtradeorg&#x2F;freqtrade:stable<br>    volumes:<br>      - “.&#x2F;user_data:&#x2F;freqtrade&#x2F;user_data”<br>    ports:<br>      - “6006:6006”<br>    command: &gt;<br>      tensorboard –logdir user_data&#x2F;models&#x2F;unique-id2 –host 0.0.0.0 –port 6006<br>docker-compose up tensorboard</p>
-<p>#不太会使用tensorbaord进行调试啊</p>
+    <title>freqtrade安装简要教程---docker安装</title>
+    <url>/2025/07/06/freqtrade/</url>
+    <content><![CDATA[<h1 id="Freqtrade-使用-Docker-安装教程"><a href="#Freqtrade-使用-Docker-安装教程" class="headerlink" title="Freqtrade 使用 Docker 安装教程"></a>Freqtrade 使用 Docker 安装教程</h1><h1 id="freqtrade官方链接："><a href="#freqtrade官方链接：" class="headerlink" title="freqtrade官方链接："></a>freqtrade官方链接：</h1><p><a href="https://www.freqtrade.io/en/stable/">https://www.freqtrade.io/en/stable/</a></p>
+<p><img src="/img/freqtrade/freqtrade2.jpg"></p>
+<h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><p>1、一台正常使用windows电脑<br>如果是linux系统，则参考freqtrade官方文档上的其他安装方案<br>确保你的系统已安装 Docker 及其相关组件。对于 Docker 的安装，可以参考官方文档。<br>最好安装docker desktop，链接：<br><a href="https://www.docker.com/products/docker-desktop/">https://www.docker.com/products/docker-desktop/</a><br><img src="/img/freqtrade/docker.png"></p>
+<h2 id="二、安装步骤"><a href="#二、安装步骤" class="headerlink" title="二、安装步骤"></a>二、安装步骤</h2><h3 id="1-创建工作目录"><a href="#1-创建工作目录" class="headerlink" title="1. 创建工作目录"></a>1. 创建工作目录</h3><p>创建一个目录用于保存 Freqtrade 的配置文件和用户数据：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ft_userdata</span><br><span class="line"><span class="built_in">cd</span> ft_userdata/</span><br></pre></td></tr></table></figure>
+<p><img src="/img/freqtrade/cmd1.png"></p>
+<p>这里我选择了在D盘创建，完成后打开电脑文件目录，可以正常看到多了一个文件夹</p>
+<h3 id="2-下载-docker-compose-yml-文件"><a href="#2-下载-docker-compose-yml-文件" class="headerlink" title="2. 下载 docker-compose.yml 文件"></a>2. 下载 <code>docker-compose.yml</code> 文件</h3><p>从 Freqtrade 的 GitHub 仓库下载 <code>docker-compose.yml</code> 文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl https://raw.githubusercontent.com/freqtrade/freqtrade/stable/docker-compose.yml -o docker-compose.yml</span><br></pre></td></tr></table></figure>
+
+<h2 id="注意，这里部分情况下会遇见网络问题，建议提前准备一个科学上网的代理"><a href="#注意，这里部分情况下会遇见网络问题，建议提前准备一个科学上网的代理" class="headerlink" title="注意，这里部分情况下会遇见网络问题，建议提前准备一个科学上网的代理"></a>注意，这里部分情况下会遇见网络问题，建议提前准备一个科学上网的代理</h2><h3 id="3-拉取-Freqtrade-Docker-镜像"><a href="#3-拉取-Freqtrade-Docker-镜像" class="headerlink" title="3. 拉取 Freqtrade Docker 镜像"></a>3. 拉取 Freqtrade Docker 镜像</h3><p>使用以下命令拉取 Freqtrade 的 Docker 镜像：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose pull</span><br></pre></td></tr></table></figure>
+<p><img src="/img/freqtrade/20250713-133054.jpg"></p>
+<h3 id="4-创建用户目录结构"><a href="#4-创建用户目录结构" class="headerlink" title="4. 创建用户目录结构"></a>4. 创建用户目录结构</h3><p>运行以下命令创建用户目录结构：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose run --<span class="built_in">rm</span> freqtrade create-userdir --userdir user_data</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="5-创建配置文件"><a href="#5-创建配置文件" class="headerlink" title="5. 创建配置文件"></a>5. 创建配置文件</h3><p>运行以下命令创建配置文件：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose run --<span class="built_in">rm</span> freqtrade new-config --config user_data/config.json</span><br></pre></td></tr></table></figure>
+<p>此命令会启动一个交互式向导，提示你输入相关配置信息，例如交易货币、交易所等。</p>
+<h3 id="6-启动-Freqtrade-容器"><a href="#6-启动-Freqtrade-容器" class="headerlink" title="6. 启动 Freqtrade 容器"></a>6. 启动 Freqtrade 容器</h3><p>启动 Freqtrade 容器：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose up -d</span><br></pre></td></tr></table></figure>
+<p><img src="/img/freqtrade/cmd2.png"></p>
+<p>在docker desktop里面可以清楚的看到运行的状态<br><img src="/img/freqtrade/cmd4.png"></p>
+<p>打开浏览器，输入127.0.0.1：8080<br><img src="/img/freqtrade/cmd5.png" alt="这里是一个正常运行的策略， Best5M"></p>
+<h2 id="三、网络问题导致镜像拉取失败的解决办法"><a href="#三、网络问题导致镜像拉取失败的解决办法" class="headerlink" title="三、网络问题导致镜像拉取失败的解决办法"></a>三、网络问题导致镜像拉取失败的解决办法</h2><h3 id="1-检查-DNS-配置"><a href="#1-检查-DNS-配置" class="headerlink" title="1. 检查 DNS 配置"></a>1. 检查 DNS 配置</h3><p>确保你的系统 DNS 配置正确。可以将 DNS 设置为 Google 或 Cloudflare 的公共 DNS：</p>
+<ul>
+<li><strong>Google DNS</strong>: 8.8.8.8 和 8.8.4.4</li>
+<li><strong>Cloudflare DNS</strong>: 1.1.1.1 和 1.0.0.1</li>
+</ul>
+<h3 id="2-修改-Docker-镜像源"><a href="#2-修改-Docker-镜像源" class="headerlink" title="2. 修改 Docker 镜像源"></a>2. 修改 Docker 镜像源</h3><p>如果默认的 Docker Hub 镜像源无法访问，可以配置国内的镜像加速器。编辑 <code>/etc/docker/daemon.json</code> 文件，添加以下内容：</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;registry-mirrors&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;https://docker.m.daocloud.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;https://dockerproxy.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;https://docker.nju.edu.cn&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;https://iju9kaj2.mirror.aliyuncs.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;http://hub-mirror.c.163.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;https://cr.console.aliyun.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;https://hub.docker.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;http://mirrors.ustc.edu.cn&quot;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>保存后，重启 Docker 服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+
+<h3 id="3-使用代理"><a href="#3-使用代理" class="headerlink" title="3. 使用代理"></a>3. 使用代理</h3><p>如果需要代理，可以配置 Docker 的代理设置。编辑 <code>/etc/systemd/system/docker.service.d/proxy.conf</code> 文件，添加以下内容：</p>
+<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Environment</span>=<span class="string">&quot;HTTP_PROXY=http://xxx.xxx.xxx.xxx:xxxx/&quot;</span></span><br><span class="line"><span class="attr">Environment</span>=<span class="string">&quot;HTTPS_PROXY=http://xxx.xxx.xxx.xxx:xxxx/&quot;</span></span><br><span class="line"><span class="attr">Environment</span>=<span class="string">&quot;NO_PROXY=localhost,127.0.0.1,xxx.xxx.xxx.xxx&quot;</span></span><br></pre></td></tr></table></figure>
+<p>保存后，重启 Docker 服务：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
+
+<h2 id="四、其他注意事项"><a href="#四、其他注意事项" class="headerlink" title="四、其他注意事项"></a>四、其他注意事项</h2><ul>
+<li>如果需要使用 WebUI，可以在 <code>docker-compose.yml</code> 文件中添加 WebUI 的配置。</li>
+<li>确保配置文件 <code>config.json</code> 中的设置符合你的需求。</li>
+<li>如果遇到容器时间不一致的问题，可以调整容器内的时区设置。</li>
+</ul>
+<h2 id="以上是使用-Docker-安装-Freqtrade-的简要教程，希望对你有所帮助。如果遇到问题，可以参考-Freqtrade-的官方文档。"><a href="#以上是使用-Docker-安装-Freqtrade-的简要教程，希望对你有所帮助。如果遇到问题，可以参考-Freqtrade-的官方文档。" class="headerlink" title="以上是使用 Docker 安装 Freqtrade 的简要教程，希望对你有所帮助。如果遇到问题，可以参考 Freqtrade 的官方文档。"></a>以上是使用 Docker 安装 Freqtrade 的简要教程，希望对你有所帮助。如果遇到问题，可以参考 Freqtrade 的官方文档。</h2><hr>
+<h2 id="暂时记录最开始的部分，后面有空慢慢更新配置文件和策略的解读"><a href="#暂时记录最开始的部分，后面有空慢慢更新配置文件和策略的解读" class="headerlink" title="暂时记录最开始的部分，后面有空慢慢更新配置文件和策略的解读"></a>暂时记录最开始的部分，后面有空慢慢更新配置文件和策略的解读</h2><h2 id="2025年11月13日更新，补充关于ubuntu系统上的安装"><a href="#2025年11月13日更新，补充关于ubuntu系统上的安装" class="headerlink" title="2025年11月13日更新，补充关于ubuntu系统上的安装"></a>2025年11月13日更新，补充关于ubuntu系统上的安装</h2><ul>
+<li>我们采取的是conda安装</li>
+</ul>
+<p>环境激活命令：</p>
+<p>source .&#x2F;.venv&#x2F;bin&#x2F;activate</p>
 ]]></content>
       <categories>
         <category>量化交易</category>
@@ -275,7 +784,7 @@
       </categories>
       <tags>
         <tag>freqtrade</tag>
-        <tag>FreqAI</tag>
+        <tag>Docker</tag>
       </tags>
   </entry>
   <entry>
@@ -349,60 +858,10 @@
       </tags>
   </entry>
   <entry>
-    <title>freqtrade安装简要教程---docker安装</title>
-    <url>/2025/07/06/freqtrade/</url>
-    <content><![CDATA[<h1 id="Freqtrade-使用-Docker-安装教程"><a href="#Freqtrade-使用-Docker-安装教程" class="headerlink" title="Freqtrade 使用 Docker 安装教程"></a>Freqtrade 使用 Docker 安装教程</h1><h1 id="freqtrade官方链接："><a href="#freqtrade官方链接：" class="headerlink" title="freqtrade官方链接："></a>freqtrade官方链接：</h1><p><a href="https://www.freqtrade.io/en/stable/">https://www.freqtrade.io/en/stable/</a></p>
-<p><img src="/img/freqtrade/freqtrade2.jpg"></p>
-<h2 id="一、准备工作"><a href="#一、准备工作" class="headerlink" title="一、准备工作"></a>一、准备工作</h2><p>1、一台正常使用windows电脑<br>如果是linux系统，则参考freqtrade官方文档上的其他安装方案<br>确保你的系统已安装 Docker 及其相关组件。对于 Docker 的安装，可以参考官方文档。<br>最好安装docker desktop，链接：<br><a href="https://www.docker.com/products/docker-desktop/">https://www.docker.com/products/docker-desktop/</a><br><img src="/img/freqtrade/docker.png"></p>
-<h2 id="二、安装步骤"><a href="#二、安装步骤" class="headerlink" title="二、安装步骤"></a>二、安装步骤</h2><h3 id="1-创建工作目录"><a href="#1-创建工作目录" class="headerlink" title="1. 创建工作目录"></a>1. 创建工作目录</h3><p>创建一个目录用于保存 Freqtrade 的配置文件和用户数据：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">mkdir</span> ft_userdata</span><br><span class="line"><span class="built_in">cd</span> ft_userdata/</span><br></pre></td></tr></table></figure>
-<p><img src="/img/freqtrade/cmd1.png"></p>
-<p>这里我选择了在D盘创建，完成后打开电脑文件目录，可以正常看到多了一个文件夹</p>
-<h3 id="2-下载-docker-compose-yml-文件"><a href="#2-下载-docker-compose-yml-文件" class="headerlink" title="2. 下载 docker-compose.yml 文件"></a>2. 下载 <code>docker-compose.yml</code> 文件</h3><p>从 Freqtrade 的 GitHub 仓库下载 <code>docker-compose.yml</code> 文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">curl https://raw.githubusercontent.com/freqtrade/freqtrade/stable/docker-compose.yml -o docker-compose.yml</span><br></pre></td></tr></table></figure>
-
-<h2 id="注意，这里部分情况下会遇见网络问题，建议提前准备一个科学上网的代理"><a href="#注意，这里部分情况下会遇见网络问题，建议提前准备一个科学上网的代理" class="headerlink" title="注意，这里部分情况下会遇见网络问题，建议提前准备一个科学上网的代理"></a>注意，这里部分情况下会遇见网络问题，建议提前准备一个科学上网的代理</h2><h3 id="3-拉取-Freqtrade-Docker-镜像"><a href="#3-拉取-Freqtrade-Docker-镜像" class="headerlink" title="3. 拉取 Freqtrade Docker 镜像"></a>3. 拉取 Freqtrade Docker 镜像</h3><p>使用以下命令拉取 Freqtrade 的 Docker 镜像：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose pull</span><br></pre></td></tr></table></figure>
-<p><img src="/img/freqtrade/20250713-133054.jpg"></p>
-<h3 id="4-创建用户目录结构"><a href="#4-创建用户目录结构" class="headerlink" title="4. 创建用户目录结构"></a>4. 创建用户目录结构</h3><p>运行以下命令创建用户目录结构：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose run --<span class="built_in">rm</span> freqtrade create-userdir --userdir user_data</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="5-创建配置文件"><a href="#5-创建配置文件" class="headerlink" title="5. 创建配置文件"></a>5. 创建配置文件</h3><p>运行以下命令创建配置文件：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose run --<span class="built_in">rm</span> freqtrade new-config --config user_data/config.json</span><br></pre></td></tr></table></figure>
-<p>此命令会启动一个交互式向导，提示你输入相关配置信息，例如交易货币、交易所等。</p>
-<h3 id="6-启动-Freqtrade-容器"><a href="#6-启动-Freqtrade-容器" class="headerlink" title="6. 启动 Freqtrade 容器"></a>6. 启动 Freqtrade 容器</h3><p>启动 Freqtrade 容器：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">docker compose up -d</span><br></pre></td></tr></table></figure>
-<p><img src="/img/freqtrade/cmd2.png"></p>
-<p>在docker desktop里面可以清楚的看到运行的状态<br><img src="/img/freqtrade/cmd4.png"></p>
-<p>打开浏览器，输入127.0.0.1：8080<br><img src="/img/freqtrade/cmd5.png" alt="这里是一个正常运行的策略， Best5M"></p>
-<h2 id="三、网络问题导致镜像拉取失败的解决办法"><a href="#三、网络问题导致镜像拉取失败的解决办法" class="headerlink" title="三、网络问题导致镜像拉取失败的解决办法"></a>三、网络问题导致镜像拉取失败的解决办法</h2><h3 id="1-检查-DNS-配置"><a href="#1-检查-DNS-配置" class="headerlink" title="1. 检查 DNS 配置"></a>1. 检查 DNS 配置</h3><p>确保你的系统 DNS 配置正确。可以将 DNS 设置为 Google 或 Cloudflare 的公共 DNS：</p>
-<ul>
-<li><strong>Google DNS</strong>: 8.8.8.8 和 8.8.4.4</li>
-<li><strong>Cloudflare DNS</strong>: 1.1.1.1 和 1.0.0.1</li>
-</ul>
-<h3 id="2-修改-Docker-镜像源"><a href="#2-修改-Docker-镜像源" class="headerlink" title="2. 修改 Docker 镜像源"></a>2. 修改 Docker 镜像源</h3><p>如果默认的 Docker Hub 镜像源无法访问，可以配置国内的镜像加速器。编辑 <code>/etc/docker/daemon.json</code> 文件，添加以下内容：</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;registry-mirrors&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="string">&quot;https://docker.m.daocloud.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;https://dockerproxy.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;https://docker.mirrors.ustc.edu.cn&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;https://docker.nju.edu.cn&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;https://iju9kaj2.mirror.aliyuncs.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;http://hub-mirror.c.163.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;https://cr.console.aliyun.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;https://hub.docker.com&quot;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="string">&quot;http://mirrors.ustc.edu.cn&quot;</span></span><br><span class="line">    <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
-<p>保存后，重启 Docker 服务：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-
-<h3 id="3-使用代理"><a href="#3-使用代理" class="headerlink" title="3. 使用代理"></a>3. 使用代理</h3><p>如果需要代理，可以配置 Docker 的代理设置。编辑 <code>/etc/systemd/system/docker.service.d/proxy.conf</code> 文件，添加以下内容：</p>
-<figure class="highlight ini"><table><tr><td class="code"><pre><span class="line"><span class="section">[Service]</span></span><br><span class="line"><span class="attr">Environment</span>=<span class="string">&quot;HTTP_PROXY=http://xxx.xxx.xxx.xxx:xxxx/&quot;</span></span><br><span class="line"><span class="attr">Environment</span>=<span class="string">&quot;HTTPS_PROXY=http://xxx.xxx.xxx.xxx:xxxx/&quot;</span></span><br><span class="line"><span class="attr">Environment</span>=<span class="string">&quot;NO_PROXY=localhost,127.0.0.1,xxx.xxx.xxx.xxx&quot;</span></span><br></pre></td></tr></table></figure>
-<p>保存后，重启 Docker 服务：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">sudo systemctl daemon-reload</span><br><span class="line">sudo systemctl restart docker</span><br></pre></td></tr></table></figure>
-
-<h2 id="四、其他注意事项"><a href="#四、其他注意事项" class="headerlink" title="四、其他注意事项"></a>四、其他注意事项</h2><ul>
-<li>如果需要使用 WebUI，可以在 <code>docker-compose.yml</code> 文件中添加 WebUI 的配置。</li>
-<li>确保配置文件 <code>config.json</code> 中的设置符合你的需求。</li>
-<li>如果遇到容器时间不一致的问题，可以调整容器内的时区设置。</li>
-</ul>
-<h2 id="以上是使用-Docker-安装-Freqtrade-的简要教程，希望对你有所帮助。如果遇到问题，可以参考-Freqtrade-的官方文档。"><a href="#以上是使用-Docker-安装-Freqtrade-的简要教程，希望对你有所帮助。如果遇到问题，可以参考-Freqtrade-的官方文档。" class="headerlink" title="以上是使用 Docker 安装 Freqtrade 的简要教程，希望对你有所帮助。如果遇到问题，可以参考 Freqtrade 的官方文档。"></a>以上是使用 Docker 安装 Freqtrade 的简要教程，希望对你有所帮助。如果遇到问题，可以参考 Freqtrade 的官方文档。</h2><hr>
-<h2 id="暂时记录最开始的部分，后面有空慢慢更新配置文件和策略的解读"><a href="#暂时记录最开始的部分，后面有空慢慢更新配置文件和策略的解读" class="headerlink" title="暂时记录最开始的部分，后面有空慢慢更新配置文件和策略的解读"></a>暂时记录最开始的部分，后面有空慢慢更新配置文件和策略的解读</h2><h2 id="2025年11月13日更新，补充关于ubuntu系统上的安装"><a href="#2025年11月13日更新，补充关于ubuntu系统上的安装" class="headerlink" title="2025年11月13日更新，补充关于ubuntu系统上的安装"></a>2025年11月13日更新，补充关于ubuntu系统上的安装</h2><ul>
-<li>我们采取的是conda安装</li>
-</ul>
-<p>环境激活命令：</p>
-<p>source .&#x2F;.venv&#x2F;bin&#x2F;activate</p>
+    <title>freqtrade-AI学习记录</title>
+    <url>/2025/07/16/freq_AI/</url>
+    <content><![CDATA[<h1 id="Freqtrade-使用"><a href="#Freqtrade-使用" class="headerlink" title="Freqtrade 使用"></a>Freqtrade 使用</h1><p>services:<br>  tensorboard:<br>    image: freqtradeorg&#x2F;freqtrade:stable<br>    volumes:<br>      - “.&#x2F;user_data:&#x2F;freqtrade&#x2F;user_data”<br>    ports:<br>      - “6006:6006”<br>    command: &gt;<br>      tensorboard –logdir user_data&#x2F;models&#x2F;unique-id2 –host 0.0.0.0 –port 6006<br>docker-compose up tensorboard</p>
+<p>#不太会使用tensorbaord进行调试啊</p>
 ]]></content>
       <categories>
         <category>量化交易</category>
@@ -410,20 +869,7 @@
       </categories>
       <tags>
         <tag>freqtrade</tag>
-        <tag>Docker</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hello-world</title>
-    <url>/2021/01/07/hello-world/</url>
-    <content><![CDATA[<h2 id="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"><a href="#自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。" class="headerlink" title="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"></a>自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。</h2><h2 id="在这互联网上开一块自留地，种一点东西。"><a href="#在这互联网上开一块自留地，种一点东西。" class="headerlink" title="在这互联网上开一块自留地，种一点东西。"></a>在这互联网上开一块自留地，种一点东西。</h2><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
-      <categories>
-        <category>随笔文字</category>
-        <category>建站随笔</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>建站</tag>
+        <tag>FreqAI</tag>
       </tags>
   </entry>
   <entry>
@@ -746,76 +1192,6 @@
       </tags>
   </entry>
   <entry>
-    <title>my_heart</title>
-    <url>/2026/03/20/my-heart/</url>
-    <content><![CDATA[<h2 id="《蛊真人》摘抄"><a href="#《蛊真人》摘抄" class="headerlink" title="《蛊真人》摘抄"></a>《蛊真人》摘抄</h2><p>有时候确实瞻前顾后，想的太多而做的太少</p>
-<hr>
-<p>无数的选择，会衍生出无数的可能。无数的可能，又相互影响。</p>
-<p>方源脑袋急速转动，各种灵光如黑暗中火石碰撞。</p>
-<p>如何做，才能维护自身，又能保全最大的利益？</p>
-<p>他绞尽脑汁。竭尽心神，短短片刻功夫，就想得双耳嗡鸣。</p>
-<p>“等一等！”陡然间，方源雄躯一震。</p>
-<p>“也许……退一步能海阔天空？我是否应该更高瞻远瞩一些？”一个匪夷所思的想法，在他脑海中形成。</p>
-<p>“不行，这样做的话，风险更大！”他旋即摇头，口中喃喃自语，否决了这个想法。</p>
-<p>但这个想法。却像是老树扎根，一时间竟然挥之不去。</p>
-<p>“如果这样做，真的能够成功的话，我的收获将更加巨大！”方源双目放光。</p>
-<p>但下一刻，他又不自觉地摇头：“此法一旦计算稍有疏漏。我就将万劫不复，比落到铁若男手中更惨。毕竟春秋蝉已经使用一次，短时间内再无重生的可能……”</p>
-<p>想着想着，方源的目光渐渐深邃起来。</p>
-<p>忽然他轻笑出声：“想我堂堂一代魔头巨擘，何时畏首畏尾，如此瞻前顾后？只要有一线希望，就该勇于出手。只要有滔天的利益。就该奋不顾身。富贵险中求，什么稳中求胜，慢慢积累？我就是要一步登天！”</p>
-<p>“没错，就这个方案了！失败就死无葬身之地。成功就如蛟龙升天，对今后大计更为有利。呵呵呵，哈哈哈，人生匆匆百年。不过一场豪赌！”</p>
-<hr>
-]]></content>
-      <categories>
-        <category>随笔文字</category>
-        <category>读书摘抄</category>
-      </categories>
-      <tags>
-        <tag>摘抄</tag>
-        <tag>读书</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>博客资料</title>
-    <url>/2025/12/11/%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%96%99/</url>
-    <content><![CDATA[<h1 id="全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索"><a href="#全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索" class="headerlink" title="全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索"></a>全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索</h1><h1 id="https-pixabay-com"><a href="#https-pixabay-com" class="headerlink" title="https://pixabay.com/"></a><a href="https://pixabay.com/">https://pixabay.com/</a></h1><hr>
-<h2 id="这是一份面向新手和进阶用户的-Hexo-写作指南，整合了常见问题与一些经验。内容涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式等。"><a href="#这是一份面向新手和进阶用户的-Hexo-写作指南，整合了常见问题与一些经验。内容涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式等。" class="headerlink" title="这是一份面向新手和进阶用户的 Hexo 写作指南，整合了常见问题与一些经验。内容涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式等。"></a>这是一份面向新手和进阶用户的 Hexo 写作指南，整合了常见问题与一些经验。内容涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式等。</h2><h1 id="https-wenjiew-astro-github-io-2025-08-16-hexo-E5-86-99-E5-8D-9A-E5-AE-A2-E6-8C-87-E5-8D-97-index-html"><a href="#https-wenjiew-astro-github-io-2025-08-16-hexo-E5-86-99-E5-8D-9A-E5-AE-A2-E6-8C-87-E5-8D-97-index-html" class="headerlink" title="https://wenjiew-astro.github.io/2025/08/16/hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/index.html"></a><a href="https://wenjiew-astro.github.io/2025/08/16/hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/index.html">https://wenjiew-astro.github.io/2025/08/16/hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/index.html</a></h1>]]></content>
-      <categories>
-        <category>资源收藏</category>
-        <category>素材工具</category>
-      </categories>
-      <tags>
-        <tag>图片素材</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>又是一年春</title>
-    <url>/2026/02/22/%E6%83%85%E8%AF%9D/</url>
-    <content><![CDATA[<h3 id="生日"><a href="#生日" class="headerlink" title="生日"></a>生日</h3><p>转眼就到了初六，窗外的小孩还在欢乐的放鞭炮，我也正式迈进了28岁。</p>
-<p>谢谢你啊，宝宝。其实我自己都有点想回避这个生日，总觉得数字往上跳一格，肩上的重量就又多了一些。但你不一样，你比我还要上心，非拉着我去买个蛋糕。看着你认真切蛋糕的样子， 那一刻我突然觉得，长大一点也没那么可怕，因为无论如何，都有你陪在我身边。</p>
-<p>成长的焦虑确实是如影随形的。28岁，说大不大，说小也不小了。开始担心父母的身体，担心工作还能不能往上走，担心未来能不能给你一个真正安稳的家。有时候夜里睡不着，侧过身看着你安静的睡脸，就会想，要是时间能慢一点就好了，或者，只要我们一直这样并肩走着，慢一点也没关系。未来那么长，我希望我们始终是彼此最坚定的底气。</p>
-<p>过年回老家，山里头下了好大一场雪。漫山遍野的白，空气冷得发甜，我站在院子里，第一个念头就是：要是你在这儿就好了。想拉着你的手踩在没人走过的雪地上，想看你哈着白气冲我笑，想把那棵挂满冰凌的老柿子树指给你看。</p>
-<p>可是山里条件实在太差了，洗澡得烧水，晚上冷得能听见风从门缝里钻进来。最让我犹豫的是——我怕你不会烤柴火。怕烟熏得你流眼泪，怕你因为冷而缩手缩脚。那一刻我才发现，爱一个人好像就是这样：哪怕是想把全世界最好的风景都给你，最后还是会输给“怕你受一点委屈”。</p>
-<img src="/img/qh/微信图片_20260320145159_135_39.jpg" width="60%" alt="压缩显示">
-
-<p>所以今年有个小小的愿望——等天气暖和了，带你回去看看我长大的地方。那时候山青了，水暖了，像所有平淡的日常那样，只是换一个地方，继续相爱。</p>
-<p>生日快乐给我，快乐给你。<br>谢谢你让我的28岁，从一块蛋糕和一屋子的温暖开始。</p>
-<p>初六夜</p>
-<hr>
-<img src="/img/qh/微信图片_20260320103841_133_39.jpg" width="60%" alt="压缩显示">
-
-<hr>
-]]></content>
-      <categories>
-        <category>随笔文字</category>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>书信</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>newstrategy5_1策略解析</title>
     <url>/2026/06/08/newstrategy5-1/</url>
     <content><![CDATA[<h1 id="从混沌到秩序：一个基于多条件融合与动态仓位调整的-Freqtrade-策略解析"><a href="#从混沌到秩序：一个基于多条件融合与动态仓位调整的-Freqtrade-策略解析" class="headerlink" title="从混沌到秩序：一个基于多条件融合与动态仓位调整的 Freqtrade 策略解析"></a>从混沌到秩序：一个基于多条件融合与动态仓位调整的 Freqtrade 策略解析</h1><p>量化交易的本质，是在不确定的市场中寻找统计意义上的优势。然而，单一指标或简单规则往往难以适应多变的市场环境。本文解析的 <code>newstrategy5_1</code> 策略，展示了一个成熟量化策略应有的复杂性与自适应性——它融合了十余种买入信号、动态 DCA 加仓、多级止盈止损以及基于市场状态的仓位过滤。下面我们将深入其核心逻辑与亮点实现，源码放在文末。</p>
@@ -927,6 +1303,49 @@
       </tags>
   </entry>
   <entry>
+    <title>博客资料</title>
+    <url>/2025/12/11/%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%96%99/</url>
+    <content><![CDATA[<h1 id="全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索"><a href="#全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索" class="headerlink" title="全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索"></a>全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索</h1><h1 id="https-pixabay-com"><a href="#https-pixabay-com" class="headerlink" title="https://pixabay.com/"></a><a href="https://pixabay.com/">https://pixabay.com/</a></h1><hr>
+<h2 id="这是一份面向新手和进阶用户的-Hexo-写作指南，整合了常见问题与一些经验。内容涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式等。"><a href="#这是一份面向新手和进阶用户的-Hexo-写作指南，整合了常见问题与一些经验。内容涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式等。" class="headerlink" title="这是一份面向新手和进阶用户的 Hexo 写作指南，整合了常见问题与一些经验。内容涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式等。"></a>这是一份面向新手和进阶用户的 Hexo 写作指南，整合了常见问题与一些经验。内容涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式等。</h2><h1 id="https-wenjiew-astro-github-io-2025-08-16-hexo-E5-86-99-E5-8D-9A-E5-AE-A2-E6-8C-87-E5-8D-97-index-html"><a href="#https-wenjiew-astro-github-io-2025-08-16-hexo-E5-86-99-E5-8D-9A-E5-AE-A2-E6-8C-87-E5-8D-97-index-html" class="headerlink" title="https://wenjiew-astro.github.io/2025/08/16/hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/index.html"></a><a href="https://wenjiew-astro.github.io/2025/08/16/hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/index.html">https://wenjiew-astro.github.io/2025/08/16/hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/index.html</a></h1>]]></content>
+      <categories>
+        <category>资源收藏</category>
+        <category>素材工具</category>
+      </categories>
+      <tags>
+        <tag>图片素材</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>my_heart</title>
+    <url>/2026/03/20/my-heart/</url>
+    <content><![CDATA[<h2 id="《蛊真人》摘抄"><a href="#《蛊真人》摘抄" class="headerlink" title="《蛊真人》摘抄"></a>《蛊真人》摘抄</h2><p>有时候确实瞻前顾后，想的太多而做的太少</p>
+<hr>
+<p>无数的选择，会衍生出无数的可能。无数的可能，又相互影响。</p>
+<p>方源脑袋急速转动，各种灵光如黑暗中火石碰撞。</p>
+<p>如何做，才能维护自身，又能保全最大的利益？</p>
+<p>他绞尽脑汁。竭尽心神，短短片刻功夫，就想得双耳嗡鸣。</p>
+<p>“等一等！”陡然间，方源雄躯一震。</p>
+<p>“也许……退一步能海阔天空？我是否应该更高瞻远瞩一些？”一个匪夷所思的想法，在他脑海中形成。</p>
+<p>“不行，这样做的话，风险更大！”他旋即摇头，口中喃喃自语，否决了这个想法。</p>
+<p>但这个想法。却像是老树扎根，一时间竟然挥之不去。</p>
+<p>“如果这样做，真的能够成功的话，我的收获将更加巨大！”方源双目放光。</p>
+<p>但下一刻，他又不自觉地摇头：“此法一旦计算稍有疏漏。我就将万劫不复，比落到铁若男手中更惨。毕竟春秋蝉已经使用一次，短时间内再无重生的可能……”</p>
+<p>想着想着，方源的目光渐渐深邃起来。</p>
+<p>忽然他轻笑出声：“想我堂堂一代魔头巨擘，何时畏首畏尾，如此瞻前顾后？只要有一线希望，就该勇于出手。只要有滔天的利益。就该奋不顾身。富贵险中求，什么稳中求胜，慢慢积累？我就是要一步登天！”</p>
+<p>“没错，就这个方案了！失败就死无葬身之地。成功就如蛟龙升天，对今后大计更为有利。呵呵呵，哈哈哈，人生匆匆百年。不过一场豪赌！”</p>
+<hr>
+]]></content>
+      <categories>
+        <category>随笔文字</category>
+        <category>读书摘抄</category>
+      </categories>
+      <tags>
+        <tag>摘抄</tag>
+        <tag>读书</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C++学习资源网站合集</title>
     <url>/2022/07/19/%E6%94%B6%E8%97%8F-C/</url>
     <content><![CDATA[<h2 id="学习网址链接合集，收藏就当学习了"><a href="#学习网址链接合集，收藏就当学习了" class="headerlink" title="学习网址链接合集，收藏就当学习了"></a>学习网址链接合集，收藏就当学习了</h2><h1 id="https-www-cctry-com-VC驿站，集合学习资源、社区交流的，充分感受到学无止境的C"><a href="#https-www-cctry-com-VC驿站，集合学习资源、社区交流的，充分感受到学无止境的C" class="headerlink" title="https://www.cctry.com/          VC驿站，集合学习资源、社区交流的，充分感受到学无止境的C++"></a><a href="https://www.cctry.com/">https://www.cctry.com/</a>          VC驿站，集合学习资源、社区交流的，充分感受到学无止境的C++</h1><h2 id="国外的资源，英文多"><a href="#国外的资源，英文多" class="headerlink" title="国外的资源，英文多"></a>国外的资源，英文多</h2><h1 id="https-www-thefreecountry-com-sourcecode-cpp-shtml"><a href="#https-www-thefreecountry-com-sourcecode-cpp-shtml" class="headerlink" title="https://www.thefreecountry.com/sourcecode/cpp.shtml"></a><a href="https://www.thefreecountry.com/sourcecode/cpp.shtml">https://www.thefreecountry.com/sourcecode/cpp.shtml</a></h1><h1 id="https-en-cppreference-com-w"><a href="#https-en-cppreference-com-w" class="headerlink" title="https://en.cppreference.com/w/"></a><a href="https://en.cppreference.com/w/">https://en.cppreference.com/w/</a></h1><h1 id="http-www-learncpp-com"><a href="#http-www-learncpp-com" class="headerlink" title="http://www.learncpp.com/"></a><a href="http://www.learncpp.com/">http://www.learncpp.com/</a></h1><h1 id="https-github-com-fffaraz-awes-GitHub上的，类似的资源太多了"><a href="#https-github-com-fffaraz-awes-GitHub上的，类似的资源太多了" class="headerlink" title="https://github.com/fffaraz/awes   GitHub上的，类似的资源太多了"></a><a href="https://github.com/fffaraz/awes">https://github.com/fffaraz/awes</a>   GitHub上的，类似的资源太多了</h1><h1 id="http-freshmeat-net-browse-164-–超过万个C编写的项目。"><a href="#http-freshmeat-net-browse-164-–超过万个C编写的项目。" class="headerlink" title="http://freshmeat.net/browse/164/ –超过万个C编写的项目。"></a><a href="http://freshmeat.net/browse/164/">http://freshmeat.net/browse/164/</a> –超过万个C编写的项目。</h1><h1 id="http-www-daniweb-com-code-c-html-–DANIWEB提供的实用代码段。更新少"><a href="#http-www-daniweb-com-code-c-html-–DANIWEB提供的实用代码段。更新少" class="headerlink" title="http://www.daniweb.com/code/c.html –DANIWEB提供的实用代码段。更新少"></a><a href="http://www.daniweb.com/code/c.html">http://www.daniweb.com/code/c.html</a> –DANIWEB提供的实用代码段。更新少</h1><h1 id="http-www-ddj-com-code-ddj-html-–一个看起来就像大神的博客，但是好久没有更新了"><a href="#http-www-ddj-com-code-ddj-html-–一个看起来就像大神的博客，但是好久没有更新了" class="headerlink" title="http://www.ddj.com/code/ddj.html –一个看起来就像大神的博客，但是好久没有更新了"></a><a href="http://www.ddj.com/code/ddj.html">http://www.ddj.com/code/ddj.html</a> –一个看起来就像大神的博客，但是好久没有更新了</h1><h1 id="http-www-cprogramming-com-cgi-bin-source-source-cgi-–C和C-编程资源。一本书的在线资源"><a href="#http-www-cprogramming-com-cgi-bin-source-source-cgi-–C和C-编程资源。一本书的在线资源" class="headerlink" title="http://www.cprogramming.com/cgi-bin/source/source.cgi –C和C + +编程资源。一本书的在线资源"></a><a href="http://www.cprogramming.com/cgi-bin/source/source.cgi">http://www.cprogramming.com/cgi-bin/source/source.cgi</a> –C和C + +编程资源。一本书的在线资源</h1><h1 id="http-private-codecogs-com-–CodeCogs是一项协作的开放源码库，C-x2F-C-的数值方面的组件。写方程"><a href="#http-private-codecogs-com-–CodeCogs是一项协作的开放源码库，C-x2F-C-的数值方面的组件。写方程" class="headerlink" title="http://private.codecogs.com/ –CodeCogs是一项协作的开放源码库，C&#x2F;C++的数值方面的组件。写方程"></a><a href="http://private.codecogs.com/">http://private.codecogs.com/</a> –CodeCogs是一项协作的开放源码库，C&#x2F;C++的数值方面的组件。写方程</h1><h1 id="http-www-codeproject-com-cat-2-–codeproject提供的C-x2F-C-资源代码项目。更新多"><a href="#http-www-codeproject-com-cat-2-–codeproject提供的C-x2F-C-资源代码项目。更新多" class="headerlink" title="http://www.codeproject.com/?cat=2 –codeproject提供的C&#x2F;C++资源代码项目。更新多"></a><a href="http://www.codeproject.com/?cat=2">http://www.codeproject.com/?cat=2</a> –codeproject提供的C&#x2F;C++资源代码项目。更新多</h1><h1 id="http-www-thefreecountry-com-sourcecode-cpp-shtml-–以下是一些C和C-库的DLL，VCLs，源代码，元件，模块，应用程序框架，类库，源代码片段等，你可以在您的项目中使用而不需要支付费用和版税。"><a href="#http-www-thefreecountry-com-sourcecode-cpp-shtml-–以下是一些C和C-库的DLL，VCLs，源代码，元件，模块，应用程序框架，类库，源代码片段等，你可以在您的项目中使用而不需要支付费用和版税。" class="headerlink" title="http://www.thefreecountry.com/sourcecode/cpp.shtml –以下是一些C和C++库的DLL，VCLs，源代码，元件，模块，应用程序框架，类库，源代码片段等，你可以在您的项目中使用而不需要支付费用和版税。"></a><a href="http://www.thefreecountry.com/sourcecode/cpp.shtml">http://www.thefreecountry.com/sourcecode/cpp.shtml</a> –以下是一些C和C++库的DLL，VCLs，源代码，元件，模块，应用程序框架，类库，源代码片段等，你可以在您的项目中使用而不需要支付费用和版税。</h1><h1 id="http-people-sc-fsu-edu-burkardt-cpp-src-cpp-src-html-–这是一个全面的关于C-的1408个源代码清单。巨多算法，几行代码需要研究半天。"><a href="#http-people-sc-fsu-edu-burkardt-cpp-src-cpp-src-html-–这是一个全面的关于C-的1408个源代码清单。巨多算法，几行代码需要研究半天。" class="headerlink" title="http://people.sc.fsu.edu/~burkardt/cpp_src/cpp_src.html –这是一个全面的关于C++的1408个源代码清单。巨多算法，几行代码需要研究半天。"></a><a href="http://people.sc.fsu.edu/~burkardt/cpp_src/cpp_src.html">http://people.sc.fsu.edu/~burkardt/cpp_src/cpp_src.html</a> –这是一个全面的关于C++的1408个源代码清单。巨多算法，几行代码需要研究半天。</h1><h1 id="http-users-cs-fiu-edu-weiss-dsaa-c-code-–C-语言数据结构与算法分析（第二版）的源代码。"><a href="#http-users-cs-fiu-edu-weiss-dsaa-c-code-–C-语言数据结构与算法分析（第二版）的源代码。" class="headerlink" title="http://users.cs.fiu.edu/~weiss/dsaa_c++/code/ –C++语言数据结构与算法分析（第二版）的源代码。"></a><a href="http://users.cs.fiu.edu/~weiss/dsaa_c++/code/">http://users.cs.fiu.edu/~weiss/dsaa_c++/code/</a> –C++语言数据结构与算法分析（第二版）的源代码。</h1><h1 id="http-www-moshier-net-天文学和数值软件源代码-一般用不上，算日历。"><a href="#http-www-moshier-net-天文学和数值软件源代码-一般用不上，算日历。" class="headerlink" title="http://www.moshier.net/ 天文学和数值软件源代码  一般用不上，算日历。"></a><a href="http://www.moshier.net/">http://www.moshier.net/</a> 天文学和数值软件源代码  一般用不上，算日历。</h1><h1 id="http-cplus-about-com-od-cgames-C-Games-with-Source-Code-htm-–游戏有关的C-源代码。主网是关于编程的"><a href="#http-cplus-about-com-od-cgames-C-Games-with-Source-Code-htm-–游戏有关的C-源代码。主网是关于编程的" class="headerlink" title="http://cplus.about.com/od/cgames/C_Games_with_Source_Code.htm –游戏有关的C++源代码。主网是关于编程的"></a><a href="http://cplus.about.com/od/cgames/C_Games_with_Source_Code.htm">http://cplus.about.com/od/cgames/C_Games_with_Source_Code.htm</a> –游戏有关的C++源代码。主网是关于编程的</h1><h1 id="http-www-cmcrossroads-com-bradapp-links-cplusplus-links-html-–布拉德阿普尔顿的C-链接-资源，项目，图书馆，教学和编码。"><a href="#http-www-cmcrossroads-com-bradapp-links-cplusplus-links-html-–布拉德阿普尔顿的C-链接-资源，项目，图书馆，教学和编码。" class="headerlink" title="http://www.cmcrossroads.com/bradapp/links/cplusplus-links.html –布拉德阿普尔顿的C++链接-资源，项目，图书馆，教学和编码。"></a><a href="http://www.cmcrossroads.com/bradapp/links/cplusplus-links.html">http://www.cmcrossroads.com/bradapp/links/cplusplus-links.html</a> –布拉德阿普尔顿的C++链接-资源，项目，图书馆，教学和编码。</h1><h1 id="https-cplusplus-com-C-合集"><a href="#https-cplusplus-com-C-合集" class="headerlink" title="https://cplusplus.com/ C++合集"></a><a href="https://cplusplus.com/">https://cplusplus.com/</a> C++合集</h1><h1 id="http-www-c-happycodings-com-–Visual-Basic、PHP、ASP技术、C、C-大全。VB的教程属实不多了"><a href="#http-www-c-happycodings-com-–Visual-Basic、PHP、ASP技术、C、C-大全。VB的教程属实不多了" class="headerlink" title="http://www.c.happycodings.com/ –Visual Basic、PHP、ASP技术、C、C++大全。VB的教程属实不多了"></a><a href="http://www.c.happycodings.com/">http://www.c.happycodings.com/</a> –Visual Basic、PHP、ASP技术、C、C++大全。VB的教程属实不多了</h1><h1 id="http-www-java2s-com-Code-Cpp-CatalogCpp-htm-–C-源代码。QT写得可以"><a href="#http-www-java2s-com-Code-Cpp-CatalogCpp-htm-–C-源代码。QT写得可以" class="headerlink" title="http://www.java2s.com/Code/Cpp/CatalogCpp.htm –C++源代码。QT写得可以"></a><a href="http://www.java2s.com/Code/Cpp/CatalogCpp.htm">http://www.java2s.com/Code/Cpp/CatalogCpp.htm</a> –C++源代码。QT写得可以</h1><h1 id="http-users-cs-fiu-edu-C-。-可以看新闻"><a href="#http-users-cs-fiu-edu-C-。-可以看新闻" class="headerlink" title="http://users.cs.fiu.edu/ C++。 可以看新闻"></a><a href="http://users.cs.fiu.edu/">http://users.cs.fiu.edu/</a> C++。 可以看新闻</h1><h1 id="http-www-josuttis-com-libbook-examples-html-–C-标准库-教程和参考资料。"><a href="#http-www-josuttis-com-libbook-examples-html-–C-标准库-教程和参考资料。" class="headerlink" title="http://www.josuttis.com/libbook/examples.html –C++标准库-教程和参考资料。"></a><a href="http://www.josuttis.com/libbook/examples.html">http://www.josuttis.com/libbook/examples.html</a> –C++标准库-教程和参考资料。</h1>]]></content>
@@ -937,6 +1356,33 @@
       <tags>
         <tag>C++</tag>
         <tag>学习资源</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>又是一年春</title>
+    <url>/2026/02/22/%E6%83%85%E8%AF%9D/</url>
+    <content><![CDATA[<h3 id="生日"><a href="#生日" class="headerlink" title="生日"></a>生日</h3><p>转眼就到了初六，窗外的小孩还在欢乐的放鞭炮，我也正式迈进了28岁。</p>
+<p>谢谢你啊，宝宝。其实我自己都有点想回避这个生日，总觉得数字往上跳一格，肩上的重量就又多了一些。但你不一样，你比我还要上心，非拉着我去买个蛋糕。看着你认真切蛋糕的样子， 那一刻我突然觉得，长大一点也没那么可怕，因为无论如何，都有你陪在我身边。</p>
+<p>成长的焦虑确实是如影随形的。28岁，说大不大，说小也不小了。开始担心父母的身体，担心工作还能不能往上走，担心未来能不能给你一个真正安稳的家。有时候夜里睡不着，侧过身看着你安静的睡脸，就会想，要是时间能慢一点就好了，或者，只要我们一直这样并肩走着，慢一点也没关系。未来那么长，我希望我们始终是彼此最坚定的底气。</p>
+<p>过年回老家，山里头下了好大一场雪。漫山遍野的白，空气冷得发甜，我站在院子里，第一个念头就是：要是你在这儿就好了。想拉着你的手踩在没人走过的雪地上，想看你哈着白气冲我笑，想把那棵挂满冰凌的老柿子树指给你看。</p>
+<p>可是山里条件实在太差了，洗澡得烧水，晚上冷得能听见风从门缝里钻进来。最让我犹豫的是——我怕你不会烤柴火。怕烟熏得你流眼泪，怕你因为冷而缩手缩脚。那一刻我才发现，爱一个人好像就是这样：哪怕是想把全世界最好的风景都给你，最后还是会输给“怕你受一点委屈”。</p>
+<img src="/img/qh/微信图片_20260320145159_135_39.jpg" width="60%" alt="压缩显示">
+
+<p>所以今年有个小小的愿望——等天气暖和了，带你回去看看我长大的地方。那时候山青了，水暖了，像所有平淡的日常那样，只是换一个地方，继续相爱。</p>
+<p>生日快乐给我，快乐给你。<br>谢谢你让我的28岁，从一块蛋糕和一屋子的温暖开始。</p>
+<p>初六夜</p>
+<hr>
+<img src="/img/qh/微信图片_20260320103841_133_39.jpg" width="60%" alt="压缩显示">
+
+<hr>
+]]></content>
+      <categories>
+        <category>随笔文字</category>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>书信</tag>
       </tags>
   </entry>
   <entry>
@@ -992,37 +1438,6 @@
       <tags>
         <tag>交易</tag>
         <tag>交易心理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>量化心得</title>
-    <url>/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/</url>
-    <content><![CDATA[<p>量化交易学习心得总结</p>
-<ol>
-<li>幸存者偏差与“低门槛”陷阱<br>低准入门槛 vs. 高竞争门槛： 交易是世界上门槛最低的行业之一（只要开户），但它是竞争最激烈的行业之一（对手是顶尖机构）。</li>
-</ol>
-<p>“新手保护期”与过度自信： 很多人初学阶段恰逢市场红利，误将行情归功于能力，导致在环境切换时迅速溃败。</p>
-<p>网络噪音的真相： 网络上“量化无用论”盛行，是因为大多数人未曾建立科学的交易体系，而真正获利的 5% 往往保持沉默。</p>
-<ol start="2">
-<li>指标的本质：从“迷信”到“工具化”<br>指标不是预言机： 否定指标是因为试图用它预测未来。其实指标只是历史数据的统计规律化，其核心作用是降维（将复杂的行情简化为可决策的信号）。</li>
-</ol>
-<p>消息面的伪命题： 相比于滞后、零散且极易被操纵的消息面，量化指标具有客观性、可回测性和唯一性。</p>
-<p>构建组合逻辑： 失败者依赖单一指标，成功者构建多因子体系。通过不同维度（动量、波动、估值等）的指标对冲单一逻辑失效的风险。</p>
-<ol start="3">
-<li>动态博弈：寻找“非平稳”市场中的确定性<br>策略的半衰期： 市场是一个进化的有机体。当一个策略被大多数人获知时，其超额收益（Alpha）就会被摊薄甚至消失。</li>
-</ol>
-<p>动态调整的维度：</p>
-<p>参数自适应： 市场从震荡转为趋势时，参数需自动调节。</p>
-<p>风控优先： 在策略失效（回撤达到阈值）时，必须具备强制离场的底层逻辑。</p>
-<p>有些时候，想得太多而做的太少了，先做一个小事情，就是B站发图文，那么多量化书籍，讲好一个策略，如果一开始就要打</p>
-<h2 id="如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。"><a href="#如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。" class="headerlink" title="如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。"></a>如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。</h2><h3 id="5090显卡好贵，跑AI以后还得换设备。"><a href="#5090显卡好贵，跑AI以后还得换设备。" class="headerlink" title="5090显卡好贵，跑AI以后还得换设备。"></a>5090显卡好贵，跑AI以后还得换设备。</h3>]]></content>
-      <categories>
-        <category>量化交易</category>
-        <category>交易心法</category>
-      </categories>
-      <tags>
-        <tag>量化</tag>
-        <tag>交易心得</tag>
       </tags>
   </entry>
   <entry>
@@ -1090,6 +1505,37 @@
       <tags>
         <tag>随笔</tag>
         <tag>诗歌</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>量化心得</title>
+    <url>/2025/12/16/%E9%87%8F%E5%8C%96%E5%BF%83%E5%BE%97/</url>
+    <content><![CDATA[<p>量化交易学习心得总结</p>
+<ol>
+<li>幸存者偏差与“低门槛”陷阱<br>低准入门槛 vs. 高竞争门槛： 交易是世界上门槛最低的行业之一（只要开户），但它是竞争最激烈的行业之一（对手是顶尖机构）。</li>
+</ol>
+<p>“新手保护期”与过度自信： 很多人初学阶段恰逢市场红利，误将行情归功于能力，导致在环境切换时迅速溃败。</p>
+<p>网络噪音的真相： 网络上“量化无用论”盛行，是因为大多数人未曾建立科学的交易体系，而真正获利的 5% 往往保持沉默。</p>
+<ol start="2">
+<li>指标的本质：从“迷信”到“工具化”<br>指标不是预言机： 否定指标是因为试图用它预测未来。其实指标只是历史数据的统计规律化，其核心作用是降维（将复杂的行情简化为可决策的信号）。</li>
+</ol>
+<p>消息面的伪命题： 相比于滞后、零散且极易被操纵的消息面，量化指标具有客观性、可回测性和唯一性。</p>
+<p>构建组合逻辑： 失败者依赖单一指标，成功者构建多因子体系。通过不同维度（动量、波动、估值等）的指标对冲单一逻辑失效的风险。</p>
+<ol start="3">
+<li>动态博弈：寻找“非平稳”市场中的确定性<br>策略的半衰期： 市场是一个进化的有机体。当一个策略被大多数人获知时，其超额收益（Alpha）就会被摊薄甚至消失。</li>
+</ol>
+<p>动态调整的维度：</p>
+<p>参数自适应： 市场从震荡转为趋势时，参数需自动调节。</p>
+<p>风控优先： 在策略失效（回撤达到阈值）时，必须具备强制离场的底层逻辑。</p>
+<p>有些时候，想得太多而做的太少了，先做一个小事情，就是B站发图文，那么多量化书籍，讲好一个策略，如果一开始就要打</p>
+<h2 id="如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。"><a href="#如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。" class="headerlink" title="如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。"></a>如果说有一个副业能够持之以恒，可能非量化莫属，天然适合发挥计算机的优势，也不用和各种人打交道。</h2><h3 id="5090显卡好贵，跑AI以后还得换设备。"><a href="#5090显卡好贵，跑AI以后还得换设备。" class="headerlink" title="5090显卡好贵，跑AI以后还得换设备。"></a>5090显卡好贵，跑AI以后还得换设备。</h3>]]></content>
+      <categories>
+        <category>量化交易</category>
+        <category>交易心法</category>
+      </categories>
+      <tags>
+        <tag>量化</tag>
+        <tag>交易心得</tag>
       </tags>
   </entry>
 </search>
