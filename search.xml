@@ -1,41 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>AI画画，见证一个时代</title>
-    <url>/2022/09/09/MJ/</url>
-    <content><![CDATA[<h1 id="见证AI崛起于我们的时代"><a href="#见证AI崛起于我们的时代" class="headerlink" title="见证AI崛起于我们的时代"></a>见证AI崛起于我们的时代</h1><p>前几天看到有人用Midjourney生成的数字绘画作品获得了比赛一等奖，恍然惊醒，原来AI已经成长到这种地步了，一种见证AI崛起于这个时代厚重历史感，</p>
-<p>作者用的是Discord频道下Midjourney，输入提示词，然后等待GPU燃烧就可以生成画作。这个过程说起来简单，但实际上还是有难度。这个过程叫做Prompt Engineering</p>
-<p>直接翻译为提示工程，可能不是太准确，网友甚至预测以后会有提示工程师这种全新职业。毕竟利用AI作画，一小时抵的上原来一星期的量，这让人明明白白的感受到什么是降维打击啊。<br><img src="/img/mj/b.png"><br>关于AI是否杀死了艺术，个人认为虎嗅这篇文章分析的有点道理。<br>《美术行业，正在被AI作画杀死？》<br><a href="https://www.huxiu.com/article/651324.html">https://www.huxiu.com/article/651324.html</a></p>
-<h1 id="整理几个AI画画工具"><a href="#整理几个AI画画工具" class="headerlink" title="整理几个AI画画工具"></a>整理几个AI画画工具</h1><p>discord.gg&#x2F;midjourney（公测）</p>
-<p>labs.openai.com&#x2F;waitlist（内测）</p>
-<p><a href="https://beta.dreamstudio.ai/dream%EF%BC%88%E5%85%AC%E6%B5%8B%EF%BC%89">https://beta.dreamstudio.ai/dream（公测）</a></p>
-<h1 id="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"><a href="#对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。" class="headerlink" title="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"></a>对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。</h1><p>一、	抖音的壁纸号，目前已经有不少人在做这个，通过精美的壁纸吸引流量，然后广告变现，但是这个由于护城河很低，也是卷的不行。需要坚持。<br>二、	对于原本的美术设计，游戏设计来说，运用得当可能会是职场杀器，缺陷在于很可能调试出来给提示词直接被公司继承，然后就直接毕业了。<br>三、	对于画家来说确实不是一个好消息，继续坚持可能会更加困难，转型则意味之前的学习成本投入几乎浪费。还是顺势拥抱吧。<br>四、	整理相关知识，卖教程，做知识星球。这个是比较可行的路子。至少可以在这一波冲击中收获一些。</p>
-<p>最后，</p>
-<p>很幸运生在这个伟大的时代，<br>但同时面对这个时代的飞速发展，<br>又感到很无力。<br>网上有个段子说的很好：长城非常壮观雄伟，但是我是修长城的人。</p>
-]]></content>
-      <categories>
-        <category>科技观察</category>
-        <category>AI</category>
-      </categories>
-      <tags>
-        <tag>AI绘画</tag>
-        <tag>Midjourney</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hello-world</title>
-    <url>/2021/01/07/hello-world/</url>
-    <content><![CDATA[<h2 id="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"><a href="#自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。" class="headerlink" title="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"></a>自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。</h2><h2 id="在这互联网上开一块自留地，种一点东西。"><a href="#在这互联网上开一块自留地，种一点东西。" class="headerlink" title="在这互联网上开一块自留地，种一点东西。"></a>在这互联网上开一块自留地，种一点东西。</h2><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
-      <categories>
-        <category>随笔文字</category>
-        <category>建站随笔</category>
-      </categories>
-      <tags>
-        <tag>博客</tag>
-        <tag>建站</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>一次 0x133 蓝屏排查实录：从怀疑所有驱动到锁定无线网卡的电源管理</title>
     <url>/2026/11/04/0x133%E8%93%9D%E5%B1%8F%E6%8E%92%E6%9F%A5%E5%AE%9E%E5%BD%95/</url>
     <content><![CDATA[<p>七月的一个下午，屏幕毫无征兆地冻住了——不是卡顿，是整个画面定在原处，键盘灯还亮着，按什么都没反应。几十秒后屏幕一黑，接着是那行这两年越来越眼熟的字：</p>
@@ -723,6 +688,41 @@
       </tags>
   </entry>
   <entry>
+    <title>AI画画，见证一个时代</title>
+    <url>/2022/09/09/MJ/</url>
+    <content><![CDATA[<h1 id="见证AI崛起于我们的时代"><a href="#见证AI崛起于我们的时代" class="headerlink" title="见证AI崛起于我们的时代"></a>见证AI崛起于我们的时代</h1><p>前几天看到有人用Midjourney生成的数字绘画作品获得了比赛一等奖，恍然惊醒，原来AI已经成长到这种地步了，一种见证AI崛起于这个时代厚重历史感，</p>
+<p>作者用的是Discord频道下Midjourney，输入提示词，然后等待GPU燃烧就可以生成画作。这个过程说起来简单，但实际上还是有难度。这个过程叫做Prompt Engineering</p>
+<p>直接翻译为提示工程，可能不是太准确，网友甚至预测以后会有提示工程师这种全新职业。毕竟利用AI作画，一小时抵的上原来一星期的量，这让人明明白白的感受到什么是降维打击啊。<br><img src="/img/mj/b.png"><br>关于AI是否杀死了艺术，个人认为虎嗅这篇文章分析的有点道理。<br>《美术行业，正在被AI作画杀死？》<br><a href="https://www.huxiu.com/article/651324.html">https://www.huxiu.com/article/651324.html</a></p>
+<h1 id="整理几个AI画画工具"><a href="#整理几个AI画画工具" class="headerlink" title="整理几个AI画画工具"></a>整理几个AI画画工具</h1><p>discord.gg&#x2F;midjourney（公测）</p>
+<p>labs.openai.com&#x2F;waitlist（内测）</p>
+<p><a href="https://beta.dreamstudio.ai/dream%EF%BC%88%E5%85%AC%E6%B5%8B%EF%BC%89">https://beta.dreamstudio.ai/dream（公测）</a></p>
+<h1 id="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"><a href="#对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。" class="headerlink" title="对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。"></a>对于我而言，并不是很关心艺术将来究竟如何，只关心AI作画可能的变现渠道。</h1><p>一、	抖音的壁纸号，目前已经有不少人在做这个，通过精美的壁纸吸引流量，然后广告变现，但是这个由于护城河很低，也是卷的不行。需要坚持。<br>二、	对于原本的美术设计，游戏设计来说，运用得当可能会是职场杀器，缺陷在于很可能调试出来给提示词直接被公司继承，然后就直接毕业了。<br>三、	对于画家来说确实不是一个好消息，继续坚持可能会更加困难，转型则意味之前的学习成本投入几乎浪费。还是顺势拥抱吧。<br>四、	整理相关知识，卖教程，做知识星球。这个是比较可行的路子。至少可以在这一波冲击中收获一些。</p>
+<p>最后，</p>
+<p>很幸运生在这个伟大的时代，<br>但同时面对这个时代的飞速发展，<br>又感到很无力。<br>网上有个段子说的很好：长城非常壮观雄伟，但是我是修长城的人。</p>
+]]></content>
+      <categories>
+        <category>科技观察</category>
+        <category>AI</category>
+      </categories>
+      <tags>
+        <tag>AI绘画</tag>
+        <tag>Midjourney</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hello-world</title>
+    <url>/2021/01/07/hello-world/</url>
+    <content><![CDATA[<h2 id="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"><a href="#自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。" class="headerlink" title="自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。"></a>自从移动互联网崛起，博客的辉煌时代早就过去了，但是如果能在这种逆境中坚持下去，也比较酷。</h2><h2 id="在这互联网上开一块自留地，种一点东西。"><a href="#在这互联网上开一块自留地，种一点东西。" class="headerlink" title="在这互联网上开一块自留地，种一点东西。"></a>在这互联网上开一块自留地，种一点东西。</h2><h1 id><a href="#" class="headerlink" title></a></h1>]]></content>
+      <categories>
+        <category>随笔文字</category>
+        <category>建站随笔</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+        <tag>建站</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>freqtrade安装简要教程---docker安装</title>
     <url>/2025/07/06/freqtrade/</url>
     <content><![CDATA[<h1 id="Freqtrade-使用-Docker-安装教程"><a href="#Freqtrade-使用-Docker-安装教程" class="headerlink" title="Freqtrade 使用 Docker 安装教程"></a>Freqtrade 使用 Docker 安装教程</h1><h1 id="freqtrade官方链接："><a href="#freqtrade官方链接：" class="headerlink" title="freqtrade官方链接："></a>freqtrade官方链接：</h1><p><a href="https://www.freqtrade.io/en/stable/">https://www.freqtrade.io/en/stable/</a></p>
@@ -870,6 +870,306 @@
       <tags>
         <tag>freqtrade</tag>
         <tag>FreqAI</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>博客资料</title>
+    <url>/2025/12/11/%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%96%99/</url>
+    <content><![CDATA[<h2 id="2026-11-06-二次更新"><a href="#2026-11-06-二次更新" class="headerlink" title="2026-11-06 二次更新"></a>2026-11-06 二次更新</h2><p>这次加的内容，一句话：<strong>从“找素材”扩展到“看别人怎么经营站点”</strong>。</p>
+<table>
+<thead>
+<tr>
+<th>更新项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>新增 4 个博客站点</td>
+<td>DavidChan &#x2F; ZhiYuan &#x2F; Martin &#x2F; 林中Yi轩，地址与可学的点见第三节</td>
+</tr>
+<tr>
+<td>新增「6 条结论」</td>
+<td>从这 4 个站提炼的可执行做法，见第四节</td>
+</tr>
+<tr>
+<td>原有 2 条保留</td>
+<td>Pixabay、Hexo 写作指南，内容不动，只整理了标题层级</td>
+</tr>
+<tr>
+<td>结构整理</td>
+<td>原来的 H1 链接改成「分类 → 条目」两级，链接现在点得开</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>上次更新：2025-12-11，建站初期收录的两个资料源。</p>
+</blockquote>
+<h2 id="一、图片与素材"><a href="#一、图片与素材" class="headerlink" title="一、图片与素材"></a>一、图片与素材</h2><h3 id="Pixabay"><a href="#Pixabay" class="headerlink" title="Pixabay"></a>Pixabay</h3><p>全球最大的图片分享网站之一，拥有超过 550 万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和 GIF 素材等，全部免费且可商用，支持中文搜索。</p>
+<ul>
+<li>地址：<a href="https://pixabay.com/">pixabay.com</a></li>
+</ul>
+<p>同类免版税图库还有 Unsplash、Pexels、Piqsels、StockSnap、Simple Desktops、故宫壁纸、ESO Images 等，按“技术文用极简、随笔用风景”来挑。</p>
+<h2 id="二、写作与建站教程"><a href="#二、写作与建站教程" class="headerlink" title="二、写作与建站教程"></a>二、写作与建站教程</h2><h3 id="Hexo-写博客指南"><a href="#Hexo-写博客指南" class="headerlink" title="Hexo 写博客指南"></a>Hexo 写博客指南</h3><p>面向新手和进阶用户的 Hexo 写作指南，整合常见问题与经验，涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式。</p>
+<ul>
+<li>地址：<a href="https://wenjiew-astro.github.io/2025/08/16/hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/index.html">Hexo 写博客指南</a></li>
+</ul>
+<h2 id="三、值得学习的博客站点（本次新增）"><a href="#三、值得学习的博客站点（本次新增）" class="headerlink" title="三、值得学习的博客站点（本次新增）"></a>三、值得学习的博客站点（本次新增）</h2><table>
+<thead>
+<tr>
+<th>站点</th>
+<th>方向</th>
+<th>一句话</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>DavidChan’s Blog</td>
+<td>Hexo SEO &#x2F; AdSense</td>
+<td>把“被搜到”当工程做</td>
+</tr>
+<tr>
+<td>ZhiYuan 的博客</td>
+<td>Butterfly 主题</td>
+<td>功能清单式的升级文</td>
+</tr>
+<tr>
+<td>Martin’s Blog</td>
+<td>自动化部署</td>
+<td>GitHub + Cloudflare 的 CI&#x2F;CD</td>
+</tr>
+<tr>
+<td>林中Yi轩</td>
+<td>长期积累</td>
+<td>134 篇的分类与索引</td>
+</tr>
+</tbody></table>
+<h3 id="1-DavidChan’s-Blog：把-SEO-和广告当工程做"><a href="#1-DavidChan’s-Blog：把-SEO-和广告当工程做" class="headerlink" title="1. DavidChan’s Blog：把 SEO 和广告当工程做"></a>1. DavidChan’s Blog：把 SEO 和广告当工程做</h3><ul>
+<li>站点：<a href="https://imchenway.com/">imchenway.com</a></li>
+<li>原文：<a href="https://imchenway.com/zh-CN/2025-10-hexo-seo-ads-optimization/">Hexo SEO 与 AdSense 优化实录</a></li>
+</ul>
+<p>一篇很完整的“Hexo 站点可见性”实录。可抄的点：</p>
+<ul>
+<li><strong>配置一致性</strong>：<code>url</code>、canonical、robots、sitemap 必须指向同一个域名，缺一处就漏权重；</li>
+<li><strong>robots.txt 显式指 sitemap</strong>，比等搜索引擎自己发现快；</li>
+<li><strong>OG &#x2F; Twitter Card &#x2F; <code>&lt;html lang&gt;</code></strong> 由模板生成，中文页别标成英文；</li>
+<li><strong>性能</strong>：懒加载 + CSS&#x2F;JS&#x2F;HTML 压缩 + 脚本 <code>defer</code>，首屏轻了广告才更容易曝光；</li>
+<li><strong>广告</strong>：头部只加载一次 <code>adsbygoogle.js</code>，文章内再 push 一个手动位，与自动广告并存；</li>
+<li><strong>闭环</strong>：Search Console 看哪些词有曝光，反推下一篇写什么。</li>
+</ul>
+<h3 id="2-ZhiYuan-的博客：Butterfly-主题升级的写法"><a href="#2-ZhiYuan-的博客：Butterfly-主题升级的写法" class="headerlink" title="2. ZhiYuan 的博客：Butterfly 主题升级的写法"></a>2. ZhiYuan 的博客：Butterfly 主题升级的写法</h3><ul>
+<li>站点：<a href="https://1zzhiyuan.github.io/">1zzhiyuan.github.io</a></li>
+<li>原文：<a href="https://1zzhiyuan.github.io/2026/05/01/blog-upgrade/">博客全新升级 — Butterfly 主题焕新</a></li>
+</ul>
+<p>把“换主题”写成一篇功能清单，读者一眼知道升级了什么：</p>
+<ul>
+<li>暗色模式（跟随系统 + 手动切换）、站内搜索、代码高亮与复制、右侧目录、图片灯箱、giscus 评论；</li>
+<li>每个特性配一条配置片段（<code>darkmode.autoChangeMode</code>、<code>local_search.preload</code>、<code>canvas_nest</code>），照着能改；</li>
+<li>结尾落到互动：“欢迎在评论区说说你的看法”。</li>
+</ul>
+<p>值得学的是<strong>结构</strong>：不是罗列“我改了配置”，而是“你会得到什么 → 怎么配”。</p>
+<h3 id="3-Martin’s-Blog：博客-2-0-迁移与自动化"><a href="#3-Martin’s-Blog：博客-2-0-迁移与自动化" class="headerlink" title="3. Martin’s Blog：博客 2.0 迁移与自动化"></a>3. Martin’s Blog：博客 2.0 迁移与自动化</h3><ul>
+<li>站点：<a href="https://blog.bruxelles-ai.ac.cn/">blog.bruxelles-ai.ac.cn</a></li>
+<li>原文：<a href="https://blog.bruxelles-ai.ac.cn/2025/05/17/blog-v2-migration-launch/">博客 2.0 正式上线｜Martin 的小站焕新记</a></li>
+</ul>
+<p>一次完整的“从 1.0 到 2.0”复盘，重点在工程化：</p>
+<ul>
+<li><strong>部署</strong>：GitHub 托管 + Cloudflare Pages 自动构建，推送即上线；</li>
+<li><strong>图床</strong>：老图迁到 PicGo，加载和维护都变轻；</li>
+<li><strong>自动化</strong>：用规则做文章自动分类，用 MCP 自动配图；</li>
+<li><strong>小惊喜</strong>：自定义 JS 让每次构建自动换导航封面，成本低但“看起来一直在更新”。</li>
+</ul>
+<h3 id="4-林中Yi轩：134-篇的长期主义"><a href="#4-林中Yi轩：134-篇的长期主义" class="headerlink" title="4. 林中Yi轩：134 篇的长期主义"></a>4. 林中Yi轩：134 篇的长期主义</h3><ul>
+<li>站点：<a href="https://gwacoe.com/">gwacoe.com</a></li>
+<li>分类页示例：<a href="https://gwacoe.com/categories/%E5%8D%95%E7%89%87%E6%9C%BA/index.html">单片机</a></li>
+</ul>
+<p>不是“教程文”，而是<strong>长期维护的样本</strong>：</p>
+<ul>
+<li><strong>分类骨架稳</strong>：Linux 24 篇、Linux 命令 8 篇、单片机、Git、Android……一级分类少，标签细；</li>
+<li><strong>标题即索引</strong>：统一 <code>分类--主题</code> 格式（如「单片机–51单片机存储器访问」），归档页像目录；</li>
+<li><strong>站点是立体的</strong>：正文之外还有电影、书单、音乐子站、说说、留言板、友链；</li>
+<li><strong>自建统计</strong>：busuanzi 慢，就换成自建 Vercount；</li>
+<li><strong>独立域名 + 备案</strong>，国内访问稳定。</li>
+</ul>
+<h2 id="四、从这-4-个站提炼的-6-条"><a href="#四、从这-4-个站提炼的-6-条" class="headerlink" title="四、从这 4 个站提炼的 6 条"></a>四、从这 4 个站提炼的 6 条</h2><ol>
+<li><strong>先一致，再优化</strong>：域名、canonical、sitemap、robots 指向同一个地方，比装十个插件有用。</li>
+<li><strong>可被发现</strong>：sitemap 自动生成只是第一步，Search Console 提交与“请求编入索引”才是闭环。</li>
+<li><strong>性能是运营成本</strong>：图片本地化 + 压缩 + 懒加载，直接影响跳出率与广告曝光。</li>
+<li><strong>分类稳、标签细、标题有格式</strong>：三个月后自己回来看得懂，读者才可能顺着读第二篇。</li>
+<li><strong>升级本身值得写</strong>：换主题、迁移、加功能，写成“你会得到什么 + 怎么配”，比纯技术日志有人看。</li>
+<li><strong>自动化要从第一天做</strong>：部署、图床、分类，哪一步还在手动，哪一步就会成为停止更新的理由。</li>
+</ol>
+]]></content>
+      <categories>
+        <category>资源收藏</category>
+        <category>素材工具</category>
+      </categories>
+      <tags>
+        <tag>图片素材</tag>
+        <tag>Hexo</tag>
+        <tag>博客运营</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>my_heart</title>
+    <url>/2026/03/20/my-heart/</url>
+    <content><![CDATA[<h2 id="《蛊真人》摘抄"><a href="#《蛊真人》摘抄" class="headerlink" title="《蛊真人》摘抄"></a>《蛊真人》摘抄</h2><p>有时候确实瞻前顾后，想的太多而做的太少</p>
+<hr>
+<p>无数的选择，会衍生出无数的可能。无数的可能，又相互影响。</p>
+<p>方源脑袋急速转动，各种灵光如黑暗中火石碰撞。</p>
+<p>如何做，才能维护自身，又能保全最大的利益？</p>
+<p>他绞尽脑汁。竭尽心神，短短片刻功夫，就想得双耳嗡鸣。</p>
+<p>“等一等！”陡然间，方源雄躯一震。</p>
+<p>“也许……退一步能海阔天空？我是否应该更高瞻远瞩一些？”一个匪夷所思的想法，在他脑海中形成。</p>
+<p>“不行，这样做的话，风险更大！”他旋即摇头，口中喃喃自语，否决了这个想法。</p>
+<p>但这个想法。却像是老树扎根，一时间竟然挥之不去。</p>
+<p>“如果这样做，真的能够成功的话，我的收获将更加巨大！”方源双目放光。</p>
+<p>但下一刻，他又不自觉地摇头：“此法一旦计算稍有疏漏。我就将万劫不复，比落到铁若男手中更惨。毕竟春秋蝉已经使用一次，短时间内再无重生的可能……”</p>
+<p>想着想着，方源的目光渐渐深邃起来。</p>
+<p>忽然他轻笑出声：“想我堂堂一代魔头巨擘，何时畏首畏尾，如此瞻前顾后？只要有一线希望，就该勇于出手。只要有滔天的利益。就该奋不顾身。富贵险中求，什么稳中求胜，慢慢积累？我就是要一步登天！”</p>
+<p>“没错，就这个方案了！失败就死无葬身之地。成功就如蛟龙升天，对今后大计更为有利。呵呵呵，哈哈哈，人生匆匆百年。不过一场豪赌！”</p>
+<hr>
+]]></content>
+      <categories>
+        <category>随笔文字</category>
+        <category>读书摘抄</category>
+      </categories>
+      <tags>
+        <tag>摘抄</tag>
+        <tag>读书</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>图片网站集合</title>
+    <url>/2025/09/04/image-site/</url>
+    <content><![CDATA[<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>简介</th>
+<th>网址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>BestWallpapers</strong></td>
+<td>数百万张4K高清壁纸，每日更新，免注册下载</td>
+<td><a href="https://bestwallpapers.net/">bestwallpapers.net</a></td>
+</tr>
+<tr>
+<td><strong>WallpaperHub</strong></td>
+<td>8K分辨率壁纸，摄影与创意类为主</td>
+<td><a href="https://wallpaperhub.app/">wallpaperhub.app</a></td>
+</tr>
+<tr>
+<td><strong>WallpapersCraft</strong></td>
+<td>支持选择分辨率，分类丰富，适配手机&#x2F;电脑</td>
+<td><a href="https://wallpaperscraft.com/">wallpaperscraft.com</a></td>
+</tr>
+<tr>
+<td><strong>Wallpaper Cave</strong></td>
+<td>动漫、插画、风景、摄影等风格多样</td>
+<td><a href="https://wallpapercave.com/">wallpapercave.com</a></td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>简介</th>
+<th>网址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Unsplash</strong></td>
+<td>世界知名摄影图库，8K分辨率，极简风、自然风为主</td>
+<td><a href="https://unsplash.com/">unsplash.com</a></td>
+</tr>
+<tr>
+<td><strong>Pexels</strong></td>
+<td>免费高清摄影图，支持中文搜索，适合壁纸使用</td>
+<td><a href="https://www.pexels.com/zh-cn/">pexels.com&#x2F;zh-cn</a></td>
+</tr>
+<tr>
+<td><strong>Pixabay</strong></td>
+<td>超240万张图片，支持矢量图、插画、视频等</td>
+<td><a href="https://pixabay.com/zh/">pixabay.com</a></td>
+</tr>
+<tr>
+<td><strong>Piqsels</strong></td>
+<td>免版税高清图库，支持中文，适合壁纸与商用</td>
+<td><a href="https://www.piqsels.com/">piqsels.com</a></td>
+</tr>
+<tr>
+<td><strong>StockSnap.io</strong></td>
+<td>高质量摄影图，每周更新，现代风格为主</td>
+<td><a href="https://stocksnap.io/">stocksnap.io</a></td>
+</tr>
+</tbody></table>
+<hr>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>风格</th>
+<th>网址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>Simple Desktops</strong></td>
+<td>极简插画风，支持Mac&#x2F;iOS&#x2F;安卓</td>
+<td><a href="http://simpledesktops.com/">simpledesktops.com</a></td>
+</tr>
+<tr>
+<td><strong>Moviemania</strong></td>
+<td>电影主题壁纸，2K分辨率</td>
+<td><a href="https://www.moviemania.io/">moviemania.io</a></td>
+</tr>
+<tr>
+<td><strong>故宫壁纸</strong></td>
+<td>官方文化类壁纸，古风爱好者必备</td>
+<td><a href="https://www.dpm.org.cn/lights/royal.html">dpm.org.cn&#x2F;lights&#x2F;royal.html</a></td>
+</tr>
+<tr>
+<td><strong>ESO Images</strong></td>
+<td>天文宇宙主题，8K超清</td>
+<td><a href="https://www.eso.org/public/images">eso.org&#x2F;public&#x2F;images</a></td>
+</tr>
+</tbody></table>
+<hr>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>简介</th>
+<th>网址</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>菜鸟图库</strong></td>
+<td>百万张高清图，支持手机&#x2F;风景&#x2F;美女等分类</td>
+<td><a href="https://www.sucai99.com/">sucai99.com</a></td>
+</tr>
+<tr>
+<td><strong>潮点网</strong></td>
+<td>注册送10次免费下载，摄影图质量高</td>
+<td><a href="https://shipin520.com/shipin-tp/0-1329-0-0-0-0-0-0-0-1.html?from_code=2510">shipin520.com</a></td>
+</tr>
+<tr>
+<td><strong>Colorhub</strong></td>
+<td>高清无版权图片，支持中文搜索</td>
+<td><a href="https://colorhub.me/">colorhub.me</a></td>
+</tr>
+<tr>
+<td><strong>别样网</strong></td>
+<td>国内老牌免费图库，百万素材</td>
+<td><a href="https://www.bieyang.net/">bieyang.net</a></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>资源收藏</category>
+        <category>素材工具</category>
+      </categories>
+      <tags>
+        <tag>图片素材</tag>
+        <tag>素材网站</tag>
       </tags>
   </entry>
   <entry>
@@ -1056,139 +1356,54 @@
       </tags>
   </entry>
   <entry>
-    <title>图片网站集合</title>
-    <url>/2025/09/04/image-site/</url>
-    <content><![CDATA[<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>简介</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>BestWallpapers</strong></td>
-<td>数百万张4K高清壁纸，每日更新，免注册下载</td>
-<td><a href="https://bestwallpapers.net/">bestwallpapers.net</a></td>
-</tr>
-<tr>
-<td><strong>WallpaperHub</strong></td>
-<td>8K分辨率壁纸，摄影与创意类为主</td>
-<td><a href="https://wallpaperhub.app/">wallpaperhub.app</a></td>
-</tr>
-<tr>
-<td><strong>WallpapersCraft</strong></td>
-<td>支持选择分辨率，分类丰富，适配手机&#x2F;电脑</td>
-<td><a href="https://wallpaperscraft.com/">wallpaperscraft.com</a></td>
-</tr>
-<tr>
-<td><strong>Wallpaper Cave</strong></td>
-<td>动漫、插画、风景、摄影等风格多样</td>
-<td><a href="https://wallpapercave.com/">wallpapercave.com</a></td>
-</tr>
-</tbody></table>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>简介</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Unsplash</strong></td>
-<td>世界知名摄影图库，8K分辨率，极简风、自然风为主</td>
-<td><a href="https://unsplash.com/">unsplash.com</a></td>
-</tr>
-<tr>
-<td><strong>Pexels</strong></td>
-<td>免费高清摄影图，支持中文搜索，适合壁纸使用</td>
-<td><a href="https://www.pexels.com/zh-cn/">pexels.com&#x2F;zh-cn</a></td>
-</tr>
-<tr>
-<td><strong>Pixabay</strong></td>
-<td>超240万张图片，支持矢量图、插画、视频等</td>
-<td><a href="https://pixabay.com/zh/">pixabay.com</a></td>
-</tr>
-<tr>
-<td><strong>Piqsels</strong></td>
-<td>免版税高清图库，支持中文，适合壁纸与商用</td>
-<td><a href="https://www.piqsels.com/">piqsels.com</a></td>
-</tr>
-<tr>
-<td><strong>StockSnap.io</strong></td>
-<td>高质量摄影图，每周更新，现代风格为主</td>
-<td><a href="https://stocksnap.io/">stocksnap.io</a></td>
-</tr>
-</tbody></table>
+    <title>又是一年春</title>
+    <url>/2026/02/22/%E6%83%85%E8%AF%9D/</url>
+    <content><![CDATA[<h3 id="生日"><a href="#生日" class="headerlink" title="生日"></a>生日</h3><p>转眼就到了初六，窗外的小孩还在欢乐的放鞭炮，我也正式迈进了28岁。</p>
+<p>谢谢你啊，宝宝。其实我自己都有点想回避这个生日，总觉得数字往上跳一格，肩上的重量就又多了一些。但你不一样，你比我还要上心，非拉着我去买个蛋糕。看着你认真切蛋糕的样子， 那一刻我突然觉得，长大一点也没那么可怕，因为无论如何，都有你陪在我身边。</p>
+<p>成长的焦虑确实是如影随形的。28岁，说大不大，说小也不小了。开始担心父母的身体，担心工作还能不能往上走，担心未来能不能给你一个真正安稳的家。有时候夜里睡不着，侧过身看着你安静的睡脸，就会想，要是时间能慢一点就好了，或者，只要我们一直这样并肩走着，慢一点也没关系。未来那么长，我希望我们始终是彼此最坚定的底气。</p>
+<p>过年回老家，山里头下了好大一场雪。漫山遍野的白，空气冷得发甜，我站在院子里，第一个念头就是：要是你在这儿就好了。想拉着你的手踩在没人走过的雪地上，想看你哈着白气冲我笑，想把那棵挂满冰凌的老柿子树指给你看。</p>
+<p>可是山里条件实在太差了，洗澡得烧水，晚上冷得能听见风从门缝里钻进来。最让我犹豫的是——我怕你不会烤柴火。怕烟熏得你流眼泪，怕你因为冷而缩手缩脚。那一刻我才发现，爱一个人好像就是这样：哪怕是想把全世界最好的风景都给你，最后还是会输给“怕你受一点委屈”。</p>
+<img src="/img/qh/微信图片_20260320145159_135_39.jpg" width="60%" alt="压缩显示">
+
+<p>所以今年有个小小的愿望——等天气暖和了，带你回去看看我长大的地方。那时候山青了，水暖了，像所有平淡的日常那样，只是换一个地方，继续相爱。</p>
+<p>生日快乐给我，快乐给你。<br>谢谢你让我的28岁，从一块蛋糕和一屋子的温暖开始。</p>
+<p>初六夜</p>
 <hr>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>风格</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>Simple Desktops</strong></td>
-<td>极简插画风，支持Mac&#x2F;iOS&#x2F;安卓</td>
-<td><a href="http://simpledesktops.com/">simpledesktops.com</a></td>
-</tr>
-<tr>
-<td><strong>Moviemania</strong></td>
-<td>电影主题壁纸，2K分辨率</td>
-<td><a href="https://www.moviemania.io/">moviemania.io</a></td>
-</tr>
-<tr>
-<td><strong>故宫壁纸</strong></td>
-<td>官方文化类壁纸，古风爱好者必备</td>
-<td><a href="https://www.dpm.org.cn/lights/royal.html">dpm.org.cn&#x2F;lights&#x2F;royal.html</a></td>
-</tr>
-<tr>
-<td><strong>ESO Images</strong></td>
-<td>天文宇宙主题，8K超清</td>
-<td><a href="https://www.eso.org/public/images">eso.org&#x2F;public&#x2F;images</a></td>
-</tr>
-</tbody></table>
+<img src="/img/qh/微信图片_20260320103841_133_39.jpg" width="60%" alt="压缩显示">
+
 <hr>
-<table>
-<thead>
-<tr>
-<th>名称</th>
-<th>简介</th>
-<th>网址</th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>菜鸟图库</strong></td>
-<td>百万张高清图，支持手机&#x2F;风景&#x2F;美女等分类</td>
-<td><a href="https://www.sucai99.com/">sucai99.com</a></td>
-</tr>
-<tr>
-<td><strong>潮点网</strong></td>
-<td>注册送10次免费下载，摄影图质量高</td>
-<td><a href="https://shipin520.com/shipin-tp/0-1329-0-0-0-0-0-0-0-1.html?from_code=2510">shipin520.com</a></td>
-</tr>
-<tr>
-<td><strong>Colorhub</strong></td>
-<td>高清无版权图片，支持中文搜索</td>
-<td><a href="https://colorhub.me/">colorhub.me</a></td>
-</tr>
-<tr>
-<td><strong>别样网</strong></td>
-<td>国内老牌免费图库，百万素材</td>
-<td><a href="https://www.bieyang.net/">bieyang.net</a></td>
-</tr>
-</tbody></table>
+]]></content>
+      <categories>
+        <category>随笔文字</category>
+        <category>生活</category>
+      </categories>
+      <tags>
+        <tag>随笔</tag>
+        <tag>书信</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>收藏SQL</title>
+    <url>/2022/07/19/%E6%94%B6%E8%97%8F-SQL/</url>
+    <content><![CDATA[<hr>
+<h3 id="SQL学习资源导航网站"><a href="#SQL学习资源导航网站" class="headerlink" title="SQL学习资源导航网站"></a>SQL学习资源导航网站</h3><h1 id="牛客"><a href="#牛客" class="headerlink" title="牛客"></a>牛客</h1><p>检索数据、排序检索数据、过滤数据、通配符、子查询、联结查询、组合查询等50个题目  </p>
+<p>网址链接 <a href="https://www.nowcoder.com/exam/oj">牛客刷题</a>。</p>
+<h1 id="国外的一个"><a href="#国外的一个" class="headerlink" title="国外的一个"></a>国外的一个</h1><p>除了SQL 还有很多其他的在线课程，缺点是部分需要付费</p>
+<p>[网址链接]（<a href="https://www.udemy.com/%EF%BC%89">https://www.udemy.com/）</a>.</p>
+<h1 id="在线"><a href="#在线" class="headerlink" title="在线"></a>在线</h1><p><a href="https://sqlzoo.net/">https://sqlzoo.net/</a></p>
+<h1 id="小白学习"><a href="#小白学习" class="headerlink" title="小白学习"></a>小白学习</h1><p><a href="http://www.xuesql.cn/">http://www.xuesql.cn/</a></p>
+<h1 id="SQL模拟面试"><a href="#SQL模拟面试" class="headerlink" title="SQL模拟面试"></a>SQL模拟面试</h1><p>模拟sql实习生场景的网站 里面的题全都会了 面试肯定也没问题啦  </p>
+<p><a href="http://www.sqlintern.com/">http://www.sqlintern.com/</a></p>
+<h1 id="https-www-stratascratch-com"><a href="#https-www-stratascratch-com" class="headerlink" title="https://www.stratascratch.com/"></a><a href="https://www.stratascratch.com/">https://www.stratascratch.com/</a></h1><p>需要注册登录
+ </p>
 ]]></content>
       <categories>
         <category>资源收藏</category>
-        <category>素材工具</category>
+        <category>编程学习</category>
       </categories>
       <tags>
-        <tag>图片素材</tag>
-        <tag>素材网站</tag>
+        <tag>SQL</tag>
+        <tag>学习资源</tag>
       </tags>
   </entry>
   <entry>
@@ -1303,89 +1518,6 @@
       </tags>
   </entry>
   <entry>
-    <title>博客资料</title>
-    <url>/2025/12/11/%E5%8D%9A%E5%AE%A2%E8%B5%84%E6%96%99/</url>
-    <content><![CDATA[<h1 id="全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索"><a href="#全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索" class="headerlink" title="全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索"></a>全球最大的图片分享网站之一，拥有超过550万张优质图片和视频素材，涵盖图片、插画、向量图、视频、音乐、音效和GIF素材等，全部免费且可商用，支持中文搜索</h1><h1 id="https-pixabay-com"><a href="#https-pixabay-com" class="headerlink" title="https://pixabay.com/"></a><a href="https://pixabay.com/">https://pixabay.com/</a></h1><hr>
-<h2 id="这是一份面向新手和进阶用户的-Hexo-写作指南，整合了常见问题与一些经验。内容涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式等。"><a href="#这是一份面向新手和进阶用户的-Hexo-写作指南，整合了常见问题与一些经验。内容涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式等。" class="headerlink" title="这是一份面向新手和进阶用户的 Hexo 写作指南，整合了常见问题与一些经验。内容涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式等。"></a>这是一份面向新手和进阶用户的 Hexo 写作指南，整合了常见问题与一些经验。内容涵盖目录结构、文章写作、分类标签管理、草稿发布以及部署方式等。</h2><h1 id="https-wenjiew-astro-github-io-2025-08-16-hexo-E5-86-99-E5-8D-9A-E5-AE-A2-E6-8C-87-E5-8D-97-index-html"><a href="#https-wenjiew-astro-github-io-2025-08-16-hexo-E5-86-99-E5-8D-9A-E5-AE-A2-E6-8C-87-E5-8D-97-index-html" class="headerlink" title="https://wenjiew-astro.github.io/2025/08/16/hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/index.html"></a><a href="https://wenjiew-astro.github.io/2025/08/16/hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/index.html">https://wenjiew-astro.github.io/2025/08/16/hexo%E5%86%99%E5%8D%9A%E5%AE%A2%E6%8C%87%E5%8D%97/index.html</a></h1>]]></content>
-      <categories>
-        <category>资源收藏</category>
-        <category>素材工具</category>
-      </categories>
-      <tags>
-        <tag>图片素材</tag>
-        <tag>Hexo</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>my_heart</title>
-    <url>/2026/03/20/my-heart/</url>
-    <content><![CDATA[<h2 id="《蛊真人》摘抄"><a href="#《蛊真人》摘抄" class="headerlink" title="《蛊真人》摘抄"></a>《蛊真人》摘抄</h2><p>有时候确实瞻前顾后，想的太多而做的太少</p>
-<hr>
-<p>无数的选择，会衍生出无数的可能。无数的可能，又相互影响。</p>
-<p>方源脑袋急速转动，各种灵光如黑暗中火石碰撞。</p>
-<p>如何做，才能维护自身，又能保全最大的利益？</p>
-<p>他绞尽脑汁。竭尽心神，短短片刻功夫，就想得双耳嗡鸣。</p>
-<p>“等一等！”陡然间，方源雄躯一震。</p>
-<p>“也许……退一步能海阔天空？我是否应该更高瞻远瞩一些？”一个匪夷所思的想法，在他脑海中形成。</p>
-<p>“不行，这样做的话，风险更大！”他旋即摇头，口中喃喃自语，否决了这个想法。</p>
-<p>但这个想法。却像是老树扎根，一时间竟然挥之不去。</p>
-<p>“如果这样做，真的能够成功的话，我的收获将更加巨大！”方源双目放光。</p>
-<p>但下一刻，他又不自觉地摇头：“此法一旦计算稍有疏漏。我就将万劫不复，比落到铁若男手中更惨。毕竟春秋蝉已经使用一次，短时间内再无重生的可能……”</p>
-<p>想着想着，方源的目光渐渐深邃起来。</p>
-<p>忽然他轻笑出声：“想我堂堂一代魔头巨擘，何时畏首畏尾，如此瞻前顾后？只要有一线希望，就该勇于出手。只要有滔天的利益。就该奋不顾身。富贵险中求，什么稳中求胜，慢慢积累？我就是要一步登天！”</p>
-<p>“没错，就这个方案了！失败就死无葬身之地。成功就如蛟龙升天，对今后大计更为有利。呵呵呵，哈哈哈，人生匆匆百年。不过一场豪赌！”</p>
-<hr>
-]]></content>
-      <categories>
-        <category>随笔文字</category>
-        <category>读书摘抄</category>
-      </categories>
-      <tags>
-        <tag>摘抄</tag>
-        <tag>读书</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C++学习资源网站合集</title>
-    <url>/2022/07/19/%E6%94%B6%E8%97%8F-C/</url>
-    <content><![CDATA[<h2 id="学习网址链接合集，收藏就当学习了"><a href="#学习网址链接合集，收藏就当学习了" class="headerlink" title="学习网址链接合集，收藏就当学习了"></a>学习网址链接合集，收藏就当学习了</h2><h1 id="https-www-cctry-com-VC驿站，集合学习资源、社区交流的，充分感受到学无止境的C"><a href="#https-www-cctry-com-VC驿站，集合学习资源、社区交流的，充分感受到学无止境的C" class="headerlink" title="https://www.cctry.com/          VC驿站，集合学习资源、社区交流的，充分感受到学无止境的C++"></a><a href="https://www.cctry.com/">https://www.cctry.com/</a>          VC驿站，集合学习资源、社区交流的，充分感受到学无止境的C++</h1><h2 id="国外的资源，英文多"><a href="#国外的资源，英文多" class="headerlink" title="国外的资源，英文多"></a>国外的资源，英文多</h2><h1 id="https-www-thefreecountry-com-sourcecode-cpp-shtml"><a href="#https-www-thefreecountry-com-sourcecode-cpp-shtml" class="headerlink" title="https://www.thefreecountry.com/sourcecode/cpp.shtml"></a><a href="https://www.thefreecountry.com/sourcecode/cpp.shtml">https://www.thefreecountry.com/sourcecode/cpp.shtml</a></h1><h1 id="https-en-cppreference-com-w"><a href="#https-en-cppreference-com-w" class="headerlink" title="https://en.cppreference.com/w/"></a><a href="https://en.cppreference.com/w/">https://en.cppreference.com/w/</a></h1><h1 id="http-www-learncpp-com"><a href="#http-www-learncpp-com" class="headerlink" title="http://www.learncpp.com/"></a><a href="http://www.learncpp.com/">http://www.learncpp.com/</a></h1><h1 id="https-github-com-fffaraz-awes-GitHub上的，类似的资源太多了"><a href="#https-github-com-fffaraz-awes-GitHub上的，类似的资源太多了" class="headerlink" title="https://github.com/fffaraz/awes   GitHub上的，类似的资源太多了"></a><a href="https://github.com/fffaraz/awes">https://github.com/fffaraz/awes</a>   GitHub上的，类似的资源太多了</h1><h1 id="http-freshmeat-net-browse-164-–超过万个C编写的项目。"><a href="#http-freshmeat-net-browse-164-–超过万个C编写的项目。" class="headerlink" title="http://freshmeat.net/browse/164/ –超过万个C编写的项目。"></a><a href="http://freshmeat.net/browse/164/">http://freshmeat.net/browse/164/</a> –超过万个C编写的项目。</h1><h1 id="http-www-daniweb-com-code-c-html-–DANIWEB提供的实用代码段。更新少"><a href="#http-www-daniweb-com-code-c-html-–DANIWEB提供的实用代码段。更新少" class="headerlink" title="http://www.daniweb.com/code/c.html –DANIWEB提供的实用代码段。更新少"></a><a href="http://www.daniweb.com/code/c.html">http://www.daniweb.com/code/c.html</a> –DANIWEB提供的实用代码段。更新少</h1><h1 id="http-www-ddj-com-code-ddj-html-–一个看起来就像大神的博客，但是好久没有更新了"><a href="#http-www-ddj-com-code-ddj-html-–一个看起来就像大神的博客，但是好久没有更新了" class="headerlink" title="http://www.ddj.com/code/ddj.html –一个看起来就像大神的博客，但是好久没有更新了"></a><a href="http://www.ddj.com/code/ddj.html">http://www.ddj.com/code/ddj.html</a> –一个看起来就像大神的博客，但是好久没有更新了</h1><h1 id="http-www-cprogramming-com-cgi-bin-source-source-cgi-–C和C-编程资源。一本书的在线资源"><a href="#http-www-cprogramming-com-cgi-bin-source-source-cgi-–C和C-编程资源。一本书的在线资源" class="headerlink" title="http://www.cprogramming.com/cgi-bin/source/source.cgi –C和C + +编程资源。一本书的在线资源"></a><a href="http://www.cprogramming.com/cgi-bin/source/source.cgi">http://www.cprogramming.com/cgi-bin/source/source.cgi</a> –C和C + +编程资源。一本书的在线资源</h1><h1 id="http-private-codecogs-com-–CodeCogs是一项协作的开放源码库，C-x2F-C-的数值方面的组件。写方程"><a href="#http-private-codecogs-com-–CodeCogs是一项协作的开放源码库，C-x2F-C-的数值方面的组件。写方程" class="headerlink" title="http://private.codecogs.com/ –CodeCogs是一项协作的开放源码库，C&#x2F;C++的数值方面的组件。写方程"></a><a href="http://private.codecogs.com/">http://private.codecogs.com/</a> –CodeCogs是一项协作的开放源码库，C&#x2F;C++的数值方面的组件。写方程</h1><h1 id="http-www-codeproject-com-cat-2-–codeproject提供的C-x2F-C-资源代码项目。更新多"><a href="#http-www-codeproject-com-cat-2-–codeproject提供的C-x2F-C-资源代码项目。更新多" class="headerlink" title="http://www.codeproject.com/?cat=2 –codeproject提供的C&#x2F;C++资源代码项目。更新多"></a><a href="http://www.codeproject.com/?cat=2">http://www.codeproject.com/?cat=2</a> –codeproject提供的C&#x2F;C++资源代码项目。更新多</h1><h1 id="http-www-thefreecountry-com-sourcecode-cpp-shtml-–以下是一些C和C-库的DLL，VCLs，源代码，元件，模块，应用程序框架，类库，源代码片段等，你可以在您的项目中使用而不需要支付费用和版税。"><a href="#http-www-thefreecountry-com-sourcecode-cpp-shtml-–以下是一些C和C-库的DLL，VCLs，源代码，元件，模块，应用程序框架，类库，源代码片段等，你可以在您的项目中使用而不需要支付费用和版税。" class="headerlink" title="http://www.thefreecountry.com/sourcecode/cpp.shtml –以下是一些C和C++库的DLL，VCLs，源代码，元件，模块，应用程序框架，类库，源代码片段等，你可以在您的项目中使用而不需要支付费用和版税。"></a><a href="http://www.thefreecountry.com/sourcecode/cpp.shtml">http://www.thefreecountry.com/sourcecode/cpp.shtml</a> –以下是一些C和C++库的DLL，VCLs，源代码，元件，模块，应用程序框架，类库，源代码片段等，你可以在您的项目中使用而不需要支付费用和版税。</h1><h1 id="http-people-sc-fsu-edu-burkardt-cpp-src-cpp-src-html-–这是一个全面的关于C-的1408个源代码清单。巨多算法，几行代码需要研究半天。"><a href="#http-people-sc-fsu-edu-burkardt-cpp-src-cpp-src-html-–这是一个全面的关于C-的1408个源代码清单。巨多算法，几行代码需要研究半天。" class="headerlink" title="http://people.sc.fsu.edu/~burkardt/cpp_src/cpp_src.html –这是一个全面的关于C++的1408个源代码清单。巨多算法，几行代码需要研究半天。"></a><a href="http://people.sc.fsu.edu/~burkardt/cpp_src/cpp_src.html">http://people.sc.fsu.edu/~burkardt/cpp_src/cpp_src.html</a> –这是一个全面的关于C++的1408个源代码清单。巨多算法，几行代码需要研究半天。</h1><h1 id="http-users-cs-fiu-edu-weiss-dsaa-c-code-–C-语言数据结构与算法分析（第二版）的源代码。"><a href="#http-users-cs-fiu-edu-weiss-dsaa-c-code-–C-语言数据结构与算法分析（第二版）的源代码。" class="headerlink" title="http://users.cs.fiu.edu/~weiss/dsaa_c++/code/ –C++语言数据结构与算法分析（第二版）的源代码。"></a><a href="http://users.cs.fiu.edu/~weiss/dsaa_c++/code/">http://users.cs.fiu.edu/~weiss/dsaa_c++/code/</a> –C++语言数据结构与算法分析（第二版）的源代码。</h1><h1 id="http-www-moshier-net-天文学和数值软件源代码-一般用不上，算日历。"><a href="#http-www-moshier-net-天文学和数值软件源代码-一般用不上，算日历。" class="headerlink" title="http://www.moshier.net/ 天文学和数值软件源代码  一般用不上，算日历。"></a><a href="http://www.moshier.net/">http://www.moshier.net/</a> 天文学和数值软件源代码  一般用不上，算日历。</h1><h1 id="http-cplus-about-com-od-cgames-C-Games-with-Source-Code-htm-–游戏有关的C-源代码。主网是关于编程的"><a href="#http-cplus-about-com-od-cgames-C-Games-with-Source-Code-htm-–游戏有关的C-源代码。主网是关于编程的" class="headerlink" title="http://cplus.about.com/od/cgames/C_Games_with_Source_Code.htm –游戏有关的C++源代码。主网是关于编程的"></a><a href="http://cplus.about.com/od/cgames/C_Games_with_Source_Code.htm">http://cplus.about.com/od/cgames/C_Games_with_Source_Code.htm</a> –游戏有关的C++源代码。主网是关于编程的</h1><h1 id="http-www-cmcrossroads-com-bradapp-links-cplusplus-links-html-–布拉德阿普尔顿的C-链接-资源，项目，图书馆，教学和编码。"><a href="#http-www-cmcrossroads-com-bradapp-links-cplusplus-links-html-–布拉德阿普尔顿的C-链接-资源，项目，图书馆，教学和编码。" class="headerlink" title="http://www.cmcrossroads.com/bradapp/links/cplusplus-links.html –布拉德阿普尔顿的C++链接-资源，项目，图书馆，教学和编码。"></a><a href="http://www.cmcrossroads.com/bradapp/links/cplusplus-links.html">http://www.cmcrossroads.com/bradapp/links/cplusplus-links.html</a> –布拉德阿普尔顿的C++链接-资源，项目，图书馆，教学和编码。</h1><h1 id="https-cplusplus-com-C-合集"><a href="#https-cplusplus-com-C-合集" class="headerlink" title="https://cplusplus.com/ C++合集"></a><a href="https://cplusplus.com/">https://cplusplus.com/</a> C++合集</h1><h1 id="http-www-c-happycodings-com-–Visual-Basic、PHP、ASP技术、C、C-大全。VB的教程属实不多了"><a href="#http-www-c-happycodings-com-–Visual-Basic、PHP、ASP技术、C、C-大全。VB的教程属实不多了" class="headerlink" title="http://www.c.happycodings.com/ –Visual Basic、PHP、ASP技术、C、C++大全。VB的教程属实不多了"></a><a href="http://www.c.happycodings.com/">http://www.c.happycodings.com/</a> –Visual Basic、PHP、ASP技术、C、C++大全。VB的教程属实不多了</h1><h1 id="http-www-java2s-com-Code-Cpp-CatalogCpp-htm-–C-源代码。QT写得可以"><a href="#http-www-java2s-com-Code-Cpp-CatalogCpp-htm-–C-源代码。QT写得可以" class="headerlink" title="http://www.java2s.com/Code/Cpp/CatalogCpp.htm –C++源代码。QT写得可以"></a><a href="http://www.java2s.com/Code/Cpp/CatalogCpp.htm">http://www.java2s.com/Code/Cpp/CatalogCpp.htm</a> –C++源代码。QT写得可以</h1><h1 id="http-users-cs-fiu-edu-C-。-可以看新闻"><a href="#http-users-cs-fiu-edu-C-。-可以看新闻" class="headerlink" title="http://users.cs.fiu.edu/ C++。 可以看新闻"></a><a href="http://users.cs.fiu.edu/">http://users.cs.fiu.edu/</a> C++。 可以看新闻</h1><h1 id="http-www-josuttis-com-libbook-examples-html-–C-标准库-教程和参考资料。"><a href="#http-www-josuttis-com-libbook-examples-html-–C-标准库-教程和参考资料。" class="headerlink" title="http://www.josuttis.com/libbook/examples.html –C++标准库-教程和参考资料。"></a><a href="http://www.josuttis.com/libbook/examples.html">http://www.josuttis.com/libbook/examples.html</a> –C++标准库-教程和参考资料。</h1>]]></content>
-      <categories>
-        <category>资源收藏</category>
-        <category>编程学习</category>
-      </categories>
-      <tags>
-        <tag>C++</tag>
-        <tag>学习资源</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>又是一年春</title>
-    <url>/2026/02/22/%E6%83%85%E8%AF%9D/</url>
-    <content><![CDATA[<h3 id="生日"><a href="#生日" class="headerlink" title="生日"></a>生日</h3><p>转眼就到了初六，窗外的小孩还在欢乐的放鞭炮，我也正式迈进了28岁。</p>
-<p>谢谢你啊，宝宝。其实我自己都有点想回避这个生日，总觉得数字往上跳一格，肩上的重量就又多了一些。但你不一样，你比我还要上心，非拉着我去买个蛋糕。看着你认真切蛋糕的样子， 那一刻我突然觉得，长大一点也没那么可怕，因为无论如何，都有你陪在我身边。</p>
-<p>成长的焦虑确实是如影随形的。28岁，说大不大，说小也不小了。开始担心父母的身体，担心工作还能不能往上走，担心未来能不能给你一个真正安稳的家。有时候夜里睡不着，侧过身看着你安静的睡脸，就会想，要是时间能慢一点就好了，或者，只要我们一直这样并肩走着，慢一点也没关系。未来那么长，我希望我们始终是彼此最坚定的底气。</p>
-<p>过年回老家，山里头下了好大一场雪。漫山遍野的白，空气冷得发甜，我站在院子里，第一个念头就是：要是你在这儿就好了。想拉着你的手踩在没人走过的雪地上，想看你哈着白气冲我笑，想把那棵挂满冰凌的老柿子树指给你看。</p>
-<p>可是山里条件实在太差了，洗澡得烧水，晚上冷得能听见风从门缝里钻进来。最让我犹豫的是——我怕你不会烤柴火。怕烟熏得你流眼泪，怕你因为冷而缩手缩脚。那一刻我才发现，爱一个人好像就是这样：哪怕是想把全世界最好的风景都给你，最后还是会输给“怕你受一点委屈”。</p>
-<img src="/img/qh/微信图片_20260320145159_135_39.jpg" width="60%" alt="压缩显示">
-
-<p>所以今年有个小小的愿望——等天气暖和了，带你回去看看我长大的地方。那时候山青了，水暖了，像所有平淡的日常那样，只是换一个地方，继续相爱。</p>
-<p>生日快乐给我，快乐给你。<br>谢谢你让我的28岁，从一块蛋糕和一屋子的温暖开始。</p>
-<p>初六夜</p>
-<hr>
-<img src="/img/qh/微信图片_20260320103841_133_39.jpg" width="60%" alt="压缩显示">
-
-<hr>
-]]></content>
-      <categories>
-        <category>随笔文字</category>
-        <category>生活</category>
-      </categories>
-      <tags>
-        <tag>随笔</tag>
-        <tag>书信</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>盈亏同源：用中庸之道破解交易的矛盾法则</title>
     <url>/2026/06/08/%E7%9B%88%E4%BA%8F%E5%90%8C%E6%BA%90%EF%BC%9A%E7%94%A8%E4%B8%AD%E5%BA%B8%E4%B9%8B%E9%81%93%E7%A0%B4%E8%A7%A3%E4%BA%A4%E6%98%93%E7%9A%84%E7%9F%9B%E7%9B%BE%E6%B3%95%E5%88%99/</url>
     <content><![CDATA[<p>中国人活在一个充满悖论的文化里。</p>
@@ -1470,27 +1602,16 @@
       </tags>
   </entry>
   <entry>
-    <title>收藏SQL</title>
-    <url>/2022/07/19/%E6%94%B6%E8%97%8F-SQL/</url>
-    <content><![CDATA[<hr>
-<h3 id="SQL学习资源导航网站"><a href="#SQL学习资源导航网站" class="headerlink" title="SQL学习资源导航网站"></a>SQL学习资源导航网站</h3><h1 id="牛客"><a href="#牛客" class="headerlink" title="牛客"></a>牛客</h1><p>检索数据、排序检索数据、过滤数据、通配符、子查询、联结查询、组合查询等50个题目  </p>
-<p>网址链接 <a href="https://www.nowcoder.com/exam/oj">牛客刷题</a>。</p>
-<h1 id="国外的一个"><a href="#国外的一个" class="headerlink" title="国外的一个"></a>国外的一个</h1><p>除了SQL 还有很多其他的在线课程，缺点是部分需要付费</p>
-<p>[网址链接]（<a href="https://www.udemy.com/%EF%BC%89">https://www.udemy.com/）</a>.</p>
-<h1 id="在线"><a href="#在线" class="headerlink" title="在线"></a>在线</h1><p><a href="https://sqlzoo.net/">https://sqlzoo.net/</a></p>
-<h1 id="小白学习"><a href="#小白学习" class="headerlink" title="小白学习"></a>小白学习</h1><p><a href="http://www.xuesql.cn/">http://www.xuesql.cn/</a></p>
-<h1 id="SQL模拟面试"><a href="#SQL模拟面试" class="headerlink" title="SQL模拟面试"></a>SQL模拟面试</h1><p>模拟sql实习生场景的网站 里面的题全都会了 面试肯定也没问题啦  </p>
-<p><a href="http://www.sqlintern.com/">http://www.sqlintern.com/</a></p>
-<h1 id="https-www-stratascratch-com"><a href="#https-www-stratascratch-com" class="headerlink" title="https://www.stratascratch.com/"></a><a href="https://www.stratascratch.com/">https://www.stratascratch.com/</a></h1><p>需要注册登录
- </p>
-]]></content>
+    <title>C++学习资源网站合集</title>
+    <url>/2022/07/19/%E6%94%B6%E8%97%8F-C/</url>
+    <content><![CDATA[<h2 id="学习网址链接合集，收藏就当学习了"><a href="#学习网址链接合集，收藏就当学习了" class="headerlink" title="学习网址链接合集，收藏就当学习了"></a>学习网址链接合集，收藏就当学习了</h2><h1 id="https-www-cctry-com-VC驿站，集合学习资源、社区交流的，充分感受到学无止境的C"><a href="#https-www-cctry-com-VC驿站，集合学习资源、社区交流的，充分感受到学无止境的C" class="headerlink" title="https://www.cctry.com/          VC驿站，集合学习资源、社区交流的，充分感受到学无止境的C++"></a><a href="https://www.cctry.com/">https://www.cctry.com/</a>          VC驿站，集合学习资源、社区交流的，充分感受到学无止境的C++</h1><h2 id="国外的资源，英文多"><a href="#国外的资源，英文多" class="headerlink" title="国外的资源，英文多"></a>国外的资源，英文多</h2><h1 id="https-www-thefreecountry-com-sourcecode-cpp-shtml"><a href="#https-www-thefreecountry-com-sourcecode-cpp-shtml" class="headerlink" title="https://www.thefreecountry.com/sourcecode/cpp.shtml"></a><a href="https://www.thefreecountry.com/sourcecode/cpp.shtml">https://www.thefreecountry.com/sourcecode/cpp.shtml</a></h1><h1 id="https-en-cppreference-com-w"><a href="#https-en-cppreference-com-w" class="headerlink" title="https://en.cppreference.com/w/"></a><a href="https://en.cppreference.com/w/">https://en.cppreference.com/w/</a></h1><h1 id="http-www-learncpp-com"><a href="#http-www-learncpp-com" class="headerlink" title="http://www.learncpp.com/"></a><a href="http://www.learncpp.com/">http://www.learncpp.com/</a></h1><h1 id="https-github-com-fffaraz-awes-GitHub上的，类似的资源太多了"><a href="#https-github-com-fffaraz-awes-GitHub上的，类似的资源太多了" class="headerlink" title="https://github.com/fffaraz/awes   GitHub上的，类似的资源太多了"></a><a href="https://github.com/fffaraz/awes">https://github.com/fffaraz/awes</a>   GitHub上的，类似的资源太多了</h1><h1 id="http-freshmeat-net-browse-164-–超过万个C编写的项目。"><a href="#http-freshmeat-net-browse-164-–超过万个C编写的项目。" class="headerlink" title="http://freshmeat.net/browse/164/ –超过万个C编写的项目。"></a><a href="http://freshmeat.net/browse/164/">http://freshmeat.net/browse/164/</a> –超过万个C编写的项目。</h1><h1 id="http-www-daniweb-com-code-c-html-–DANIWEB提供的实用代码段。更新少"><a href="#http-www-daniweb-com-code-c-html-–DANIWEB提供的实用代码段。更新少" class="headerlink" title="http://www.daniweb.com/code/c.html –DANIWEB提供的实用代码段。更新少"></a><a href="http://www.daniweb.com/code/c.html">http://www.daniweb.com/code/c.html</a> –DANIWEB提供的实用代码段。更新少</h1><h1 id="http-www-ddj-com-code-ddj-html-–一个看起来就像大神的博客，但是好久没有更新了"><a href="#http-www-ddj-com-code-ddj-html-–一个看起来就像大神的博客，但是好久没有更新了" class="headerlink" title="http://www.ddj.com/code/ddj.html –一个看起来就像大神的博客，但是好久没有更新了"></a><a href="http://www.ddj.com/code/ddj.html">http://www.ddj.com/code/ddj.html</a> –一个看起来就像大神的博客，但是好久没有更新了</h1><h1 id="http-www-cprogramming-com-cgi-bin-source-source-cgi-–C和C-编程资源。一本书的在线资源"><a href="#http-www-cprogramming-com-cgi-bin-source-source-cgi-–C和C-编程资源。一本书的在线资源" class="headerlink" title="http://www.cprogramming.com/cgi-bin/source/source.cgi –C和C + +编程资源。一本书的在线资源"></a><a href="http://www.cprogramming.com/cgi-bin/source/source.cgi">http://www.cprogramming.com/cgi-bin/source/source.cgi</a> –C和C + +编程资源。一本书的在线资源</h1><h1 id="http-private-codecogs-com-–CodeCogs是一项协作的开放源码库，C-x2F-C-的数值方面的组件。写方程"><a href="#http-private-codecogs-com-–CodeCogs是一项协作的开放源码库，C-x2F-C-的数值方面的组件。写方程" class="headerlink" title="http://private.codecogs.com/ –CodeCogs是一项协作的开放源码库，C&#x2F;C++的数值方面的组件。写方程"></a><a href="http://private.codecogs.com/">http://private.codecogs.com/</a> –CodeCogs是一项协作的开放源码库，C&#x2F;C++的数值方面的组件。写方程</h1><h1 id="http-www-codeproject-com-cat-2-–codeproject提供的C-x2F-C-资源代码项目。更新多"><a href="#http-www-codeproject-com-cat-2-–codeproject提供的C-x2F-C-资源代码项目。更新多" class="headerlink" title="http://www.codeproject.com/?cat=2 –codeproject提供的C&#x2F;C++资源代码项目。更新多"></a><a href="http://www.codeproject.com/?cat=2">http://www.codeproject.com/?cat=2</a> –codeproject提供的C&#x2F;C++资源代码项目。更新多</h1><h1 id="http-www-thefreecountry-com-sourcecode-cpp-shtml-–以下是一些C和C-库的DLL，VCLs，源代码，元件，模块，应用程序框架，类库，源代码片段等，你可以在您的项目中使用而不需要支付费用和版税。"><a href="#http-www-thefreecountry-com-sourcecode-cpp-shtml-–以下是一些C和C-库的DLL，VCLs，源代码，元件，模块，应用程序框架，类库，源代码片段等，你可以在您的项目中使用而不需要支付费用和版税。" class="headerlink" title="http://www.thefreecountry.com/sourcecode/cpp.shtml –以下是一些C和C++库的DLL，VCLs，源代码，元件，模块，应用程序框架，类库，源代码片段等，你可以在您的项目中使用而不需要支付费用和版税。"></a><a href="http://www.thefreecountry.com/sourcecode/cpp.shtml">http://www.thefreecountry.com/sourcecode/cpp.shtml</a> –以下是一些C和C++库的DLL，VCLs，源代码，元件，模块，应用程序框架，类库，源代码片段等，你可以在您的项目中使用而不需要支付费用和版税。</h1><h1 id="http-people-sc-fsu-edu-burkardt-cpp-src-cpp-src-html-–这是一个全面的关于C-的1408个源代码清单。巨多算法，几行代码需要研究半天。"><a href="#http-people-sc-fsu-edu-burkardt-cpp-src-cpp-src-html-–这是一个全面的关于C-的1408个源代码清单。巨多算法，几行代码需要研究半天。" class="headerlink" title="http://people.sc.fsu.edu/~burkardt/cpp_src/cpp_src.html –这是一个全面的关于C++的1408个源代码清单。巨多算法，几行代码需要研究半天。"></a><a href="http://people.sc.fsu.edu/~burkardt/cpp_src/cpp_src.html">http://people.sc.fsu.edu/~burkardt/cpp_src/cpp_src.html</a> –这是一个全面的关于C++的1408个源代码清单。巨多算法，几行代码需要研究半天。</h1><h1 id="http-users-cs-fiu-edu-weiss-dsaa-c-code-–C-语言数据结构与算法分析（第二版）的源代码。"><a href="#http-users-cs-fiu-edu-weiss-dsaa-c-code-–C-语言数据结构与算法分析（第二版）的源代码。" class="headerlink" title="http://users.cs.fiu.edu/~weiss/dsaa_c++/code/ –C++语言数据结构与算法分析（第二版）的源代码。"></a><a href="http://users.cs.fiu.edu/~weiss/dsaa_c++/code/">http://users.cs.fiu.edu/~weiss/dsaa_c++/code/</a> –C++语言数据结构与算法分析（第二版）的源代码。</h1><h1 id="http-www-moshier-net-天文学和数值软件源代码-一般用不上，算日历。"><a href="#http-www-moshier-net-天文学和数值软件源代码-一般用不上，算日历。" class="headerlink" title="http://www.moshier.net/ 天文学和数值软件源代码  一般用不上，算日历。"></a><a href="http://www.moshier.net/">http://www.moshier.net/</a> 天文学和数值软件源代码  一般用不上，算日历。</h1><h1 id="http-cplus-about-com-od-cgames-C-Games-with-Source-Code-htm-–游戏有关的C-源代码。主网是关于编程的"><a href="#http-cplus-about-com-od-cgames-C-Games-with-Source-Code-htm-–游戏有关的C-源代码。主网是关于编程的" class="headerlink" title="http://cplus.about.com/od/cgames/C_Games_with_Source_Code.htm –游戏有关的C++源代码。主网是关于编程的"></a><a href="http://cplus.about.com/od/cgames/C_Games_with_Source_Code.htm">http://cplus.about.com/od/cgames/C_Games_with_Source_Code.htm</a> –游戏有关的C++源代码。主网是关于编程的</h1><h1 id="http-www-cmcrossroads-com-bradapp-links-cplusplus-links-html-–布拉德阿普尔顿的C-链接-资源，项目，图书馆，教学和编码。"><a href="#http-www-cmcrossroads-com-bradapp-links-cplusplus-links-html-–布拉德阿普尔顿的C-链接-资源，项目，图书馆，教学和编码。" class="headerlink" title="http://www.cmcrossroads.com/bradapp/links/cplusplus-links.html –布拉德阿普尔顿的C++链接-资源，项目，图书馆，教学和编码。"></a><a href="http://www.cmcrossroads.com/bradapp/links/cplusplus-links.html">http://www.cmcrossroads.com/bradapp/links/cplusplus-links.html</a> –布拉德阿普尔顿的C++链接-资源，项目，图书馆，教学和编码。</h1><h1 id="https-cplusplus-com-C-合集"><a href="#https-cplusplus-com-C-合集" class="headerlink" title="https://cplusplus.com/ C++合集"></a><a href="https://cplusplus.com/">https://cplusplus.com/</a> C++合集</h1><h1 id="http-www-c-happycodings-com-–Visual-Basic、PHP、ASP技术、C、C-大全。VB的教程属实不多了"><a href="#http-www-c-happycodings-com-–Visual-Basic、PHP、ASP技术、C、C-大全。VB的教程属实不多了" class="headerlink" title="http://www.c.happycodings.com/ –Visual Basic、PHP、ASP技术、C、C++大全。VB的教程属实不多了"></a><a href="http://www.c.happycodings.com/">http://www.c.happycodings.com/</a> –Visual Basic、PHP、ASP技术、C、C++大全。VB的教程属实不多了</h1><h1 id="http-www-java2s-com-Code-Cpp-CatalogCpp-htm-–C-源代码。QT写得可以"><a href="#http-www-java2s-com-Code-Cpp-CatalogCpp-htm-–C-源代码。QT写得可以" class="headerlink" title="http://www.java2s.com/Code/Cpp/CatalogCpp.htm –C++源代码。QT写得可以"></a><a href="http://www.java2s.com/Code/Cpp/CatalogCpp.htm">http://www.java2s.com/Code/Cpp/CatalogCpp.htm</a> –C++源代码。QT写得可以</h1><h1 id="http-users-cs-fiu-edu-C-。-可以看新闻"><a href="#http-users-cs-fiu-edu-C-。-可以看新闻" class="headerlink" title="http://users.cs.fiu.edu/ C++。 可以看新闻"></a><a href="http://users.cs.fiu.edu/">http://users.cs.fiu.edu/</a> C++。 可以看新闻</h1><h1 id="http-www-josuttis-com-libbook-examples-html-–C-标准库-教程和参考资料。"><a href="#http-www-josuttis-com-libbook-examples-html-–C-标准库-教程和参考资料。" class="headerlink" title="http://www.josuttis.com/libbook/examples.html –C++标准库-教程和参考资料。"></a><a href="http://www.josuttis.com/libbook/examples.html">http://www.josuttis.com/libbook/examples.html</a> –C++标准库-教程和参考资料。</h1>]]></content>
       <categories>
         <category>资源收藏</category>
         <category>编程学习</category>
       </categories>
       <tags>
         <tag>学习资源</tag>
-        <tag>SQL</tag>
+        <tag>C++</tag>
       </tags>
   </entry>
   <entry>
